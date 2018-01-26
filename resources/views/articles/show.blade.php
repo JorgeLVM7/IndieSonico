@@ -12,7 +12,7 @@
                 </div>
             </div>
             <hr>
-            <div class="row bw">
+            <div class="row ">
                 <div class="col-12">
                     <h4>{{ $article->head }}</h4>
                 </div>
