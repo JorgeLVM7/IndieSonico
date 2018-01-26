@@ -1,0 +1,147 @@
+body{
+    background-color: #ededed !important;
+}
+
+.posts{
+    background-color: #ededed;
+    margin-top: 71px;
+}
+
+/*fondo blanco de publicaciones y publicidad*/
+.bw{
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: #ededed solid 2px;
+}
+
+
+
+.top-ten{
+    height: 225px;
+}
+
+.text-carousel{
+    background: #ededed;
+    opacity: 0.5;
+
+    /*filter: alpha(opacity=50); !* For IE8 and earlier *!*/
+}
+
+.mr{
+    margin-right: -43px;
+}
+
+.img-articles{
+    height: 350px;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.text-top-ten{
+    color: #000;
+}
+
+.publicidad{
+    background-color: #ededed;
+}
+
+.siguenos{
+    float: right;
+    color: #66abb3;
+}
+.siguenos:hover{
+    text-decoration: none !important;
+    color: #ff2e63 !important;
+    float: right;
+}
+
+.irs{
+    vertical-align: inherit;
+}
+
+
+
+
+
+/* Colores de IndieSonico */
+
+/* Header #242424 */
+
+.h-insonico{
+    background-color: #242424 !important;
+}
+
+.b-insonico{
+    /*background-color: #ededed;*/
+
+}
+.t-insonico, .descripcion{
+    color: #3b3c3d !important;
+}
+
+.descripcion{
+    padding-top: 16px;
+}
+
+.a-corregido{
+    opacity: unset !important;
+    text-decoration: none !important;
+    color: #FFFFFF !important;
+}
+
+.a-corregido:hover{
+    text-decoration: none !important;
+    color: #ff2e63 !important;
+}
+
+.a-logout{
+    text-decoration: none !important;
+    color: #FFFFFF !important;
+}
+.a-logout:hover{
+    text-decoration: none !important;
+    color: #ff2e63 !important;
+}
+
+.ul-logout{
+    background-color: #242424 !important;
+}
+.li-logout{
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+
+
+/*.fixed-top3 {*/
+    /*position: static;*/
+    /*top:0;*/
+    /*!*right:.5em;*!*/
+    /*!*float: left;*!*/
+    /*z-index:1030;*/
+/*}*/
+
+
+
+
+/*.fixed-top2 {*/
+    /*position: absolute;*/
+    /*!*top: -50px;*!*/
+    /*right:.5em;*/
+    /*float: right;*/
+    /*!*z-index:1030;*!*/
+/*}*/
+
+.scroll {
+    overflow-x: hidden;
+    height: 500px;
+    /*-webki*/
+
+}
+
+.scroll::-webkit-scrollbar {
+    background-color: transparent;
+}
