@@ -41,11 +41,9 @@
                             </div>
                         </div>
                         <div class="row">
-                            <br>
-                            <label for="body"></label>
-                            <textarea name="" id="body" cols="30" rows="10" >{{$article->body}}</textarea>
-                            <br>
-                        </div>
+                            <div class="col-12">
+                                {!! $article->body !!}
+                            </div>
 {{--                        <a href="{{route('cinema.show',$article->id)}}" class="btn btn-info">Ver más</a>--}}
                         <button type="button" class="btn btn-primary">Twitter</button>
                         <button type="button" class="btn btn-primary">Facebook</button>

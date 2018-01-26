@@ -12,38 +12,24 @@
                 </div>
             </div>
             <hr>
-            <div class="col-12">
-                {{--Encabezado--}}
-                <div class="row">
+            <div class="row bw">
+                <div class="col-12">
                     <h4>{{ $article->head }}</h4>
                 </div>
-
-                <div class="row">
+                <div class="col-12">
                     <img src="/images/{{$article->path}}" class="img-fluid" alt="Responsive image">
                 </div>
-
-
-
-
-                {{--<div class="embed-responsive embed-responsive-16by9">--}}
-                    {{--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"></iframe>--}}
-                {{--</div>--}}
-
-                {{--Descripcion--}}
-                <p id="descripcion">{{ $article->description }}</p>
-                {{--Cuerpo--}}
-{{--                <p class="text-justify">{{ $article->body }}</p>--}}
-                <div class="row">
-                    {{--<textarea name="" id="" cols="30" rows="10">--}}
-                        {!! $article->body !!}
-                    {{--</textarea>--}}
+                <div class="col-12">
+                    <p id="descripcion">{{ $article->description }}</p>
                 </div>
-                <div class="row">
+                <div class="col-12">
+                        {!! $article->body !!}
+                </div>
+                <div class="col-12">
                     <p>{{ $article->category }}</p>
                 </div>
-                <div class="row">
+                <div class="col-12">
                     <p><b>{{ $article->autor }}</b></p>
-
                 </div>
 
             </div>

@@ -76,7 +76,7 @@
 </nav>
 
 
-<div class="container">
+<div class="container bw">
     <br>
     @yield('content')
 
