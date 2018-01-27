@@ -1,6 +1,5 @@
 @extends('layout')
 
-
 @section('content')
   <div class="row">
       <div class="col-12">
@@ -43,11 +42,8 @@
                         </div>
                       </td>
                   </tr>
-
-
-                      @endforeach
+              @endforeach
               </tbody>
-
           </table>
           {!! $articles->render() !!}
       </div>

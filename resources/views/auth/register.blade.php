@@ -1,22 +1,21 @@
 @extends('layout')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default just">
-                {{--<div class="panel-heading">Register</div>--}}
+<div class="container-fluid">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
 
+                </div>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('user') ? ' has-error' : '' }}">
-                            <label for="user" class="col-md-4 control-label">User</label>
-
+                            <label for="user" class="col-md-4 control-label">Usuario</label>
                             <div class="col-md-6">
                                 <input id="user" type="text" class="form-control" name="user" value="{{ old('user') }}" required autofocus>
-
                                 @if ($errors->has('user'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('user') }}</strong>

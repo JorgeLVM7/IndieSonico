@@ -1,8 +1,7 @@
 @extends('layout')
 
-
 @section('content')
-    <div class="cotainer-fluid">
+    <div class="container-fluid">
         <div class="col-12">
             <div class="row ">
                 <div class="col-12">
@@ -15,6 +14,8 @@
                         </div>
                     </div>
                     <hr>
+                    @include('users.fragment.info')
+
                     @include('articles.fragment.error')
 
                     <div class="row">

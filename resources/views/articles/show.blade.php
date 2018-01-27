@@ -4,8 +4,11 @@
     <div class="row">
         <div class="col-12">
             <div class="row">
-                <div class="col-11">
+                <div class="col-10">
                     <h1>Vista Previa</h1>
+                </div>
+                <div class="col-1">
+                    <a class="btn btn-outline-dark" href="{{route('articles.index')}}">Regresar</a>
                 </div>
                 <div class="col-1 ">
                     <a class="btn btn-outline-warning" href="{{route('articles.edit',$article->id)}}">Editar</a>
@@ -35,9 +38,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <div class="row justify-content-center">
-        <a class="btn btn-outline-dark" href="{{route('articles.index')}}">Regresar</a>
-    </div>
+
+
 
 @endsection
