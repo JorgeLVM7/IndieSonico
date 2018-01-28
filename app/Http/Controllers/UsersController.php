@@ -54,7 +54,7 @@ class UsersController extends Controller
         $user ->last_name = $request ->last_name;
         $user ->level = $request -> level;
         $user ->email = $request -> email;
-        $user ->password = $request ->password;
+        //$user ->password = $request ->password;
 
 
 

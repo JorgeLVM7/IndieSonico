@@ -4,7 +4,15 @@
 @section('content')
     <div class="row">
         <div class="col-12">
-            <h3 class="text-center">Editar Artículo </h3>
+            <div class="row">
+                <div class="col-10">
+                    <h3>Editar Artículo </h3>
+                </div>
+                <div class="col-2">
+                    <a class="btn btn-outline-dark float-right" href="{{route('articles.index')}}">Cancelar</a>
+                </div>
+            </div>
+            <hr>
             @include('articles.fragment.error')
 
 
@@ -15,8 +23,5 @@
             {!! Form::close() !!}
 
         </div>
-    </div>
-    <div class="row justify-content-center">
-        <a class="btn btn-outline-dark" href="{{route('articles.index')}}">Cancelar</a>
     </div>
 @endsection

@@ -1,16 +1,16 @@
 @extends('layout')
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container">
         <div class="col-12">
             <div class="row ">
                 <div class="col-12">
                     <div class="row">
-                        <div class="col-11">
+                        <div class="col-10">
                             <h1>Crear Publicación</h1>
                         </div>
-                        <div class="col-1 ">
-                            <a class="btn btn-outline-dark" href="{{route('articles.index')}}">Cancelar</a>
+                        <div class="col-2">
+                            <a class="btn btn-outline-dark float-right" href="{{route('articles.index')}}">Cancelar</a>
                         </div>
                     </div>
                     <hr>

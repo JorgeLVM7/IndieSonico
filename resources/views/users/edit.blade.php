@@ -1,24 +1,35 @@
 @extends('layout')
 
 @section('content')
-
-    <div class="row">
+    <div class="container">
         <div class="col-12">
-            <h3 class="text-center">
-                Editar Usuario
-            </h3>
-            @include('users.fragment.error')
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-10">
+                            <h1>Editar Usuario</h1>
+                        </div>
+                        <div class="col-2">
+                            <a class="btn btn-outline-dark float-right" href="{{route('users.index')}}">Cancelar</a>
+                        </div>
+                    </div>
+                    <hr>
 
-            {!! Form::model($user, ['route'=>['users.update',$user->id], 'method'=> 'PUT']) !!}
+                    @include('users.fragment.error')
 
-            @include('users.fragment.form')
+                    <div class="row">
+                        <div class="col-12">
+                            {!! Form::model($user, ['route'=>['users.update',$user->id], 'method'=> 'PUT']) !!}
 
-            {!! Form::close() !!}
+                            @include('users.fragment.form2')
 
+                            {!! Form::close() !!}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <a class="btn btn-outline-dark" href="{{route('users.index')}}">Cancelar</a>
-    </div>
+
 
     @endsection

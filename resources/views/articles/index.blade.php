@@ -4,11 +4,11 @@
   <div class="row">
       <div class="col-12">
           <div class="row">
-              <div class="col-11">
+              <div class="col-10">
                   <h1>Publicaciones</h1>
               </div>
-              <div class="col-1 ">
-                  <a class="btn btn-outline-dark" href="{{route('articles.create')}}">Nuevo</a>
+              <div class="col-2">
+                  <a class="btn btn-outline-dark float-right" href="{{route('articles.create')}}">Nuevo</a>
               </div>
           </div>
           @include('articles.fragment.info')
