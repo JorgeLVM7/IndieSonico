@@ -22,3 +22,4 @@ class CinemaController extends Controller
         return view('cinema.show', compact('article'));
     }
 }
+

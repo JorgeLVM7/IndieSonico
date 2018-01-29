@@ -17,6 +17,8 @@ Route::get('/','FrontController@index')->name('index');
 
 Route::resource('approvals','ApprovalsController');
 
+Route::resource('carousel', 'CarouselController');
+
 Route::resource('music','MusicController');
 
 Route::resource('cinema','CinemaController');

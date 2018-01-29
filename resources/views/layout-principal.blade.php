@@ -51,6 +51,8 @@
 </nav>
 <div class="container-fluid posts ">
 
+{{--    @yield('slider')--}}
+
     @yield('content')
 
 </div>
