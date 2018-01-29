@@ -15,13 +15,11 @@
 
 Route::get('/','FrontController@index')->name('index');
 
+Route::resource('approvals','ApprovalsController');
+
 Route::resource('music','MusicController');
 
-
-//Route::get('cinema/show','CinemaController@index');
 Route::resource('cinema','CinemaController');
-
-
 
 Route::resource('art','ArtController');
 

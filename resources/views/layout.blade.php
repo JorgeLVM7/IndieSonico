@@ -25,8 +25,9 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link a-corregido" href="#">Aprobaciones</a>
+                <a class="nav-link a-corregido" href="{{route('approvals.index')}}">Aprobaciones</a>
             </li>
+
             @if(Auth::user()->level==="Administrador")
 
             <li class="nav-item">

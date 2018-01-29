@@ -28,7 +28,7 @@ class UsersController extends Controller
         $user ->last_name = $request ->last_name;
         $user ->level = $request -> level;
         $user ->email = $request -> email;
-        $user ->password = $request ->password;
+        $user ->password = bcrypt($request['password']);
 
 
         $user ->save();
@@ -40,7 +40,7 @@ class UsersController extends Controller
 
     public function create()
     {
-        return view('auth.register');
+        return view('users.create');
     }
 
 
