@@ -11,16 +11,41 @@
     {!! Form::label('description','Descripción ') !!}
     {!! Form::text('description', null,['class'=>'form-control']) !!}
 </div>
-
+<div class="form-group">
+    {!! Form::label('body','Cuerpo ') !!}
+    {!! Form::textarea('body', null,['class'=>'form-control']) !!}
+</div>
 <div class="form-group">
     {!! Form::label('video','Link de Video') !!}
     {!! Form::text('video', null,['class'=>'form-control']) !!}
 </div>
 
+
+
 <div class="form-group">
-    {!! Form::label('body','Cuerpo ') !!}
-    {!! Form::textarea('body', null,['class'=>'form-control']) !!}
+    {!! Form::label('head_2','Encabezado 2') !!}
+    {!! Form::text('head_2', null,['class'=>'form-control']) !!}
 </div>
+<div class="form-group">
+    {!! Form::label('image_2','Foto 2') !!}
+    {!! Form::file('path_2') !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('description_2','Descripción 2') !!}
+    {!! Form::text('description_2', null,['class'=>'form-control']) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('body_2','Cuerpo 2 ') !!}
+    {!! Form::textarea('body_2', null,['class'=>'form-control']) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('video_2','Link de Video 2') !!}
+    {!! Form::text('video_2', null,['class'=>'form-control']) !!}
+</div>
+
+
+
 
 <div class="form-group">
     <label for="">Autor</label>

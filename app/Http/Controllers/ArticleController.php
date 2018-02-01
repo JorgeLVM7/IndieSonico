@@ -26,14 +26,21 @@ class ArticleController extends Controller
     {
         $article = new Article;
 
-        $article ->head = $request ->head;
-        $article ->description = $request ->description;
-        $article ->body = $request -> body;
-        $article ->category = $request ->category;
-        $article ->autor = Auth::user()->name.' '.Auth::user()->last_name;
-        $article ->approve = 'No Aprobado';
-        $article ->path = $request ->path;
-        $article->video =$request->video;
+        $article ->head         = $request    ->head;
+        $article ->path         = $request    ->path;
+        $article ->description  = $request    ->description;
+        $article ->body         = $request    ->body;
+        $article->video         =$request     ->video;
+
+        $article ->head_2       = $request    ->head_2;
+        $article ->path_2       = $request    ->path_2;
+        $article ->description_2 = $request   ->description_2;
+        $article ->body_2       = $request    ->body_2;
+        $article ->video_2      = $request    ->video_2;
+
+        $article ->autor        = Auth::user()->name.' '.Auth::user()->last_name;
+        $article ->category     = $request ->category;
+        $article ->approve      = 'No Aprobado';
 
         $article ->save();
 
@@ -53,14 +60,21 @@ class ArticleController extends Controller
     {
         $article = Article::find($id);
 
-        $article ->head = $request ->head;
-        $article ->description = $request ->description;
-        $article ->body = $request -> body;
-        $article ->category = $request ->category;
-        $article ->autor = Auth::user()->name.' '.Auth::user()->last_name;
-        $article ->approve= 'No Aprobado';
-        $article ->path = $request ->path;
-        $article->video =$request->video;
+        $article ->head         = $request    ->head;
+        $article ->path         = $request    ->path;
+        $article ->description  = $request    ->description;
+        $article ->body         = $request    ->body;
+        $article->video         =$request     ->video;
+
+        $article ->head_2       = $request    ->head_2;
+        $article ->path_2       = $request    ->path_2;
+        $article ->description_2 = $request   ->description_2;
+        $article ->body_2       = $request    ->body_2;
+        $article ->video_2      = $request    ->video_2;
+
+        $article ->autor        = Auth::user()->name.' '.Auth::user()->last_name;
+        $article ->category     = $request ->category;
+        $article ->approve      = 'No Aprobado';
 
 
 

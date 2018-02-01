@@ -19,8 +19,6 @@ class CreateArticlesTable extends Migration
             $table->mediumText('description');
             $table->text('body');
             $table->string('category');
-//            $table->string('autor')-> nullable();
-//            $table->dateTime('date');
             $table->timestamps();
         });
     }

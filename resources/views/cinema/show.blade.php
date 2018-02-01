@@ -2,7 +2,7 @@
 
 @section('content')
 
-    {{--<div id="carouselExampleSlidesOnly" class="carousel slide fixed-absolute" data-ride="carousel">
+{{--    <div id="carouselExampleSlidesOnly" class="carousel slide fixed-absolute" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block w-100 top-ten" src="icons/1.png" alt="First slide">
