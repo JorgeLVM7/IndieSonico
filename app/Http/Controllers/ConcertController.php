@@ -11,4 +11,10 @@ class ConcertController extends Controller
         $articles = Article::orderBy('id', 'DESC')->where('category','Conciertos')->paginate();
         return view('concert.index',compact('articles'));
     }
+
+    public function show($id)
+    {
+        $article = Article::find($id);
+        return view('concert.show', compact('article'));
+    }
 }

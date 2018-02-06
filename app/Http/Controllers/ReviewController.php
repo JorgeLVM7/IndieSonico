@@ -11,4 +11,10 @@ class ReviewController extends Controller
         $articles = Article::orderBy('id', 'DESC')->where('category','Reseñas')->paginate();
         return view('review.index',compact('articles'));
     }
+
+    public function show($id)
+    {
+        $article = Article::find($id);
+        return view('review.show', compact('article'));
+    }
 }

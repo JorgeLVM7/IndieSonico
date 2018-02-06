@@ -21,5 +21,6 @@ class CinemaController extends Controller
         $article = Article::find($id);
         return view('cinema.show', compact('article'));
     }
+
 }
 

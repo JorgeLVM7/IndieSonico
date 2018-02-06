@@ -14,4 +14,9 @@ class MusicController extends Controller
         return view('music.index',compact('articles'));
     }
 
+    public function show($id)
+    {
+        $article = Article::find($id);
+        return view('music.show', compact('article'));
+    }
 }

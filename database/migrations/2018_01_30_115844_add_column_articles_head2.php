@@ -14,11 +14,11 @@ class AddColumnArticlesHead2 extends Migration
     public function up()
     {
         Schema::table('articles',function (Blueprint $table){
-            $table->text('head_2');
-            $table->string('path_2');
-            $table->mediumText('description_2');
-            $table->text('body_2');
-            $table->text('video_2');
+            $table->text('head_2')->nullable();
+            $table->string('path_2')->nullable();
+            $table->mediumText('description_2')->nullable();
+            $table->text('body_2')->nullable();
+            $table->text('video_2')->nullable();
         });
     }
 

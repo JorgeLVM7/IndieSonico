@@ -11,4 +11,9 @@ class ArtController extends Controller
         $articles = Article::orderBy('id', 'DESC')->where('category','Arte')->paginate();
         return view('art.index',compact('articles'));
     }
+    public function show($id)
+    {
+        $article = Article::find($id);
+        return view('art.show', compact('article'));
+    }
 }
