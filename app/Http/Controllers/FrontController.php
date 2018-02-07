@@ -8,7 +8,11 @@ class FrontController extends Controller
 {
     public function index()
     {
+
+//        $articles = Article::orderBy('id', 'DESC')->paginate();
+
         $articles = Article::orderBy('id', 'DESC')->paginate();
+
         return view('index',compact('articles'));
     }
 }

@@ -153,36 +153,68 @@ body{
 
 
 
-/* 1680 x 1050 */
-@media (min-width: 1670px) and (min-height: 1040px){
-    .scroll{
-        height: 750px;
-    }
-    .top-ten{
-        height: 300px;
-    }
-}
+/*!* 1680 x 1050 *!*/
+/*@media (min-width: 1670px) and (min-height: 1040px){*/
+    /*.scroll{*/
+        /*height: 750px;*/
+    /*}*/
+    /*.top-ten{*/
+        /*height: 300px;*/
+    /*}*/
+/*}*/
 
 
-/* 1440 x 900 */
-@media (min-width: 1430px){
-    .scroll{
-        height: 500px;
-    }
-    .top-ten{
-        height: 300px;
-    }
-}
+/*!* 1440 x 900 *!*/
+/*@media (min-width: 1430px) and (min-height: 890px){*/
+    /*.scroll{*/
+        /*height: 630px;*/
+    /*}*/
+    /*.top-ten{*/
+        /*height: 300px;*/
+    /*}*/
+/*}*/
+
+/*!* 1440 x 750 *!*/
+/*@media (min-width: 1430px) and (min-height: 740px){*/
+    /*.scroll{*/
+        /*height: 630px;*/
+    /*}*/
+    /*.top-ten{*/
+        /*height: 350px;*/
+    /*}*/
+/*}*/
 
 
-/*1024 x 768 */
-@media (min-width: 1014px)and (min-height: 768px){
-    .scroll{
-        height: 430px;
-    }
-    .top-ten{
-        height: 250px;
-    }
-}
+/*!*1280 x 800 *!*/
+/*@media (min-width: 1280px)and (min-height: 800px){*/
+    /*.scroll{*/
+        /*height: 530px;*/
+    /*}*/
+    /*.top-ten{*/
+        /*height: 250px;*/
+    /*}*/
+/*}*/
+
+/*!*1024 x 768        Listo *!*/
+/*@media (min-width: 1014px)and (min-height: 768px){*/
+    /*.scroll{*/
+        /*height: 435px;*/
+    /*}*/
+    /*.top-ten{*/
+        /*height: 250px;*/
+    /*}*/
+/*}*/
+
+/*!*1280 x 800 *!*/
+/*@media (min-width: 414px)and (min-height: 736px){*/
+    /*.scroll{*/
+        /*height: 300px;*/
+    /*}*/
+    /*.top-ten{*/
+        /*height: 150px;*/
+    /*}*/
+/*}*/
+
+
 
 
