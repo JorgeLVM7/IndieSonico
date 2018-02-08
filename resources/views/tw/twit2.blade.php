@@ -6,7 +6,7 @@
 
     <div class="row bw twit2-2">
         <div class="col-6 iconos">
-            <h4>SÍGUENOS</h4>
+            <h4 class="sig">SÍGUENOS</h4>
 
         </div>
         <div class="col-6 iconos">

@@ -1,12 +1,12 @@
 <div class="row">
-    <div class="col-6">
+    <div class="col-sm-6">
         <div class="form-group">
             {!! Form::label('name','Nombre') !!}
             {!! Form::text('name', null,['class'=>'form-control']) !!}
         </div>
 
     </div>
-    <div class="col-6">
+    <div class="col-sm-6">
         <div class="form-group">
             {!! Form::label('email','Correo') !!}
             {!! Form::text('email', null,['class'=>'form-control']) !!}

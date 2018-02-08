@@ -35,9 +35,13 @@
                                 <div class="row">
                                     <p class="card-subtitle mb-2  descripcion">{{ $article -> description }}</p>
                                 </div>
-                                <a href="" class="btn btn-info">Ver más</a>
-                                <button type="button" class="btn btn-primary">Twitter</button>
-                                <button type="button" class="btn btn-primary">Facebook</button>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <a href="" class="btn btn-info">Ver</a>
+                                        <button type="button" class="btn btn-primary">Twitter</button>
+                                        <button type="button" class="btn btn-primary">Facebook</button>
+                                    </div>
+                                </div>
                             </div>
                         @endforeach
                         {!! $articles->render() !!}
