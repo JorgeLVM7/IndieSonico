@@ -64,6 +64,8 @@
 
 </div>
 
+{{ Form::hidden('user_id',auth()->user()->id ) }}
+
 <div class="form-group">
     {!! Form::submit('Guardar',['class'=>'btn btn-primary', 'style'=>"cursor: pointer"]) !!}
 

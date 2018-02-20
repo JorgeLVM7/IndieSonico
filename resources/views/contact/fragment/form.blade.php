@@ -15,8 +15,8 @@
     </div>
     <div class="col-12">
         <div class="form-group">
-            {!! Form::label('message','Mensaje') !!}
-            {!! Form::textarea('message', null,['class'=>'form-control', 'rows'=>'10']) !!}
+            {!! Form::label('mensaje','Mensaje') !!}
+            {!! Form::textarea('mensaje', null,['class'=>'form-control', 'rows'=>'10']) !!}
         </div>
     </div>
     <div class="col-6">

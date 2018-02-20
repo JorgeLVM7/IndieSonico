@@ -6,20 +6,19 @@
                 <div class="carousel-item active">
                     <img class="d-block w-100 top-ten" src="icons/1.png" alt="First slide">
                 </div>
-                @foreach($articles as $article)
+                @foreach($tops as $top)
                     <div class="carousel-item ">
-                        <img class="d-block w-100 top-ten logo" src="images/{{$article->path}}" alt="">
-                        <div class="carousel-caption d-none d-md-block text-carousel">
-                            <a class="text-top-ten ">{{$article->head}}</a>
-                            <p>
-                                <a class="a-corregido" href="">Ver más</a>
-                            </p>
-                        </div>
+                        <img class="d-block w-100 top-ten logo" src="images/{{$top->path}}" alt="">
+                        {{--<div class="carousel-caption d-none d-md-block text-carousel">--}}
+                            {{--<a class="text-top-ten ">{{$article->head}}</a>--}}
+                            {{--<p>--}}
+                                {{--<a class="a-corregido" href="">Ver más</a>--}}
+                            {{--</p>--}}
+                        {{--</div>--}}
                     </div>
                 @endforeach
             </div>
         </div>
-
 
         <div class="container-fluid">
             <div class="row">

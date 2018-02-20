@@ -28,7 +28,7 @@ class HomeController extends Controller
 
         $articles = Article::orderBy('id', 'DESC')->paginate();
         return view('index',compact('articles'));
-//        return view('home');
+//       return view('home');
     }
 
 

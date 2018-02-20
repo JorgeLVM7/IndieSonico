@@ -1,3 +1,6 @@
+
+
+
 <?php
 
 use Illuminate\Support\Facades\Schema;
@@ -18,6 +21,9 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->text('level');
+            $table->text('last_name');
+            $table->text('user');
             $table->rememberToken();
             $table->timestamps();
         });

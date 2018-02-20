@@ -12,7 +12,9 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $articles = Article::orderBy('id', 'DESC')->paginate();
+        $articles = Article::orderBy('id', 'DESC')
+                    ->where('user_id', auth()->user()->id)
+                        ->paginate();
         return view('articles.index',compact('articles'));
 
     }
@@ -41,6 +43,8 @@ class ArticleController extends Controller
         $article ->autor        = Auth::user()->name.' '.Auth::user()->last_name;
         $article ->category     = $request ->category;
         $article ->approve      = 'No Aprobado';
+
+        $article ->user_id      = $request     ->user_id;
 
         $article ->save();
 

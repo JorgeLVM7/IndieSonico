@@ -1,10 +1,11 @@
+
 <?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnArticlesVideo extends Migration
+class CreateToptensTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +14,12 @@ class AddColumnArticlesVideo extends Migration
      */
     public function up()
     {
-        Schema::table('articles', function (Blueprint $table){
-            $table->text('video');
+        Schema::create('toptens', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('head');
+            $table->string('path');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
@@ -25,9 +30,7 @@ class AddColumnArticlesVideo extends Migration
      */
     public function down()
     {
-        Schema::table('articles', function (Blueprint $table) {
-
-            $table->dropColumn('video');
-        });
+        Schema::dropIfExists('toptens');
     }
 }
+

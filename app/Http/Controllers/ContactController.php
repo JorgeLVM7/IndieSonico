@@ -1,15 +1,27 @@
 <?php
 
 namespace Insonico\Http\Controllers;
-use Insonico\Article;
-
+use Mail;
+use Session;
+use Redirect;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
+
     public function index()
     {
-        $articles = Article::orderBy('id', 'DESC')->paginate();
-        return view('contact.index',compact('articles'));
+        return view('contact.index');
+    }
+    public function store(Request $request)
+    {
+        Mail::send('contact.emails', $request->all(), function ($msj){
+            $msj ->subject ('Correo de contacto');
+            $msj ->to('jorgito11@gmail.com');
+
+        });
+
+        return redirect()-> route('contact.index')
+            ->with('info','El correo enviado correctamente');
     }
 }

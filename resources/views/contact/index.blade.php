@@ -11,9 +11,11 @@
                         </div>
                     </div>
 
+                    @include('contact.fragment.info')
+
                     <div class="row">
                         <div class="col-12">
-                            {!! Form::open(['route'=>'articles.store', 'files'=>true]) !!}
+                            {!! Form::open(['route'=>'contact.store']) !!}
 
                             @include('contact.fragment.form')
 
