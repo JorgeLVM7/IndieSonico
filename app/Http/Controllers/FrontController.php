@@ -12,7 +12,9 @@ class FrontController extends Controller
 
        $tops = Topten::orderBy('id', 'DESC')->paginate();
 
-        $articles = Article::orderBy('id', 'DESC')->paginate();
+        $articles = Article::orderBy('id', 'DESC')
+            ->where('approve','Aprobado')
+            ->paginate();
 
         return view('index',compact('articles','tops'));
     }

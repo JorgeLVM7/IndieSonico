@@ -9,12 +9,6 @@
             @foreach($tops as $top)
                 <div class="carousel-item ">
                     <img class="d-block w-100 top-ten logo" src="images/{{$top->path}}" alt="">
-                    {{--<div class="carousel-caption d-none d-md-block text-carousel">--}}
-                        {{--<a class="text-top-ten ">{{$article->head}}</a>--}}
-                        {{--<p>--}}
-                            {{--<a class="a-corregido" href="">Ver más</a>--}}
-                        {{--</p>--}}
-                    {{--</div>--}}
                 </div>
             @endforeach
         </div>

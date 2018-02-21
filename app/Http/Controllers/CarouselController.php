@@ -62,12 +62,12 @@ class CarouselController extends Controller
     {
         $top = Topten::find($id);
         $top->delete();
-        return back()->with('info', 'El artículo fue eliminado correctamente');
+        return back()->with('info', 'El top fue eliminado correctamente');
     }
 
     public function edit($id)
     {
         $top = Topten::find($id);
-        return view('Toptens.edit', compact('top'));
+        return view('carousel.edit', compact('top'));
     }
 }
