@@ -25,12 +25,12 @@
             <li class="nav-item">
                 <a class="nav-link a-corregido" href="{{route('articles.index')}}">Artículos <span class="sr-only">(current)</span></a>
             </li>
-
-            <li class="nav-item">
-                <a class="nav-link a-corregido" href="{{route('approvals.index')}}">Aprobaciones</a>
-            </li>
-
+            
             @if(Auth::user()->level==="Administrador")
+
+                <li class="nav-item">
+                    <a class="nav-link a-corregido" href="{{route('approvals.index')}}">Aprobaciones</a>
+                </li>
 
                 <li class="nav-item">
                     <a class="nav-link a-corregido" href="{{route('users.index')}}">Usuarios</a>

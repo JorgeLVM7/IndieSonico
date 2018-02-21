@@ -11,9 +11,21 @@ class ApprovalsController extends Controller
 {
     public function index()
     {
-        $approvals=Article::orderBy('id','DESC')->where('approve','No Aprobado')->paginate(25);
+        $approvals=Article::orderBy('id','DESC')
+            ->where('approve','No Aprobado')->paginate(25);
 
-        return view('approvals.index',compact('approvals'));
+        $approvals_decline=Article::orderBy('id','DESC')
+            ->where('approve','Rechazado')->paginate(25);
+
+        $approvals_acepted=Article::orderBy('id','DESC')
+            ->where('approve','Aprobado')->paginate(25);
+
+
+
+        return view('approvals.index',
+            compact('approvals',
+                'approvals_decline',
+                'approvals_acepted'));
     }
 
     public function show($id)

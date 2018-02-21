@@ -14,7 +14,7 @@ class ArticleController extends Controller
     {
         $articles = Article::orderBy('id', 'DESC')
                     ->where('user_id', auth()->user()->id)
-                        ->paginate();
+                        ->paginate(25);
         return view('articles.index',compact('articles'));
 
     }

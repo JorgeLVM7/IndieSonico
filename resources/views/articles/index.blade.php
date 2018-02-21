@@ -18,6 +18,7 @@
                     <th>Encabezado</th>
                     <th>Descripción</th>
                     <th>Categoria</th>
+                    <th>Estado</th>
                     <th colspan="3">Acciones</th>
                 </tr>
               </thead>
@@ -27,6 +28,7 @@
                       <td>{{ $article ->head }}</td>
                       <td>{{ $article ->description }}</td>
                       <td>{{ $article ->category }}</td>
+                      <td>{{ $article ->approve }}</td>
                       <td>
                         <div class="btn-group btn-group-toggle" >
                           <a href="{{ route('articles.show', $article->id) }}" class="btn btn-outline-success" role="button" aria-pressed="true">Ver</a>
