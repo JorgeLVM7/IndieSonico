@@ -70,10 +70,10 @@ return [
             'model' => Insonico\User::class,
         ],
 
-         'users' => [
-             'driver' => 'database',
-             'table' => 'users',
-         ],
+//         'users' => [
+//             'driver' => 'eloquent',
+//             'table' => 'users',
+//         ],
     ],
 
     /*
