@@ -151,6 +151,27 @@ body{
 }
 
 
+
+/* Colores de Filas */
+
+
+.Aprobado{
+    background: #d9f2d9 !important;
+}
+
+.No{
+    background: #ffffcc !important;
+}
+
+.Rechazado{
+    background: #ffcccc !important;
+}
+
+.approvals{
+    color: #2a2a2a !important;
+}
+
+
 /*1903 x 821 */
 @media (min-width: 1900px) and (min-height: 800px){
     .scroll{

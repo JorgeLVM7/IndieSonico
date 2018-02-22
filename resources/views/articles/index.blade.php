@@ -24,7 +24,7 @@
               </thead>
               <tbody>
               @foreach($articles as $article)
-                  <tr>
+                  <tr class="{{$article ->approve}}">
                       <td>{{ $article ->head }}</td>
                       <td>{{ $article ->description }}</td>
                       <td>{{ $article ->category }}</td>
@@ -40,7 +40,6 @@
                               <input type="hidden" name="_method" value="DELETE">
                               <button class="btn btn-outline-danger" style="cursor: pointer;" type="submit">Borrar</button>
                           </form>
-
                         </div>
                       </td>
                   </tr>
