@@ -20,7 +20,7 @@
             "database"
         ],
         "psr-4": {
-            "Insonico\\": "app/"
+            "IndieSonico\\": "app/"
         }
     },
     "autoload-dev": {

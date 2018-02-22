@@ -1,6 +1,6 @@
 <?php
 
-namespace Insonico\Http\Controllers;
+namespace IndieSonico\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

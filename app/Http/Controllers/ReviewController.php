@@ -1,7 +1,7 @@
 <?php
 
-namespace Insonico\Http\Controllers;
-use Insonico\Article;
+namespace IndieSonico\Http\Controllers;
+use IndieSonico\Article;
 use Illuminate\Http\Request;
 
 class ReviewController extends Controller

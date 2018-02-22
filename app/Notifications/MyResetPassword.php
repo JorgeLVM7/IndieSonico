@@ -1,6 +1,6 @@
 <?php
 
-namespace Insonico\Notifications;
+namespace IndieSonico\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;

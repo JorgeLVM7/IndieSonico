@@ -1,9 +1,9 @@
 <?php
 
-namespace Insonico\Http\Controllers\Auth;
+namespace IndieSonico\Http\Controllers\Auth;
 
-use Insonico\User;
-use Insonico\Http\Controllers\Controller;
+use IndieSonico\User;
+use IndieSonico\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -61,7 +61,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \Insonico\User
+     * @return \IndieSonico\User
      */
     protected function create(array $data)
     {

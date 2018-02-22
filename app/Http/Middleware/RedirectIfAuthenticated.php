@@ -1,6 +1,6 @@
 <?php
 
-namespace Insonico\Http\Middleware;
+namespace IndieSonico\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

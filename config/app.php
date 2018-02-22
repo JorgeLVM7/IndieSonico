@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        Insonico\Providers\AppServiceProvider::class,
-        Insonico\Providers\AuthServiceProvider::class,
-        // Insonico\Providers\BroadcastServiceProvider::class,
-        Insonico\Providers\EventServiceProvider::class,
-        Insonico\Providers\RouteServiceProvider::class,
+        IndieSonico\Providers\AppServiceProvider::class,
+        IndieSonico\Providers\AuthServiceProvider::class,
+        // IndieSonico\Providers\BroadcastServiceProvider::class,
+        IndieSonico\Providers\EventServiceProvider::class,
+        IndieSonico\Providers\RouteServiceProvider::class,
 
 //        Laravel Collective
         Collective\Html\HtmlServiceProvider::class,

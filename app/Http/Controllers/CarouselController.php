@@ -1,10 +1,10 @@
 <?php
 
-namespace Insonico\Http\Controllers;
+namespace IndieSonico\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Insonico\Topten;
-use Insonico\Http\Requests\ToptenRequest;
+use IndieSonico\Topten;
+use IndieSonico\Http\Requests\ToptenRequest;
 
 
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Insonico\Providers;
+namespace IndieSonico\Providers;
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;

@@ -12,7 +12,7 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(Insonico\User::class, function (Faker\Generator $faker) {
+$factory->define(IndieSonico\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
@@ -23,7 +23,7 @@ $factory->define(Insonico\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(Insonico\Article::class, function (Faker\Generator $faker) {
+$factory->define(IndieSonico\Article::class, function (Faker\Generator $faker) {
 
 
     return [

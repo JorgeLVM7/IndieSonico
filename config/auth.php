@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Insonico\User::class,
+            'model' => IndieSonico\User::class,
         ],
 
 //         'users' => [

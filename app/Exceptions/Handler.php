@@ -1,6 +1,6 @@
 <?php
 
-namespace Insonico\Exceptions;
+namespace IndieSonico\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;

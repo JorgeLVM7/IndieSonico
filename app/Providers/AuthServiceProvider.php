@@ -1,6 +1,6 @@
 <?php
 
-namespace Insonico\Providers;
+namespace IndieSonico\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'Insonico\Model' => 'Insonico\Policies\ModelPolicy',
+        'IndieSonico\Model' => 'IndieSonico\Policies\ModelPolicy',
     ];
 
     /**

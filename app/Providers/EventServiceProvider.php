@@ -1,6 +1,6 @@
 <?php
 
-namespace Insonico\Providers;
+namespace IndieSonico\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Insonico\Events\Event' => [
-            'Insonico\Listeners\EventListener',
+        'IndieSonico\Events\Event' => [
+            'IndieSonico\Listeners\EventListener',
         ],
     ];
 

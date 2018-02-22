@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => Insonico\User::class,
+        'model' => IndieSonico\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

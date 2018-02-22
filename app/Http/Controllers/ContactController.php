@@ -1,6 +1,6 @@
 <?php
 
-namespace Insonico\Http\Controllers;
+namespace IndieSonico\Http\Controllers;
 use Mail;
 use Session;
 use Redirect;

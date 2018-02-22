@@ -1,8 +1,8 @@
 <?php
 
-namespace Insonico\Http\Controllers\Auth;
+namespace IndieSonico\Http\Controllers\Auth;
 
-use Insonico\Http\Controllers\Controller;
+use IndieSonico\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller

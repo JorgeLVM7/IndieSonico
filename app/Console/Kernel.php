@@ -1,6 +1,6 @@
 <?php
 
-namespace Insonico\Console;
+namespace IndieSonico\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

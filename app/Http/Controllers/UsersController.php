@@ -1,10 +1,10 @@
 <?php
 
-namespace Insonico\Http\Controllers;
+namespace IndieSonico\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Insonico\User;
-use Insonico\Http\Requests\UserRequest;
+use IndieSonico\User;
+use IndieSonico\Http\Requests\UserRequest;
 
 class UsersController extends Controller
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Insonico\Http\Middleware;
+namespace IndieSonico\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Insonico;
+namespace IndieSonico;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;

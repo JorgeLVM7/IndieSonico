@@ -1,13 +1,13 @@
 <?php
 
-namespace Insonico;
+namespace IndieSonico;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 //use Illuminate\Contracts\Auth\CanResetPassword;
 use Illuminate\Auth\Passwords\CanResetPassword;
-use  Insonico\Notifications\MyResetPassword;
+use  IndieSonico\Notifications\MyResetPassword;
 
 
 class User extends Authenticatable

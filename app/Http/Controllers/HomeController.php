@@ -1,10 +1,10 @@
 <?php
 
-namespace Insonico\Http\Controllers;
+namespace IndieSonico\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Insonico\Article;
-use Insonico\Http\Requests\ArticleRequest;
+use IndieSonico\Article;
+use IndieSonico\Http\Requests\ArticleRequest;
 
 class HomeController extends Controller
 {

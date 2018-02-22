@@ -1,9 +1,9 @@
 <?php
 
-namespace Insonico\Http\Controllers;
-use Insonico\Article;
+namespace IndieSonico\Http\Controllers;
+use IndieSonico\Article;
 use Illuminate\Http\Request;
-use Insonico\Topten;
+use IndieSonico\Topten;
 
 class FrontController extends Controller
 {

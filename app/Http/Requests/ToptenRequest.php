@@ -1,6 +1,6 @@
 <?php
 
-namespace Insonico\Http\Requests;
+namespace IndieSonico\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
