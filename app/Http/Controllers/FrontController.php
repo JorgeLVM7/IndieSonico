@@ -18,4 +18,12 @@ class FrontController extends Controller
 
         return view('index',compact('articles','tops'));
     }
+
+    public function show($id)
+    {
+        $article = Article::find($id);
+        return view('show', compact('article'));
+    }
+
+
 }

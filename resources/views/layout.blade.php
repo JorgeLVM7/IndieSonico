@@ -31,7 +31,6 @@
                 <li class="nav-item">
                     <a class="nav-link a-corregido" href="{{route('approvals.index')}}">Aprobaciones</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link a-corregido" href="{{route('users.index')}}">Usuarios</a>
                 </li>

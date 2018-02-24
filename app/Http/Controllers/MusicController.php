@@ -10,7 +10,8 @@ class MusicController extends Controller
 
     public function index()
     {
-        $articles = Article::orderBy('id', 'DESC')->where('category','Música')->paginate();
+        $articles = Article::orderBy('id', 'DESC')
+            ->where('category','Música')->paginate();
         return view('music.index',compact('articles'));
     }
 

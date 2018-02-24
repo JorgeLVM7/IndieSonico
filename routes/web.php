@@ -13,7 +13,12 @@
 
 // Controladores de la Pagina Principal
 
+
+
 Route::get('/','FrontController@index')->name('index');
+
+Route::get('show/{id}','FrontController@show')->name('show');
+
 
 Route::resource('approvals','ApprovalsController');
 

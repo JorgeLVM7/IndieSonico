@@ -33,7 +33,7 @@
                         <div class="row">
                             <p class="card-subtitle mb-2  descripcion">{{ $article -> description }}</p>
                         </div>
-                        <a href="{{route('cinema.show',$article->id)}}" class="btn btn-info">Ver más</a>
+                        <a href="{{route('concert.show',$article->id)}}" class="btn btn-info">Ver</a>
                         <button type="button" class="btn btn-primary">Twitter</button>
                         <button type="button" class="btn btn-primary">Facebook</button>
                     </div>

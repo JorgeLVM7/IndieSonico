@@ -31,9 +31,10 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
-                                        <a href="" class="btn btn-info">Ver</a>
+                                        <a href="{{ route('show',$article->id) }}" class="btn btn-info">Ver</a>
                                         <button type="button" class="btn btn-primary">Twitter</button>
                                         <button type="button" class="btn btn-primary">Facebook</button>
+
                                     </div>
                                 </div>
                             </div>
