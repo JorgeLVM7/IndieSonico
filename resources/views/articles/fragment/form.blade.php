@@ -57,8 +57,10 @@
     {!! Form::select('category',['Música'=>'Música',
                                 'Cine'=>'Cine',
                                 'Arte'=>'Arte',
-                                'Deportes'=>'Deportes',
-                                'Reseñas'=>'Reseñas']
+                                'Reseñas'=>'Reseñas',
+                                'Conciertos'=>'Conciertos',
+                                'Random'=>'Random'
+                                ]
                                 , null,['class'=>'form-control']
 ) !!}
 

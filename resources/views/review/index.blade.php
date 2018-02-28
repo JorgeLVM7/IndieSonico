@@ -1,24 +1,19 @@
 @extends('layout-principal')
 
 @section('content')
-    <div id="carouselExampleSlidesOnly" class="carousel slide fixed-absolute" data-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class=" carousel slide fixed-absolute ahi" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block w-100 top-ten" src="icons/1.png" alt="First slide">
             </div>
-            @foreach($articles as $article)
+            @foreach($tops as $top)
                 <div class="carousel-item ">
-                    <img class="d-block w-100 top-ten logo" src="images/{{$article->path}}" alt="">
-                    <div class="carousel-caption d-none d-md-block text-carousel">
-                        <a class="text-top-ten ">{{$article->head}}</a>
-                        <p>
-                            <a class="a-corregido" href="">Ver más</a>
-                        </p>
-                    </div>
+                    <img class="d-block w-100 top-ten logo" src="images/{{$top->path}}" alt="">
                 </div>
             @endforeach
         </div>
     </div>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-9 scroll bw">
@@ -33,9 +28,11 @@
                         <div class="row">
                             <p class="card-subtitle mb-2  descripcion">{{ $article -> description }}</p>
                         </div>
-                        <a href="{{route('review.show',$article->id)}}" class="btn btn-info">Ver</a>
-                        <button type="button" class="btn btn-primary">Twitter</button>
-                        <button type="button" class="btn btn-primary">Facebook</button>
+                        <div class="row">
+                            <a href="{{ route('review.show',$article->id) }}" class="btn btn-info pse">Ver más</a>
+                            <a  class="twitter-share-button esp" data-size="large" href="https://twitter.com/home?status=http%3A//indiesonico.com/review/{{$article->id }}">Twittear</a>
+                            <div class="fb-share-button esp" data-href="http://indiesonico.com/review/{{ $article ->id }}" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Findiesonico.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+                        </div>
                     </div>
                 @endforeach
                 {!! $articles->render() !!}

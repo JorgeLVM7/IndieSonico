@@ -26,6 +26,8 @@ Route::resource('carousel', 'CarouselController');
 
 Route::resource('music','MusicController');
 
+//Route::get('/music/','MusicController')->name('music.index');
+
 Route::resource('cinema','CinemaController');
 
 Route::resource('art','ArtController');

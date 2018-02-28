@@ -85,10 +85,9 @@
                     </div>
 
 
-                    <div class="row"><div class="col-12">
-                            <button type="button" class="btn btn-primary">Twitter</button>
-                            <button type="button" class="btn btn-primary">Facebook</button>
-                        </div>
+                    <div class="row">
+                        <a  class="twitter-share-button esp" data-size="large" href="https://twitter.com/home?status=http%3A//indiesonico.com/show/{{$article->id }}">Twittear</a>
+                        <div class="fb-share-button esp" data-href="http://indiesonico.com/show/{{ $article ->id }}" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Findiesonico.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
                     </div>
                 </div>
             </div>

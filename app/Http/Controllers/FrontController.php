@@ -9,7 +9,6 @@ class FrontController extends Controller
 {
     public function index()
     {
-
        $tops = Topten::orderBy('id', 'DESC')->paginate();
 
         $articles = Article::orderBy('id', 'DESC')

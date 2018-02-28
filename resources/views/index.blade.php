@@ -18,7 +18,6 @@
             <div class="row">
                 <div class="col-sm-9 scroll bw">
                         @foreach($articles as $article)
-
                             <div class="card-body">
                                 <div class="row ">
                                     <h3 class="card-title"><b>{{ $article ->head }}</b></h3>
@@ -30,12 +29,9 @@
                                     <p class="card-subtitle mb-2  descripcion">{{ $article -> description }}</p>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12">
-                                        <a href="{{ route('show',$article->id) }}" class="btn btn-info">Ver</a>
-                                        <button type="button" class="btn btn-primary">Twitter</button>
-                                        <button type="button" class="btn btn-primary">Facebook</button>
-
-                                    </div>
+                                    <a href="{{ route('show',$article->id) }}" class="btn btn-info pse">Ver más</a>
+                                    <a  class="twitter-share-button esp" data-size="large" href="https://twitter.com/home?status=http%3A//indiesonico.com/show/{{$article->id }}">Twittear</a>
+                                    <div class="fb-share-button esp" data-href="http://indiesonico.com/show/{{ $article ->id }}" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Findiesonico.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
                                 </div>
                             </div>
                         @endforeach

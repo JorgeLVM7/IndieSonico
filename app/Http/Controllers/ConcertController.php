@@ -3,13 +3,21 @@
 namespace IndieSonico\Http\Controllers;
 use IndieSonico\Article;
 use Illuminate\Http\Request;
+use IndieSonico\Topten;
+use IndieSonico\Http\Requests\ArticleRequest;
+use Auth;
 
 class ConcertController extends Controller
 {
     public function index()
     {
-        $articles = Article::orderBy('id', 'DESC')->where('category','Conciertos')->paginate();
-        return view('concert.index',compact('articles'));
+        $tops = Topten::orderBy('id', 'DESC')->paginate();
+
+        $articles = Article::orderBy('id', 'DESC')
+            ->where('category','Conciertos')
+            ->orWhere('approve', 'Aprobado')
+            ->paginate();
+        return view('concert.index',compact('articles', 'tops'));
     }
 
     public function show($id)

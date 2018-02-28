@@ -26,7 +26,6 @@ class ArticleRequest extends FormRequest
         return [
 
             'head'=> 'required',
-            'body'=> 'required',
             'description'=> 'required',
             'category'=> 'required',
 

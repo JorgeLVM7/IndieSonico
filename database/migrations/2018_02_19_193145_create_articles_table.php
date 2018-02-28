@@ -19,8 +19,8 @@ class CreateArticlesTable extends Migration
             $table->string('head');
             $table->string('path');
             $table->mediumText('description');
-            $table->text('body');
-            $table->text('video');
+            $table->text('body')->nullable();
+            $table->text('video')->nullable();
 
             $table->text('head_2')->nullable();
             $table->string('path_2')->nullable();

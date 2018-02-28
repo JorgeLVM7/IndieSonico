@@ -151,6 +151,16 @@ body{
 }
 
 
+.esp{
+    margin-left: 5px !important;
+}
+
+.pse{
+    margin-right: 5px !important;
+    padding: 0px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
 
 /* Colores de Filas */
 
