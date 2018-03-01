@@ -127,7 +127,7 @@ body{
 
 
 .img-articles{
-    height: 275px;
+    height: 100%;
     border-radius: 3px;
     width: 100%;
 }
@@ -190,6 +190,7 @@ body{
     .top-ten{
         height: 300px;
     }
+
 }
 
 /* 1680 x 1050 */
@@ -300,12 +301,12 @@ body{
     .scroll{
         height: 450px;
     }
-    .top-ten{
-        height: 125px;
+    .carousel{
+        display: none !important;
     }
 
     .img-articles{
-        height: 100px;
+        height: 100%;
         border-radius: 3px;
         width: 100%;
     }

@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+    'host' => env('MAIL_HOST', 'indiesonico.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'jorgito11@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'jorge luis'),
+        'address' => env('MAIL_FROM_ADDRESS', 'contacto@indiesonico.com'),
+        'name' => env('MAIL_FROM_NAME', 'Soporte Indie Sonico'),
     ],
 
     /*

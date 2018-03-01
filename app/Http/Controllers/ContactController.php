@@ -17,11 +17,11 @@ class ContactController extends Controller
     {
         Mail::send('contact.emails', $request->all(), function ($msj){
             $msj ->subject ('Correo de contacto');
-            $msj ->to('jorgito11@gmail.com');
+            $msj ->to('hola@indiesonico.com');
 
         });
 
         return redirect()-> route('contact.index')
-            ->with('info','El correo enviado correctamente');
+            ->with('info','El correo se ha enviado correctamente');
     }
 }
