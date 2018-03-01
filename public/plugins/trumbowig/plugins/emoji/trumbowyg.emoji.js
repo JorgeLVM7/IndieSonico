@@ -489,7 +489,7 @@
             ':memo:',
             ':pencil:',
             ':book:',
-            ':art:',
+            ':move:',
             ':microphone:',
             ':headphones:',
             ':trumpet:',

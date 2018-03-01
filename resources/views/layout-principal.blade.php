@@ -27,16 +27,16 @@
                 <a class="nav-link a-corregido" href="{{route('music.index')}}">Música</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link a-corregido" href="{{route('cinema.index')}}">Cine</a>
+                <a class="nav-link a-corregido" href="{{route('move.index')}}">Moviendo el Indie</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link a-corregido" href="{{route('art.index')}}">Arte</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link a-corregido" href="{{route('review.index')}}">Reseñas</a>
+                <a class="nav-link a-corregido" href="{{route('post.index')}}">Artículos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link a-corregido" href="{{route('concert.index')}}">Conciertos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link a-corregido" href="{{route('cinema.index')}}">Cine</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link a-corregido" href="{{route('random.index')}}">Random</a>

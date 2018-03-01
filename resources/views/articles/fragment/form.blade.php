@@ -56,8 +56,8 @@
     {!! Form::label('category','Categoría ') !!}
     {!! Form::select('category',['Música'=>'Música',
                                 'Cine'=>'Cine',
-                                'Arte'=>'Arte',
-                                'Reseñas'=>'Reseñas',
+                                'Moviendo el Indie'=>'Moviendo el Indie',
+                                'Artículos'=>'Artículos',
                                 'Conciertos'=>'Conciertos',
                                 'Random'=>'Random'
                                 ]

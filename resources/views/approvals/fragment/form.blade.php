@@ -56,9 +56,11 @@
     {!! Form::label('category','Categoría ') !!}
     {!! Form::select('category',['Música'=>'Música',
                                 'Cine'=>'Cine',
-                                'Arte'=>'Arte',
-                                'Deportes'=>'Deportes',
-                                'Reseñas'=>'Reseñas']
+                                'Moviendo el Indie'=>'Moviendo el Indie',
+                                'Artículos'=>'Artículos',
+                                'Conciertos'=>'Conciertos',
+                                'Random'=>'Random'
+                                ]
                                 , null,['class'=>'form-control']
 ) !!}
 

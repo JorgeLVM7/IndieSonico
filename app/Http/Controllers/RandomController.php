@@ -15,7 +15,7 @@ class RandomController extends Controller
 
         $articles = Article::orderBy('id', 'DESC')
             ->where('category','Random')
-            ->orWhere('approve', 'Aprobado')
+            ->Where('approve', '=','Aprobado')
             ->paginate();
         return view('random.index',compact('articles', 'tops'));
     }

@@ -15,7 +15,7 @@ class ConcertController extends Controller
 
         $articles = Article::orderBy('id', 'DESC')
             ->where('category','Conciertos')
-            ->orWhere('approve', 'Aprobado')
+            ->Where('approve', '=','Aprobado')
             ->paginate();
         return view('concert.index',compact('articles', 'tops'));
     }

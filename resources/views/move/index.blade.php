@@ -29,7 +29,7 @@
                         <div class="row">
                             <p class="card-subtitle mb-2  descripcion">{{ $article -> description }}</p>
                         </div><div class="row">
-                            <a href="{{ route('art.show',$article->id) }}" class="btn btn-info pse">Ver más</a>
+                            <a href="{{ route('move.show',$article->id) }}" class="btn btn-info pse">Ver más</a>
                             <a  class="twitter-share-button esp" data-size="large" href="https://twitter.com/home?status=http%3A//indiesonico.com/art/{{$article->id }}">Twittear</a>
                             <div class="fb-share-button esp" data-href="http://indiesonico.com/art/{{ $article ->id }}" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Findiesonico.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
                         </div>

@@ -7,7 +7,7 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col-11">
-                        <h1>Crear Usuario</h1>
+                        <h1>Crear kgkvkhjbUsuario</h1>
                     </div>
                     <div class="col-1 ">
                         <a class="btn btn-outline-dark" href="{{route('users.index')}}">Cancelar</a>

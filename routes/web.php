@@ -30,9 +30,9 @@ Route::resource('music','MusicController');
 
 Route::resource('cinema','CinemaController');
 
-Route::resource('art','ArtController');
+Route::resource('move','MoveController');
 
-Route::resource('review','ReviewController');
+Route::resource('post','PostController');
 
 Route::resource('concert','ConcertController');
 

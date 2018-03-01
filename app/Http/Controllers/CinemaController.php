@@ -15,7 +15,7 @@ class CinemaController extends Controller
 
         $articles = Article::orderBy('id', 'DESC')
             ->where('category','Cine')
-            ->orWhere('approve', 'Aprobado')
+            ->Where('approve', '=','Aprobado')
             ->paginate();
         return view('cinema.index',compact('articles','tops'));
     }

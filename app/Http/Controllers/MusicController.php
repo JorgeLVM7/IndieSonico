@@ -14,8 +14,8 @@ class MusicController extends Controller
         $tops = Topten::orderBy('id', 'DESC')->paginate();
 
         $articles = Article::orderBy('id', 'DESC')
-            ->where('category','Música')
-            ->orWhere('approve', 'Aprobado')
+            ->where('category', '=','Música')
+            ->Where('approve', '=','Aprobado')
             ->paginate();
         return view('music.index',compact('articles','tops'));
     }

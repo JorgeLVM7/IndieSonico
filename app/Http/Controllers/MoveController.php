@@ -4,24 +4,24 @@ namespace IndieSonico\Http\Controllers;
 use IndieSonico\Article;
 use Illuminate\Http\Request;
 use IndieSonico\Topten;
+use IndieSonico\Http\Requests\ArticleRequest;
+use Auth;
 
-
-class ReviewController extends Controller
+class MoveController extends Controller
 {
     public function index()
     {
         $tops = Topten::orderBy('id', 'DESC')->paginate();
 
         $articles = Article::orderBy('id', 'DESC')
-            ->where('category','Reseñas')
+            ->where('category','Moviendo el Indie')
+            ->Where('approve', '=','Aprobado')
             ->paginate();
-
-        return view('review.index',compact('articles','tops'));
+        return view('move.index',compact('articles','tops'));
     }
-
     public function show($id)
     {
         $article = Article::find($id);
-        return view('review.show', compact('article'));
+        return view('move.show', compact('article'));
     }
 }
