@@ -37,6 +37,9 @@
                 <li class="nav-item">
                     <a class="nav-link a-corregido" href="{{route('carousel.index')}}">Top</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link a-corregido" href="{{route('advertising.index')}}">Publicidad</a>
+                </li>
 
             @else
 

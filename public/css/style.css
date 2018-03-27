@@ -1,9 +1,9 @@
 body{
-    background-color: #ededed !important;
+    background-color: #FFFFFF !important;
 }
 
 .posts{
-    background-color: #ededed;
+    background-color: #FFFFFF;
     margin-top: 71px;
 }
 
@@ -12,13 +12,13 @@ body{
     background: #FFFFFF;
     border-radius: 5px;
     margin-bottom: 10px;
-    border: #ededed solid 2px;
+    border: #FFFFFF solid 2px;
 }
 
 
 
 .top-ten{
-    height: 300px;
+    height: 250px;
 }
 
 .text-carousel{
@@ -43,7 +43,7 @@ body{
 }
 
 .publicidad{
-    background-color: #ededed;
+    background-color: #FFFFFF;
 }
 .siguenos2{
     font-size: 14px;
@@ -127,14 +127,14 @@ body{
 
 
 .img-articles{
-    height: 100%;
+    height: 100% !important;
     border-radius: 3px;
     width: 100%;
 }
 
 .scroll {
     overflow-x: hidden;
-    height: 440px;
+    height: 640px;
 }
 
 
@@ -181,37 +181,97 @@ body{
     color: #2a2a2a !important;
 }
 
+.redes{
+    /*display: none;*/
+    width: 100%;
+    height: 100%;
+}
+.a-redes{
+    width: 100%;
+}
 
+
+.banner1{
+    width: 100%;
+    height: 100%;
+}
+
+.e-banner1{
+    margin-top: 65px;
+    height: 50%;
+}
+
+.banner2{
+    width: 100%;
+    height: 89vh;
+}
+
+@media (min-width: 1025px) {
+    .redes{
+        display: none !important;
+    }
+}
 /*1903 x 821 */
 @media (min-width: 1900px) and (min-height: 800px){
     .scroll{
-        height: 590px;
+        height: 592px;
     }
     .top-ten{
-        height: 300px;
+        height: 275px;
     }
+
+    .scroll-show-more{
+        height: 500px !important;
+    }
+    /*.redes{*/
+        /*display: none !important;*/
+    /*}*/
+
+
+
 
 }
 
 /* 1680 x 1050 */
 @media (min-width: 1670px) and (min-height: 1040px){
     .scroll{
-        height: 610px;
+        height: 590px !important;
     }
     .top-ten{
         height: 350px;
     }
+    /*.redes{*/
+        /*display: none !important;*/
+    /*}*/
+
+
+
 }
 
 
 /* 1440 x 900 */
 @media (max-width: 1440px) and (min-height: 900px){
     .scroll{
-        height: 520px;
+        height: 580px !important;
     }
     .top-ten{
-        height: 300px;
+        height: 250px;
     }
+
+    .banner2{
+        width: 100%;
+        height: 86vh;
+    }
+    .e-banner1{
+        height: 42% !important;
+    }
+    /*.redes{*/
+        /*display: none !important;*/
+    /*}*/
+
+
+
+
 }
 
 
@@ -219,17 +279,27 @@ body{
 /*1280 x 800 */
 @media (max-width: 1280px)and (min-height: 800px){
     .scroll{
-        height: 460px;
+        height: 425px;
     }
     .top-ten{
         height: 250px;
     }
+    .e-banner1{
+        display: none !important;
+    }
+    .banner2{
+        width: 100%;
+        height: 84vh;
+    }
+    /*.redes{*/
+        /*display: none;*/
+    /*}*/
 }
 
 /*1024 x 768        Listo */
-@media (max-width: 1024px){
+@media (max-width: 1024px) and (min-height: 767px)and (max-height: 768px){
     .scroll{
-        height: 440px;
+        height: 400px !important;
     }
     .top-ten{
         height: 250px;
@@ -241,12 +311,25 @@ body{
     .sig{
         font-size: 22.5px;
     }
+    .banner2{
+        display: none !important;
+    }
+    .c-banner2{
+        display: none !important;
+    }
+    .centro{
+        margin: 0 auto;
+    }
+    .col-sm-9{
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
 }
 
 /*1024 x 1366        Listo */
-@media (max-width: 1024px)and (min-height: 1366px){
+@media (max-width: 1024px)and (max-height: 1366px){
     .scroll{
-        height: 1030px;
+        height: 1030px !important;
     }
     .top-ten{
         height: 250px;
@@ -254,12 +337,18 @@ body{
     .twit2-1,.twit2-2{
         visibility: visible !important;
     }
+    .banner2{
+        display: none !important;
+    }
+    .c-banner2{
+        display: none !important;
+    }
 }
 
 /*768 x 1024        Listo */
-@media (max-width: 768px)and (min-height: 1024px){
+@media (max-width: 768px)and (max-height: 1024px){
     .scroll{
-        height: 690px;
+        height: 655px !important;
     }
     .top-ten{
         height: 250px;
@@ -269,7 +358,7 @@ body{
         width: 160px;
     }
     .twit2-1{
-        width:180px !important; ;
+        width:100% !important; ;
     }
     .sig{
         font-size: 16px;
@@ -278,39 +367,157 @@ body{
 
 
 /* 414 x 736    LISTA*/
-@media (max-width: 414px)and (min-height: 736px){
+@media (max-width: 414px)and (max-height: 736px){
     .scroll{
-        height: 525px;
-    }
-    .top-ten{
-        height: 125px;
+        height: 635px !important;
     }
 
-    .img-articles{
-        height: 100px;
-        border-radius: 3px;
-        width: 100%;
+    .banner2{
+        display: none !important;
     }
+    .c-banner2{
+        display: none !important;
+    }
+
+
+    /*.img-articles{*/
+        /*height: 100px !important;*/
+        /*border-radius: 3px;*/
+        /*width: 100% !important;*/
+    /*}*/
     .twit2-1,.twit2-2{
+        display: none !important;
+    }
+    .carousel{
+        display: none !important;
+    }
+    .menu-top-iphone5{
+        width: 75%;
+    }
+
+    .col-8{
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    .publicidad{
         display: none !important;
     }
 }
 
-/* 375 x 667    LISTA*/
-@media (max-width: 375px)and (min-height: 667px){
+
+/* 375 x 812    LISTA*/
+@media (max-width: 375px)and (min-height: 812px){
     .scroll{
-        height: 450px;
+        height: 100vh;
     }
     .carousel{
         display: none !important;
     }
 
-    .img-articles{
-        height: 100%;
-        border-radius: 3px;
-        width: 100%;
-    }
     .twit2-1,.twit2-2{
         display: none !important;
     }
+    .menu-top-iphone5{
+        width: 75%;
+    }
+    .col-8{
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    .publicidad{
+        display: none !important;
+    }
+}
+
+
+
+
+/* 375 x 667    LISTA*/
+@media (max-width: 375px)and (min-height: 667px){
+    .scroll{
+        height: 100vh;
+    }
+    .carousel{
+        display: none !important;
+    }
+
+    .twit2-1,.twit2-2{
+        display: none !important;
+    }
+    .menu-top-iphone5{
+        width: 75%;
+    }
+    .col-8{
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    .publicidad{
+        display: none !important;
+    }
+}
+
+
+/* 375 x 667    LISTA*/
+@media (max-width: 320px)and (min-height: 568px){
+    .scroll{
+        height: 100vh;
+    }
+    .carousel{
+        display: none !important;
+    }
+
+    .twit2-1,.twit2-2{
+        display: none !important;
+    }
+    .menu-top-iphone5{
+        width: 75%;
+    }
+    .col-8{
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    .publicidad{
+        display: none !important;
+    }
+}
+
+/* 375 x 667    LISTA*/
+@media (max-width: 320px)and (min-height: 480px){
+    .scroll{
+        height: 100vh;
+    }
+    .carousel{
+        display: none !important;
+    }
+
+    .twit2-1,.twit2-2{
+        display: none !important;
+    }
+    .menu-top-iphone4{
+        width: 75%;
+    }
+
+    .col-8{
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    .publicidad{
+        display: none !important;
+    }
+
+}
+
+@media (min-width: 415px) and (max-width: 1024px) {
+
+    .redes{
+        display: none;
+    }
+    .col-8{
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    .publicidad{
+        display: none !important;
+    }
+
 }

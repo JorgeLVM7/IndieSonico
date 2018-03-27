@@ -1,13 +1,18 @@
-<div class="col-sm-3">
-    <div class="row bw twit2-1">
-        <a class="twitter-timeline" data-lang="es" data-width="270" data-height="230" data-dnt="false" href="https://twitter.com/IndieSonico?ref_src=twsrc%5Etfw">Tweets by IndieSonico</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="col-sm-3 publicidad">
+
+    <div class="row bw e-banner1">
+       <div class="col-12">
+           @foreach($banners3 as $banner3)
+
+               <img class="banner1" src="/images/{{$banner3->path}}" alt="">
+           @endforeach
+           {!! $banners3->render() !!}       </div>
     </div>
 
 
-    <div class="row bw twit2-2">
+    <div class="row bw">
         <div class="col-6 iconos">
             <h4 class="sig">SÍGUENOS</h4>
-
         </div>
         <div class="col-6 iconos">
             <a href="https://www.facebook.com/indiesonico/" ><img src="/icons/facebook.png" alt=""></a>
@@ -36,6 +41,9 @@
                     <a class="siguenos" href="{{route('contact.index')}}"><b>CONTACTO</b></a>
                 </div>
 
+            </div>
+            <div class="row">
+                <br>
             </div>
         </div>
     </div>

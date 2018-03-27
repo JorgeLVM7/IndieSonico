@@ -7,14 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>InsonicoV2</title>
 
+    <script src="/js/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
-
 <nav class="navbar navbar-expand-lg navbar-dark  fixed-top h-insonico">
     <div class="container-fluid">
-    <a class="navbar-brand" href="{{route('index')}}"><img src="/icons/white-logo1.jpg" alt=""></a>
+    <a class="navbar-brand menu-top-iphone5 menu-top-iphone4" href="{{route('index')}}"><img style="width: 75%" src="/icons/white-logo1.jpg" alt=""></a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -50,16 +50,44 @@
     </div>
 </nav>
 
-<div class="container  posts ">
+<div class="container-fluid  posts ">
+    <div class="row">
+        <div class="col-2 c-banner2" >
+            <br>
+            @foreach($banners1 as $banner1)
 
-{{--    @yield('slider')--}}
+            <img class="banner2" src="/images/{{$banner1->path}}" alt="">
+                @endforeach
+            {!! $banners1->render() !!}
+        </div>
+        <div class="col-8 centro">
+            @yield('content')
+        </div>
+        <div class="col-2 c-banner2">
+            <br>
+            @foreach($banners2 as $banner2)
 
-    @yield('content')
+                <img class="banner2" src="/images/{{$banner2->path}}" alt="">
+            @endforeach
+            {!! $banners2->render() !!}
+        </div>
+    </div>
+
+
+
+
 
 </div>
 
+{{--<script type="text/javascript">--}}
+    {{--// jQuery--}}
+    {{--$(document).ready(function(){--}}
+        {{--$('#alternar-respuesta-ej1').on('click',function(){--}}
+            {{--$('#respuesta-ej1').toggle('slow');--}}
+        {{--});--}}
+    {{--});--}}
 
-
+{{--</script>--}}
 
 <script>window.twttr = (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],

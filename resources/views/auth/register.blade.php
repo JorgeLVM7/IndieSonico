@@ -64,8 +64,6 @@
                             <label for="level" class="col-md-12 control-label">Rol</label>
 
                             <div class="col-md-12">
-                                {{--<input id="level" type="text" class="form-control" name="level" value="{{ old('level') }}" required autofocus>--}}
-
                                 <select name="level" id="level" class="form-control">
                                     <option value="Editor">Editor</option>
                                     <option value="Administrador">Administrador</option>

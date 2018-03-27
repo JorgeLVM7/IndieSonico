@@ -1,11 +1,23 @@
 @extends('layout-principal')
 
 @section('content')
-
+    <br>
+    <div id="carouselExampleSlidesOnly" class=" carousel slide fixed-absolute ahi" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100 top-ten" src="/icons/1.png" alt="First slide">
+            </div>
+            @foreach($tops as $top)
+                <div class="carousel-item ">
+                    <img class="d-block w-100 top-ten logo" src="images/{{$top->path}}" alt="">
+                </div>
+            @endforeach
+        </div>
+    </div>
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-9 bw">
+            <div class="col-sm-9 scroll bw">
                 <div class="card-body">
                     <div class="row ">
                         <h1 class="card-title">{{ $article ->head }}</h1>
