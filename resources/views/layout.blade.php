@@ -5,16 +5,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>InsonicoV2</title>
+    <title>Indie Sonico</title>
 
     <link rel="stylesheet" href="/css/style.css">
+
     <link rel="stylesheet" href="/plugins/trumbowig/ui/trumbowyg.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark h-insonico">
-    <a class="navbar-brand" href="{{route('articles.index')}}"><img src="/icons/white-logo1.jpg" alt=""></a>
+    <a class="navbar-brand" href="{{route('articles.index')}}"><img src="/logos/white-logo1.jpg" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,13 +35,6 @@
                 <li class="nav-item">
                     <a class="nav-link a-corregido" href="{{route('users.index')}}">Usuarios</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link a-corregido" href="{{route('carousel.index')}}">Top</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link a-corregido" href="{{route('advertising.index')}}">Publicidad</a>
-                </li>
-
             @else
 
 
@@ -101,6 +95,8 @@
         crossorigin="anonymous"></script>
 <script src="/plugins/trumbowig/trumbowyg.min.js"></script>
 <script src="/js/util.js"></script>
+
+
 
 
 </body>

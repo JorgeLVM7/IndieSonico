@@ -6,26 +6,28 @@ use IndieSonico\Advertising;
 use Mail;
 use Session;
 use Redirect;
+use IndieSonico\Article;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class ContactController extends Controller
 {
 
     public function index()
     {
-        $banners1= Advertising::orderBy ('id', 'DESC')
-            ->where('id','=','1')
-            ->paginate(3);
+        $tops = Article::orderBy('id', 'DESC')
+            ->where('approve','Aprobado')
+            ->limit(5)
+            ->paginate(5);
 
-        $banners2= Advertising::orderBy ('id', 'DESC')
-            ->where('id','=','2')
-            ->paginate(3);
+        $tops1 = Article::orderBy('id', 'DESC')
+            ->where('approve','Aprobado')
+            ->limit(2)
+            ->paginate(2);
 
-        $banners3= Advertising::orderBy ('id', 'DESC')
-            ->where('id','=','3')
-            ->paginate(3);
-
-        return view('contact.index',compact('articles','tops','banners1','banners2','banners3'));
+        return view('contact.index',compact('tops', 'tops1'));
     }
     public function store(Request $request)
     {

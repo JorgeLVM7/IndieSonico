@@ -1,18 +1,28 @@
-@extends('layout-principal')
+@extends('layouts.indie3')
 
-@section('content')
-    <br>
+@section('content-video')
+    <div class="container-fluid">
+        <div class="row">
+            <video width="100%" height="100%" autoplay loop>
+                <source src="../logos/indie.mp4" type="video/mp4">
+                <source src="../logos/indie.ogg" type="video/ogg">
+            </video>
+        </div>
+    </div>
+@endsection
+
+@section('content1')
         {{--<div class="container-fluid">--}}
             <div class="row">
-                <div class="col-sm-9 bw">
-                    <div class="row">
-                        <a class="a-redes" href=""><img class="redes" src="icons/face.jpg" alt=""></a>
+                <div class="col-sm-12 bw">
+                    <div class="row follow">
+                        <a class="a-redes" href="https://www.facebook.com/indiesonico/"><img class="redes" src="logos/face.jpg" alt="" style="width: 100%"></a>
                     </div>
-                    <div class="row">
-                        <a class="a-redes" href=""><img class="redes" src="icons/insta.jpg" alt=""></a>
+                    <div class="row follow">
+                        <a class="a-redes" href="https://www.instagram.com/indiesonico/"><img class="redes" src="logos/insta.jpg" alt=""></a>
                     </div>
-                    <div class="row">
-                        <a class="a-redes" href=""><img class="redes" src="icons/youtube.jpg" alt=""></a>
+                    <div class="row follow">
+                        <a class="a-redes" href="https://www.youtube.com/channel/UC6C4w1GO4iuIZxqjrmLf7YQ"><img class="redes" src="logos/youtube.jpg" alt=""></a>
                     </div>
                     <div class="row">
                         <div class="col-12 text-center">
@@ -32,8 +42,7 @@
                         </div>
                     </div>
                 </div>
-                {{-- Col-sm-3 Caja contenedora de Twitter y Publicidad --}}
-                @include('tw.twit2')
+
             </div>
         {{--</div>--}}
 

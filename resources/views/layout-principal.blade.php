@@ -5,8 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>InsonicoV2</title>
+    <title>Indie Sonico</title>
 
+    <link rel="icon" href="/css/favicon.ico">
     <script src="/js/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -14,7 +15,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark  fixed-top h-insonico">
     <div class="container-fluid">
-    <a class="navbar-brand menu-top-iphone5 menu-top-iphone4" href="{{route('index')}}"><img style="width: 75%" src="/icons/white-logo1.jpg" alt=""></a>
+    <a class="navbar-brand menu-top-iphone5 menu-top-iphone4" href="{{route('index')}}"><img style="width: 60%" src="/logos/logo.png" alt=""></a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,7 +31,7 @@
                 <a class="nav-link a-corregido" href="{{route('move.index')}}">Moviendo el Indie</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link a-corregido" href="{{route('post.index')}}">Artículos</a>
+                <a class="nav-link a-corregido" href="{{route('sessionsis')}}">Artículos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link a-corregido" href="{{route('concert.index')}}">Conciertos</a>
@@ -39,7 +40,7 @@
                 <a class="nav-link a-corregido" href="{{route('cinema.index')}}">Cine</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link a-corregido" href="{{route('random.index')}}">Random</a>
+                <a class="nav-link a-corregido" href="{{route('entertainment')}}">Random</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link a-corregido" href="{{route('contact.index')}}">Contacto</a>
@@ -78,6 +79,8 @@
 
 
 </div>
+
+
 
 {{--<script type="text/javascript">--}}
     {{--// jQuery--}}

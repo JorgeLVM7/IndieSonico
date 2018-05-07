@@ -1,146 +1,89 @@
-@extends('layout-principal')
+@extends('layouts.indie3')
 
-@section('content')
-    <br>
-    <div id="carouselExampleSlidesOnly" class=" carousel slide fixed-absolute ahi" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100 top-ten" src="icons/1.png" alt="First slide">
-            </div>
-            @foreach($tops as $top)
-                <div class="carousel-item ">
-                    <img class="d-block w-100 top-ten logo" src="images/{{$top->path}}" alt="">
-                </div>
-            @endforeach
-        </div>
-    </div>
+@section('content-video')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-9 scroll bw">
-                @foreach($articles as $article)
-                    <div id="{{$article->id}}" class="card-body">
-
-                        {{--Publicacion --}}
-                        <div class="row ">
-                            <h3 class="card-title"><b>{{ $article ->head }}</b></h3>
-                        </div>
-                        <div class="row ">
-                            <img class="card-img-top img-articles" src="images/{{$article->path}}" alt="Card image cap">
-                        </div>
-                        <div class="row">
-                            <p class="card-subtitle mb-2  descripcion">{{ $article -> description }}</p>
-                        </div>
-                        <div class="row">
-                            <hr>
-                        </div>
-
-                        {{--Contenido a Ocultar --}}
-
-                        <div class="" id="respuesta-ej{{$article->id}}">
-                            <div class="row">
-                                {!! $article->body !!}
-                                <br>
-                            </div>
-
-                            @if(! empty($article->video))
-                                <div class="row">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe class="embed-responsive-item" src="{{$article->video}}"></iframe>
-                                    </div>
-                                </div>
-                            @else
-                            @endif
-
-
-                            @if(! empty($article->head_2))
-                                <div class="row ">
-                                    <h1 class="card-title">{{ $article ->head_2 }}</h1>
-                                    <br>
-                                </div>
-                            @else
-                            @endif
-
-                            @if(! empty($article->path_2))
-                                <div class="row">
-                                    <img class="card-img-top img-articles" src="../images/{{$article->path_2}}" alt="Card image cap">
-                                    <br>
-                                </div>
-
-                            @else
-                            @endif
-
-                            @if(! empty($article->description_2))
-                                <div class="row">
-                                    <p class="card-subtitle mb-2  descripcion">{{ $article -> description_2 }}</p>
-                                    <br>
-                                </div>
-                            @else
-                            @endif
-
-                            @if(! empty($article->body_2))
-                                <div class="row">
-                                    {!! $article->body_2 !!}
-                                    <br>
-                                </div>
-                            @else
-                            @endif
-
-                            @if(! empty($article->video_2))
-                                <div class="row">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe class="embed-responsive-item" src="{{$article->video_2}}"></iframe>
-                                    </div>
-                                    <br>
-                                </div>
-                            @else
-                            @endif
-
-                            <br>
-                            <div class="row">
-                                <br>
-                                <p>Categoria: <b>{{$article->category}}</b></p>
-                            </div>
-                            <div class="row">
-                                <p>Posteado por: <b>{{$article->autor}}</b></p>
-                            </div>
-
-
-                            <div class="row">
-                                <hr>
-                            </div>
-                        </div>
-
-                        {{--Botones de Compartir --}}
-                        <div class="row">
-                            <button href="#{{$article->id}}"type="submit" id="alternar-respuesta-ej{{$article->id}}" onClick="ShowHideElement{{$article->id}}()" class="btn btn-info pse">Ver más</button>
-                            <a  class="twitter-share-button esp" data-size="large" href="https://twitter.com/home?status=http%3A//indiesonico.com/move/{{$article->id }}">Twittear</a>
-                            <div class="fb-share-button esp" data-href="http://indiesonico.com/move/{{ $article ->id }}" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Findiesonico.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
-                        </div>
-                    </div>
-
-                    <script>
-
-                        // $('.caja').hide();
-                        $("#respuesta-ej{{$article->id}}").hide();
-                        function ShowHideElement{{$article->id}}() {
-
-                            text="";
-
-                            if ($("#alternar-respuesta-ej{{$article->id}}").text()==="Ver más"){
-                                $("#respuesta-ej{{$article->id}}").show();
-                                text ="Ver menos";
-                            }else{
-                                $("#respuesta-ej{{$article->id}}").hide();
-                                text ="Ver más";
-                            }
-                            $("#alternar-respuesta-ej{{$article->id}}").html(text);
-                        }
-                    </script>
-                @endforeach
-                {!! $articles->render() !!}
-            </div>
-            {{-- Col-sm-3 Caja contenedora de Twitter y Publicidad --}}
-            @include('tw.twit2')
+            <video width="100%" height="100%" autoplay loop>
+                <source src="../logos/indie.mp4" type="video/mp4">
+                <source src="../logos/indie.ogg" type="video/ogg">
+            </video>
         </div>
     </div>
+@endsection
+{{--Top de 5 noticias --}}
+@section('content0')
+
+    @foreach($tops as $top)
+        <div id="tops0" class="card" style="border:none !important;">
+            <img class="card-img-top" src="../images/{{$top->path}}" alt="Card image cap" style="height: 112px">
+            <a href="{{ route('show',$top->id) }}" class="a-corregido2">
+                <h5 class="card-title">{{ $top ->head }}</h5>
+            </a>
+        </div>
+    @endforeach
+
+    @foreach($tops1 as $top1)
+
+
+        <div id="tops1" class="col-6">
+            <img class="card-img-top" src="../images/{{$top1->path}}" alt="Card image cap" style="height: 112px">
+            <a href="{{ route('show',$top1->id) }}" class="a-corregido2">
+                <h5 class="card-title">{{ $top1 ->head }}</h5>
+            </a>
+        </div>
+
+    @endforeach
+
+@endsection
+
+{{-- Noticia 1--}}
+@section('content1')
+
+    @foreach($last_articles as $last_article)
+
+        <div id="" class="carousel slide" data-ride="carousel">
+            <a class="a-first-notice" href="{{ route('move.show',$last_article->id) }}">
+                <div class="carousel-inner a-first-notice">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 img-first-notice" src="images/{{$last_article->path}}" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block caja-first-notice">
+                            <a class="a-corregido2" href=""><h1 class="h1-first-notice">{{$last_article->head}}</h1>
+                                <p class="p-first-notice">{{$last_article->description}} </p></a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    @endforeach
+
+    {{--Espacio de separacion entre ultimo publicacion y las demas --}}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <br>
+            </div>
+        </div>
+    </div>
+    @foreach($articles as $article)
+
+        <div class="row" style="margin-bottom: 10px">
+            <div class="col-sm-6">
+                <a href="{{route('move.show', $article->id)}}" class="a-corregido2">
+                    <h1 class="card-title">{{ $article ->head }}</h1>
+                </a>
+                <p class="card-subtitle mb-2  descripcion">{{ $article -> description }}</p>
+                <p>{{$article->category}}</p>
+                <p>By {{$article->autor}}</p>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <img class="card-img-top img-articles" src="images/{{$article->path}}" alt="Card image cap">
+
+                </div>
+            </div>
+        </div>
+
+    @endforeach
+
 @endsection

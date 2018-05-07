@@ -14,7 +14,6 @@
 // Controladores de la Pagina Principal
 
 
-
 Route::get('/','FrontController@index')->name('index');
 
 Route::get('show/{id}','FrontController@show')->name('show');
@@ -32,11 +31,11 @@ Route::resource('cinema','CinemaController');
 
 Route::resource('move','MoveController');
 
-Route::resource('post','PostController');
+Route::resource('sessionsis','SessionsISController');
 
 Route::resource('concert','ConcertController');
 
-Route::resource('random','RandomController');
+Route::resource('entertainment','EntertainmentController');
 
 Route::resource('contact','ContactController');
 
@@ -58,3 +57,7 @@ Route::resource('log','LogController');
 Route::resource('cPanel','CpanelController');
 
 
+//Route::get('images/{filename}', function ($filename)
+//{
+//    return Image::make(public_path('images/' . $filename))->response();
+//});

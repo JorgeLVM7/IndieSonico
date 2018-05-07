@@ -5,50 +5,62 @@ use IndieSonico\Advertising;
 use IndieSonico\Article;
 use Illuminate\Http\Request;
 use IndieSonico\Topten;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Collection;
+
 
 class FrontController extends Controller
 {
     public function index()
     {
-        $banners1= Advertising::orderBy ('id', 'DESC')
-            ->where('id','=','1')
-            ->paginate(3);
 
-        $banners2= Advertising::orderBy ('id', 'DESC')
-            ->where('id','=','2')
-            ->paginate(3);
 
-        $banners3= Advertising::orderBy ('id', 'DESC')
-            ->where('id','=','3')
-            ->paginate(3);
+       $tops = Article::orderBy('id', 'DESC')
+           ->where('approve','Aprobado')
+           ->limit(5)
+           ->paginate(5);
 
-       $tops = Topten::orderBy('id', 'DESC')->paginate();
-
-        $articles = Article::orderBy('id', 'DESC')
+        $tops1 = Article::orderBy('id', 'DESC')
             ->where('approve','Aprobado')
+            ->limit(2)
+            ->paginate(2);
+
+
+
+        $last_articles = Article::orderBy('id', 'DESC')
+            ->limit(1)
+            ->paginate(1);
+
+
+//        $articles = Article::orderBy('id', 'DESC')
+//            ->where('approve','Aprobado')
+//            ->orWhere('id' < ([$last_articles->id ]))
+//            ->paginate();
+
+        $articles = DB::table('articles')
+            ->orderBy('id','DESC')
+            ->where('approve','Aprobado')
+            ->orwhere('id','<>',[$last_articles])
             ->paginate();
 
-        return view('index',compact('articles','tops','banners1','banners2','banners3'));
+
+        return view('index',compact('articles','tops','tops1', 'last_articles'));
     }
 
     public function show($id)
     {
-        $banners1= Advertising::orderBy ('id', 'DESC')
-            ->where('id','=','1')
-            ->paginate(3);
 
-        $banners2= Advertising::orderBy ('id', 'DESC')
-            ->where('id','=','2')
-            ->paginate(3);
+        $tops1 = Article::orderBy('id', 'DESC')
+            ->where('approve','Aprobado')
+            ->limit(2)
+            ->paginate(2);
 
-        $banners3= Advertising::orderBy ('id', 'DESC')
-            ->where('id','=','3')
-            ->paginate(3);
-
-        $tops = Topten::orderBy('id', 'DESC')->paginate();
-
+        $tops = Article::orderBy('id', 'DESC')
+            ->limit(5)
+            ->paginate(5);
         $article = Article::find($id);
-        return view('show', compact('article','tops','banners1','banners2','banners3'));
+
+        return view('show', compact('article','tops','tops1'));
     }
 
 

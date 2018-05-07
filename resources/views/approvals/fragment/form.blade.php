@@ -55,12 +55,9 @@
 <div class="form-group">
     {!! Form::label('category','Categoría ') !!}
     {!! Form::select('category',['Música'=>'Música',
-                                'Cine'=>'Cine',
                                 'Moviendo el Indie'=>'Moviendo el Indie',
-                                'Artículos'=>'Artículos',
-                                'Conciertos'=>'Conciertos',
-                                'Random'=>'Random'
-                                ]
+                                'Sesiones IS' => 'Sesiones IS',
+                                'Entretenimiento'=>'Entretenimiento']
                                 , null,['class'=>'form-control']
 ) !!}
 
