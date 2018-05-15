@@ -14,7 +14,7 @@
                         </div>
                     </div>
                     <hr>
-                    @include('users.fragment.info')
+                    @include('articles.fragment.info')
 
                     @include('articles.fragment.error')
 

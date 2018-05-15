@@ -3,8 +3,10 @@
 @section('content0')
 
     @foreach($tops as $top)
-        <div id="tops0" class="card" style="border:none !important;">
-            <img class="card-img-top" src="../images/{{$top->path}}" alt="Card image cap" style="height: 112px">
+        <div id="tops0" class="card" style="border:none !important; margin: 0;">
+            <a href="{{ route('show',$top->id) }}">
+                <img  class="card-img-top" src="../images/{{$top->path}}" alt="Card image cap" style="height: 112px">
+            </a>
             <a href="{{ route('show',$top->id) }}" class="a-corregido2">
                 <h5 class="card-title">{{ $top ->head }}</h5>
             </a>
@@ -13,9 +15,10 @@
 
     @foreach($tops1 as $top1)
 
-        <div id="tops1" class="col-6">
-            <img class="card-img-top" src="../images/{{$top1->path}}" alt="Card image cap" style="height: 112px">
-            <a href="{{ route('show',$top1->id) }}" class="a-corregido2">
+        <div id="tops1" class="col-6" style="border:none !important; padding: 0;">
+            <a href="{{ route('show',$top1->id) }}">
+                <img  class="card-img-top" src="../images/{{$top1->path}}" alt="Card image cap" style="height: 112px">
+            </a>            <a href="{{ route('show',$top1->id) }}" class="a-corregido2">
                 <h5 class="card-title">{{ $top1 ->head }}</h5>
             </a>
         </div>
@@ -30,7 +33,7 @@
         <div class="col-sm-12">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1>{{ $article ->head }}</h1>
+                    <h2>{{ $article ->head }}</h2>
                     <p>{{ $article -> description }}</p>
                 </div>
             </div>
@@ -117,13 +120,14 @@
             @endif
         </div>
 
+
         {{--<div class="col-sm-4">--}}
             {{--<p>Publicidad</p>--}}
             {{--<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, aut deserunt doloremque et ex illum magni nam quia. Consequatur consequuntur esse incidunt iste libero molestiae nam nulla quis quos recusandae!</span><span>A accusamus, animi corporis dolorem earum error hic illum impedit modi nihil possimus quibusdam quis repudiandae sequi tenetur unde veritatis vero. Dicta doloribus ex explicabo labore magni quaerat soluta voluptatem?</span><span>Ad amet aut dicta dolores, doloribus eos exercitationem explicabo id minus nemo placeat quam quasi repellendus sint, suscipit tempora temporibus tenetur vero voluptate voluptatum. Cupiditate repellendus, voluptatem! Aperiam, magnam, quibusdam.</span><span>Deleniti ducimus eligendi enim est ex exercitationem facere incidunt magnam nesciunt perspiciatis quas quisquam, repellendus repudiandae, sequi similique suscipit velit. Esse exercitationem minus modi? Aliquid cumque ipsum optio quaerat quisquam?</span><span>Aliquam animi corporis dignissimos eaque, inventore ipsa ipsam magni mollitia necessitatibus nihil obcaecati omnis praesentium quaerat quas quasi quidem quisquam reiciendis repellendus sint tempore velit veritatis voluptas voluptatum? Maxime, officia.</span></p>--}}
         {{--</div>--}}
     </div>
 
-    <div class="row">
+    <div class="row col-12">
         <div class="col-sm-12">
             {{--Aqui va  un id="tops1"--}}
             <div id="" class="row">
@@ -135,6 +139,51 @@
 
     <div class="row">
         <br>
+    </div>
+
+@endsection
+
+@section('content-bottoms')
+
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h3>Notas Relacionadas</h3>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        @foreach($bottoms as $bottom)
+
+            <div id="tops0" class="col-sm-4">
+                <div id="" class="card" style="border:none !important;">
+                    <a href="{{ route('show',$bottom->id) }}">
+                        <img  class="card-img-top" src="../images/{{$bottom->path}}" alt="Card image cap" style="height: 200px">
+                    </a>
+                    <a href="{{ route('show',$bottom->id) }}" class="a-corregido2">
+                        <h5 class="card-title">{{ $bottom ->head }}</h5>
+                    </a>
+                </div>
+            </div>
+
+        @endforeach
+
+    </div>
+
+    <div class="row">
+        <div id="tops1" class="row col-12 justify-content-around" style="margin: 0 auto;">
+            @foreach($bottoms as $bottom)
+
+                <div id="tops1" class="col-6" style="border:none !important; padding: 0;">
+                    <a href="{{ route('show',$bottom->id) }}">
+                        <img  class="card-img-top" src="../images/{{$bottom->path}}" alt="Card image cap" style="height: 120px">
+                    </a>
+                    <a href="{{ route('show',$bottom->id) }}" class="a-corregido2">
+                        <h5 class="card-title">{{ $bottom ->head }}</h5>
+                    </a>
+                </div>
+
+            @endforeach
+        </div>
     </div>
 
 @endsection

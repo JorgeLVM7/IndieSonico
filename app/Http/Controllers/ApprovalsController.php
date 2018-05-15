@@ -51,8 +51,10 @@ class ApprovalsController extends Controller
         $article ->video_2      = $request    ->video_2;
 
         $article ->autor        = Auth::user()->name.' '.Auth::user()->last_name;
-        $article ->category     = $request ->category;
-        $article ->approve      = $request ->approve;
+        $article ->category     = $request    ->category;
+        $article ->approve      = $request    ->approve;
+        $article ->important      = $request  ->important;
+
 
 
 

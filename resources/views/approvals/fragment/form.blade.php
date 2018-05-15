@@ -75,6 +75,15 @@
 ) !!}
 
 </div>
+
+<div class="form-group">
+    {!! Form::label('important','Destacado o No Destacado ') !!}
+    {!! Form::select('important',['No Destacado'=>'No Destacado',
+                                'Destacado'=>'Destacado']
+                                , null,['class'=>'form-control']
+) !!}
+
+</div>
 <div class="form-group">
     {!! Form::submit('Guardar',['class'=>'btn btn-primary', 'style'=>"cursor: pointer"]) !!}
 

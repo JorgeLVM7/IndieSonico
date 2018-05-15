@@ -1,6 +1,6 @@
 body{
     background-color: #FFFFFF !important;
-    font-family: 'Anton', sans-serif !important;
+    font-family: 'Nunito', sans-serif !important;
 }
 
 p{
@@ -165,11 +165,17 @@ p{
     width: 100% !important;
 }
 
+
+.logo-indie{
+    margin: 0 auto;
+}
 @media (min-width: 768px) {
 
     #tops1, .red, .follow{
         display: none !important;
     }
+
+
 
 
 }
@@ -183,6 +189,15 @@ p{
         height: 300px;
     }
 
+    .logo-indie{
+        width: 60% !important;
+    }
+}
 
-    
+
+@media (max-width: 576px) {
+    .a-footer{
+        text-align: center;
+    }
+
 }

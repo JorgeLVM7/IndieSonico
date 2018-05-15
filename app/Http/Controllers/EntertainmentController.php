@@ -12,11 +12,14 @@ class EntertainmentController extends Controller
 
         $tops = Article::orderBy('id', 'DESC')
             ->where('approve','Aprobado')
+            ->where('important','Destacado')
             ->limit(5)
             ->paginate(5);
 
         $tops1 = Article::orderBy('id', 'DESC')
             ->where('approve','Aprobado')
+            ->where('important','Destacado')
+
             ->limit(2)
             ->paginate(2);
 
@@ -29,7 +32,6 @@ class EntertainmentController extends Controller
             ->orderBy('id','DESC')
             ->where('category', '=','Entretenimiento')
             ->where('approve','Aprobado')
-//            ->orwhere('id','<>',[$last_articles])
             ->paginate();
 
         return view('entertainment.index',compact('articles','tops', 'tops1','last_articles'));
@@ -49,6 +51,13 @@ class EntertainmentController extends Controller
 
         $article = Article::find($id);
 
-        return view('entertainment.show', compact('article','tops','tops1'));
+        $bottoms = DB::table('articles')
+            ->orderBy('id','DESC')
+            ->where('category', '=','Entretenimiento')
+            ->where('approve','Aprobado')
+            ->where('important','Destacado')
+            ->paginate(5);
+
+        return view('entertainment.show', compact('article','tops','tops1','bottoms'));
     }
 }

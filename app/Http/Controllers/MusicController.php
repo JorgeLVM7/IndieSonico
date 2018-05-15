@@ -10,19 +10,23 @@ class MusicController extends Controller
 {
     public function index()
     {
+        $videos = Video::orderBy('id','DESC')->paginate();
 
         $tops = Article::orderBy('id', 'DESC')
             ->where('approve','Aprobado')
+            ->where('important','Destacado')
             ->limit(5)
             ->paginate(5);
 
         $tops1 = Article::orderBy('id', 'DESC')
             ->where('approve','Aprobado')
+            ->where('important','Destacado')
             ->limit(2)
             ->paginate(2);
 
         $last_articles = Article::orderBy('id', 'DESC')
             ->where('category', '=','Música')
+            ->where('approve','Aprobado')
             ->limit(1)
             ->paginate(1);
 
@@ -30,13 +34,12 @@ class MusicController extends Controller
             ->orderBy('id','DESC')
             ->where('category', '=','Música')
             ->where('approve','Aprobado')
-//            ->orwhere('id','<>',[$last_articles])
             ->paginate();
 
-        return view('music.index',compact('articles','tops', 'tops1','last_articles'));
+        return view('music.index',compact('articles','tops', 'tops1','last_articles','videos'));
     }
 
-    public function show($id)
+    public function show($head)
     {
         $tops = Article::orderBy('id', 'DESC')
             ->where('approve','Aprobado')
@@ -48,8 +51,15 @@ class MusicController extends Controller
             ->limit(2)
             ->paginate(2);
 
-        $article = Article::find($id);
+        $article = Article::find($head);
 
-        return view('music.show', compact('article','tops','tops1'));
+        $bottoms = DB::table('articles')
+            ->orderBy('id','DESC')
+            ->where('category', '=','Música')
+            ->where('important','Destacado')
+            ->where('approve','Aprobado')
+            ->paginate(5);
+
+        return view('music.show', compact('article','tops','tops1', 'bottoms'));
     }
 }

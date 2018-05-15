@@ -46,7 +46,7 @@ Route::resource('contact','ContactController');
 
 Route::resource('articles', 'ArticleController');
 
-Route::resource('advertising','AdvertisingController');
+Route::resource('videos','VideosController');
 
 Auth::routes();
 

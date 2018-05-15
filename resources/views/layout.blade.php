@@ -35,6 +35,9 @@
                 <li class="nav-item">
                     <a class="nav-link a-corregido" href="{{route('users.index')}}">Usuarios</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link a-corregido" href="{{route('videos.index')}}">Videos</a>
+                </li>
             @else
 
 

@@ -9,7 +9,7 @@
     <link rel="icon" href="/css/favicon.ico">
     <script src="/js/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
@@ -48,13 +48,16 @@
     </nav>
 <div class="container">
     <div class="row">
+        <br>
+    </div>
+    <div class="row">
         <div id="tops0" class="col-sm-12">
             <div id="tops0" class="card-group">
                 @yield('content0')
             </div>
         </div>
 
-        <div id="tops1" class="row justify-content-around">
+        <div id="tops1" class="row col-12 justify-content-around" style="margin: 0 auto;">
             @yield('content0')
         </div>
     </div>
@@ -77,7 +80,35 @@
 
     @yield('content1')
 
+
+
+
+    @yield('content-bottoms')
+
+
+
+    {{--<div class="row">--}}
+        {{--<div id="tops0" class="col-sm-12">--}}
+            {{--<div id="tops0" class="card-group">--}}
+                {{--@yield('bottoms-content')--}}
+            {{--</div>--}}
+        {{--</div>--}}
+
+        {{--<div id="tops1" class="row justify-content-around">--}}
+
+            {{--<div class="col-md-12">--}}
+                {{--<div class="row">--}}
+                    {{--@yield('bottoms-content')--}}
+                {{--</div>--}}
+
+            {{--</div>--}}
+
+        {{--</div>--}}
+    {{--</div>--}}
+
 </div>
+
+
 
 
     <div class="container-fluid footer">
@@ -87,34 +118,44 @@
             </div>
             <div class="row">
                 <div class="col-sm-4">
-                    <img style="width: 80%" src="/logos/logo.png" alt="">
+                    <img class="logo-indie mx-auto d-block" style="width: 80%" src="/logos/logo.png" alt="">
                 </div>
-                <div class="col-sm-8">
+                <div class="col-sm-4">
                     <ul class="navbar-nav ml-auto">
 
-                        <li class="nav-item">
-                            <a class="nav-link a-corregido" href="{{route('music.index')}}">Música</a>
+                        <li class="nav-item ">
+                            <a class="nav-link a-corregido a-footer" href="{{route('music.index')}}">Música</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link a-corregido" href="{{route('move.index')}}">Moviendo el Indie</a>
+                        <li class="nav-item ">
+                            <a class="nav-link a-corregido a-footer" href="{{route('move.index')}}">Moviendo el Indie</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link a-corregido" href="{{route('sessionsis.index')}}">Sesiones Indie Sonico</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link a-corregido" href="{{route('entertainment.index')}}">Entretenimiento</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link a-corregido" href="{{route('contact.index')}}">Contacto</a>
-                        </li>
+
+
 
                     </ul>
                 </div>
+                <div class="col-sm-4">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link a-corregido a-footer" href="{{route('sessionsis.index')}}">Sesiones Indie Sonico</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link a-corregido a-footer" href="{{route('entertainment.index')}}">Entretenimiento</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
 
+                </div>
+                <div class="col-sm-8 ">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link a-corregido a-footer" href="{{route('contact.index')}}">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="row">
-                <hr>
-            </div>
+
             <div class="row text-center">
                 <div class="col-sm-12">
                     <p>Todos los derechos reservados de Indie Sonico 2018</p>

@@ -45,6 +45,8 @@ class ArticleController extends Controller
         $article ->approve      = 'No Aprobado';
 
         $article ->user_id      = $request     ->user_id;
+        $article ->important    = 'No Destacado';
+
 
         $article ->save();
 
@@ -79,6 +81,8 @@ class ArticleController extends Controller
         $article ->autor        = Auth::user()->name.' '.Auth::user()->last_name;
         $article ->category     = $request ->category;
         $article ->approve      = 'No Aprobado';
+        $article ->important    = 'No Destacado';
+
 
 
 
