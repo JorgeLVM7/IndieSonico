@@ -2,6 +2,8 @@
 
 namespace IndieSonico\Http\Controllers;
 use IndieSonico\Article;
+use IndieSonico\Video;
+
 use Illuminate\Http\Request;
 use IndieSonico\Http\Requests\ArticleRequest;
 use Illuminate\Support\Facades\DB;

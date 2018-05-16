@@ -2,6 +2,7 @@
 
 namespace IndieSonico\Http\Controllers;
 use IndieSonico\Article;
+use IndieSonico\Video;
 
 use IndieSonico\Advertising;
 use Illuminate\Http\Request;

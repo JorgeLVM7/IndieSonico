@@ -3,12 +3,15 @@
 namespace IndieSonico\Http\Controllers;
 use IndieSonico\Article;
 use Illuminate\Support\Facades\DB;
+use IndieSonico\Video;
 
 
 class EntertainmentController extends Controller
 {
     public function index()
     {
+        $videos = Video::orderBy('id','DESC')->paginate();
+
 
         $tops = Article::orderBy('id', 'DESC')
             ->where('approve','Aprobado')
@@ -34,7 +37,7 @@ class EntertainmentController extends Controller
             ->where('approve','Aprobado')
             ->paginate();
 
-        return view('entertainment.index',compact('articles','tops', 'tops1','last_articles'));
+        return view('entertainment.index',compact('articles','tops', 'tops1','last_articles','videos'));
     }
 
     public function show($id)
