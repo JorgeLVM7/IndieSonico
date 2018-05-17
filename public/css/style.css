@@ -58,7 +58,7 @@ p{
 }
 .a-corregido:hover, .a-corregido2:hover{
     text-decoration: none !important;
-    color: #ff2e63 !important;
+    color: #FEDC13 !important;
 }
 
 .a-logout{
@@ -67,7 +67,7 @@ p{
 }
 .a-logout:hover{
     text-decoration: none !important;
-    color: #ff2e63 !important;
+    color: #FEDC13 !important;
 }
 
 .ul-logout{
@@ -151,7 +151,7 @@ p{
     text-decoration: none;
     width: 55px;
     color: #FFFFFF;
-    background-color: #E03C64;
+    background-color: #FEDC13;
 }
 #twitter{
     padding: 10px 20px;
@@ -194,10 +194,23 @@ p{
     }
 }
 
+@media (min-width: 576px) {
+    .vista-móvil{
+        display: none !important;
+    }
 
-@media (max-width: 576px) {
+}
+
+@media (max-width: 575.5px) {
     .a-footer{
         text-align: center;
+    }
+
+    .vista-web{
+        display: none !important;
+    }
+    .text-movil-center{
+        text-align: center !important;
     }
 
 }
