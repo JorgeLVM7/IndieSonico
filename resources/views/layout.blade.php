@@ -15,7 +15,9 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark h-insonico">
-    <a class="navbar-brand" href="{{route('articles.index')}}"><img src="/logos/white-logo1.jpg" alt=""></a>
+    <a class="navbar-brand" href="{{route('articles.index')}}">
+        <img src="/logos/white-logo1.jpg" alt="">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

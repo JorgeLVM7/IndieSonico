@@ -1,18 +1,25 @@
 body{
     background-color: #FFFFFF !important;
     font-family: 'Nunito', sans-serif !important;
+    transition: all 3s !important;
+    /*line-height: 1 !important;*/
 }
 
 p{
     color: gray !important;
 }
 
+#number{
+    font-size: 2.5rem;
+    line-height: 1 !important;
+}
 
 .h-insonico{
     background-color: #242424 !important;
 }
 
 .img-articles{
+    max-height: 300px !important;
     height: 100% !important;
     border-radius: 3px;
     width: 100%;
@@ -31,8 +38,17 @@ p{
     background-color: #444444;
     color: #FEDC13;
 }
+.title-articles{
+    font-size: 1.75rem;
+    line-height: 1.2;
 
+}
+.title-tops{
+    font-size: .8rem !important;
+    line-height: 1.2 !important;
 
+    padding-top: 5px;
+}
 .caja-first-notice{
     background-color: #FFFFFF ;
     transform: scale(1.3);
@@ -42,6 +58,28 @@ p{
 .h1-first-notice, .p-first-notice{
     color: #000000;
 }
+
+.first-notice{
+    /*background-color: rgba(255,255,255,.8);*/
+    display: block;
+    position: absolute;
+    bottom: -16px;
+    margin: 0 auto !important;
+    padding: 5px;
+    width: 100%;
+    color: #000 !important;
+    align-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.texto {
+    background-color: #ffffff;
+    padding: 15px;
+    width: 100%;
+
+}
+
 
 .img-first-notice{
     height: 500px;
@@ -59,6 +97,7 @@ p{
 .a-corregido:hover, .a-corregido2:hover{
     text-decoration: none !important;
     color: #FEDC13 !important;
+    transition: 1s;
 }
 
 .a-logout{
@@ -68,6 +107,8 @@ p{
 .a-logout:hover{
     text-decoration: none !important;
     color: #FEDC13 !important;
+    transition: 1s;
+
 }
 
 .ul-logout{
@@ -169,19 +210,55 @@ p{
 .logo-indie{
     margin: 0 auto;
 }
-@media (min-width: 768px) {
 
-    #tops1, .red, .follow{
+.p-d-reservados{
+    font-size: x-small;
+    text-align: center;
+}
+
+#trumbowyg-logos{
+    display: none;
+}
+
+@media (max-width: 992px) {
+    #caja-tops0,#tops0,#botoms0{
         display: none !important;
     }
 
+}
 
+@media (min-width: 992px) {
+    #caja-tops1,#tops1,#tops2,#bottoms1{
+        display: none !important;
+    }
+}
 
+@media (max-width: 762px) {
 
 }
 
+@media (min-width: 762px) {
+
+}
+
+@media (max-width: 576px) {
+    #tops2{
+        display:none !important;
+    }
+}
+
+@media (min-width: 576px) {
+    #tops1{
+        display: none !important;
+    }
+}
+
+
+
+
+
 @media (max-width: 766px) {
-    #tops0, .red{
+    .red{
         display: none !important;
     }
 
@@ -192,16 +269,18 @@ p{
     .logo-indie{
         width: 60% !important;
     }
-}
 
-@media (min-width: 576px) {
-    .vista-móvil{
+    h1{
+        font-size: 1em !important;
+    }
+}
+@media (min-width: 768px) {
+
+    .red, .follow{
         display: none !important;
     }
-
 }
-
-@media (max-width: 575.5px) {
+@media (max-width: 576px) {
     .a-footer{
         text-align: center;
     }
@@ -211,6 +290,11 @@ p{
     }
     .text-movil-center{
         text-align: center !important;
+    }
+}
+@media (min-width: 576px) {
+    .vista-móvil{
+        display: none !important;
     }
 
 }

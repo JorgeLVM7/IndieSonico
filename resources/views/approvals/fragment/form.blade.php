@@ -1,6 +1,6 @@
 <div class="form-group">
     {!! Form::label('head','Encabezado del artículo') !!}
-    {!! Form::text('head', null,['class'=>'form-control']) !!}
+    {!! Form::text('head', null,['class'=>'form-control','maxlength'=>'65']) !!}
 </div>
 <div class="form-group">
     {!! Form::label('image','Foto') !!}
