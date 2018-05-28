@@ -43,7 +43,7 @@
                 <img  class="card-img-top" src="../images/{{$top1->path}}" alt="Card image cap" style="border-radius:0 !important;height: 112px">
             </a>
 
-            <div class="row align-items-center">
+            <div class="row align-items-center col-12">
                 <div class="col-12 title-tops">
                     <a href="{{ route('show',$top1->id.$top1->head) }}" class="a-corregido2">
                         {{ $top1 ->head }}
@@ -62,7 +62,7 @@
                 <img  class="card-img-top" src="../images/{{$top2->path}}" alt="Card image cap" style="border-radius:0 !important;height: 112px">
             </a>
 
-            <div class="row align-items-center">
+            <div class="row align-items-center col-12">
                 <div class="col-1">
                     <span id="number">{{$top2->rownum1}}</span>
                 </div>
@@ -92,7 +92,7 @@
                     <div class="row first-notice vista-web">
                         <div class="texto">
                             <b>
-                                <a href="{{ route('show',$last_article->id.$last_article->head) }}" class="a-corregido2">
+                                <a href="{{ route('show',$last_article->id.$last_article->head) }}" class="a-corregido2 a-destacado">
                                     <h1 class="text-tablet">
                                         <b>{{$last_article->head}}</b>
                                     </h1>
@@ -102,7 +102,7 @@
                         </div>
                     </div>
 
-                    <div class="row vista-móvil text-movil-center " >
+                    <div class="row vista-móvil col-12 text-movil-center " >
                         <div class="col-sm-12">
                             <b>
                                 <a href="{{ route('show',$last_article->id.$last_article->head) }}" class="a-corregido2">
@@ -121,6 +121,76 @@
 
     @endforeach
 
+    <div class="row">
+        <div class="col-12">
+            <br>
+        </div>
+
+    </div>
+
+    <div class="row">
+    @foreach($last_articles as $last_article)
+
+            <div class="col-sm-8">
+                <div class="row">
+                    <a href="{{ route('show',$last_article->id.$last_article->head) }}" class="a-corregido2">
+                        <img class="card-img-top" src="images/{{$last_article->path}}" alt="">
+
+                        <div class="row first-notice-category vista-web">
+                            <div class="texto-category">
+                                <b>
+                                    <i>
+                                        <span class="title-first-category">INDIE SONICO</span>
+                                    </i>
+                                </b>
+                            </div>
+                        </div>
+
+                        {{--<div class="row">--}}
+                            {{--<div class="col-12">--}}
+                                {{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolore natus voluptates. Aperiam, commodi dolorem dolorum excepturi illo impedit maxime molestiae neque nulla odio quae quasi repellendus soluta ullam voluptatibus.</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                        <div class="row vista-móvil col-12 text-movil-center " >
+                            <div class="col-sm-12">
+                                <b>
+                                    <a href="{{ route('show',$last_article->id.$last_article->head) }}" class="a-corregido2">
+                                        <h3 class="">
+                                            <b>{{$last_article->head}}</b>
+                                        </h3>
+                                    </a>
+                                </b>
+                                <p class="p-first-notice">{{$last_article->description}} </p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p class="descripcion">{{$last_article->description}}</p>
+                        </div>
+                        <div class="col-12">
+                            <p> <i>by</i> {{$last_article->autor}} </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-4 vista-web">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, culpa et exercitationem fugiat inventore laboriosam laborum, magnam magni nulla pariatur perferendis quisquam, similique tempora tenetur voluptatum. Dolorum natus omnis sapiente?</p>
+            </div>
+
+            <div class="col-sm-8">
+
+            </div>
+            <div class="col-sm-4">
+
+            </div>
+
+    @endforeach
+    </div>
+
+
     {{--Espacio de separacion entre ultimo publicacion y las demas --}}
     <div class="container">
         <div class="row">
@@ -135,7 +205,7 @@
             <div class="col-sm-6 ">
                 <p>{{$article->category}}</p>
                 <a href="{{ route('show',$article->id.$article->head) }}" class="a-corregido2">
-                    <span class="title-articles">{{ $article ->head }}</span>
+                    <span class="title-articles"><b>{{ $article ->head }}</b></span>
                 </a>
                 <p class="card-subtitle mb-2  descripcion">{{ $article -> description }}</p>
 
@@ -174,7 +244,7 @@
             </div>
             <div class="col-sm-6 text-movil-center">
                 <a href="{{ route('show',$article->id.$article->head) }}" class="a-corregido2">
-                    <h2 class="card-title">{{ $article ->head }}</h2>
+                    <h2 class="card-title"><b>{{ $article ->head }}</b></h2>
                 </a>
                 <p class="card-subtitle mb-2  descripcion">{{ $article -> description }}</p>
 

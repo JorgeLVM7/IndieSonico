@@ -52,12 +52,12 @@ class FrontController extends Controller
 
     public function show($id)
     {
+        //        Muestra el video de arriba 
         $videos = Video::orderBy('id','DESC')->paginate();
 
-        // Inicializa @rownum
+        //        Muestra 5 Noticias en el TOP 5 en Web
         DB::statement(DB::raw('SET @rownum = 0'));
 
-        // Realiza la consulta
         $tops = DB::table('articles')
             ->select('id','head','path',DB::raw ('@rownum := @rownum + 1 as rownum'))
             ->where('approve', '=', 'Aprobado')
@@ -65,8 +65,9 @@ class FrontController extends Controller
             ->orderBy('id', 'DESC')
             ->paginate(5);
 
-        // Inicializa @rownum
+        //        Muestra 3 Noticias en el TOP 5 en Tablet
         DB::statement(DB::raw('SET @rownum1 = 0'));
+
         $tops2 = DB::table('articles')
             ->select('id','head','path',DB::raw ('@rownum1 := @rownum1 + 1 as rownum1'))
             ->where('approve', '=', 'Aprobado')
@@ -74,11 +75,14 @@ class FrontController extends Controller
             ->orderBy('id', 'DESC')
             ->paginate(3);
 
+        //        Muestra 2 Noticias en el TOP 5 en Móvil
         $tops1 = Article::orderBy('id', 'DESC')
             ->where('approve','Aprobado')
             ->where('important','Destacado')
             ->limit(2)
             ->paginate(2);
+
+
 
 
         $article = Article::find($id);

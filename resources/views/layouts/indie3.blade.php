@@ -47,43 +47,55 @@
                     <li class="nav-item">
                         <a class="nav-link a-corregido" href="{{route('entertainment.index')}}">Entretenimiento</a>
                     </li>
+
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+
+
                     <li class="nav-item">
                         <a class="nav-link a-corregido" href="{{route('contact.index')}}">Contacto</a>
                     </li>
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link a-corregido" href="{{route('entertainment.index')}}">Entretenimiento</a>--}}
+                    {{--</li>--}}
 
                 </ul>
             </div>
         </div>
     </nav>
-<div class="container">
-    <div class="row">
-        <br>
-    </div>
-    <div class="row">
-
-        <div id="caja-tops0" class="col-sm-12 card-group">
-                @yield('content0')
-        </div>
-
-        <div id="caja-tops1" class="row col-12 " style="margin: 0 auto; padding: 0;">
-            @yield('content0')
-        </div>
-
-    </div>
-</div>
-
-<div class="container">
-    <div class="row ">
-        <div class="col-sm-12">
+{{--<div class="container-fluid negro">--}}
+    <div class="container blanco">
+        <div class="row">
             <br>
         </div>
+        <div class="row">
+
+            <div id="caja-tops0" class="col-sm-12 card-group">
+                @yield('content0')
+            </div>
+
+            <div id="caja-tops1" class="row col-12 " style="margin: 0 auto; padding: 0;">
+                @yield('content0')
+            </div>
+
+        </div>
     </div>
 
-    @yield('content1')
+    <div class="container blanco">
+        <div class="row publicidad-top">
+            <div class="col-sm-12">
+                <br>
+            </div>
+        </div>
 
-    @yield('content-bottoms')
+        @yield('content1')
 
-</div>
+        @yield('content-bottoms')
+
+    </div>
+{{--</div>--}}
     <div class="container-fluid footer">
         <div class="container">
             <div class="row">

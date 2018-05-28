@@ -73,13 +73,50 @@ p{
     padding-right: 10%;
 }
 
+.title-first-category{
+    font-size: 2em;
+}
+
+.first-notice-category{
+    /*background-color: rgba(255,255,255,.8);*/
+    display: block;
+    position: absolute;
+    bottom:91%;
+    margin: 0 auto !important;
+    padding: 0;
+    width: 75%;
+    color: #000 !important;
+    align-content: center;
+    padding-left: 5%;
+    padding-right: 10%;
+}
+
 .texto {
-    background-color: #ffffff;
+    background-color: #FEDC13;
     padding: 15px;
     width: 100%;
+    text-align: center;
 
 }
 
+.texto-category {
+    background-color: #FEDC13;
+    padding: 3px;
+    width: 100%;
+    text-align: center;
+
+}
+.a-destacado:hover{
+    color: #000000 !important;
+}
+
+/*.negro{*/
+    /*background-color: #444444;*/
+/*}*/
+
+/*.blanco{*/
+    /*background-color: #ffffff;*/
+/*}*/
 
 .img-first-notice{
     height: 500px;
@@ -119,19 +156,6 @@ p{
     margin: 0 auto;
 }
 
-
-
-
-/*.scroll::-webkit-scrollbar {*/
-    /*background-color: transparent;*/
-/*}*/
-
-
-
-
-
-
-
 .esp{
     margin-left: 5px !important;
 }
@@ -161,8 +185,22 @@ p{
 .approvals{
     color: #2a2a2a !important;
 }
+/*Cajas vacias para publicidad */
+
+
+.publicidad-medium{
+    height: 400px;
+}
+.publicidad-top,.publicidad-bottom{
+    height: 100px;
+}
+
+
 
 /*Caja flotante de redes sociales */
+
+
+
 
 .red{
     position: fixed;
@@ -220,9 +258,19 @@ p{
     display: none;
 }
 
+
+@media (max-width: 1200px) {
+    .first-notice-category {
+        bottom: 89.5%;
+    }
+}
+
 @media (max-width: 992px) {
     #caja-tops0,#tops0,#botoms0{
         display: none !important;
+    }
+    .first-notice-category {
+        bottom: 87%;
     }
 
 }
@@ -231,13 +279,21 @@ p{
     #caja-tops1,#tops1,#tops2,#bottoms1{
         display: none !important;
     }
-}
 
-@media (max-width: 762px) {
 
 }
 
-@media (min-width: 762px) {
+@media (max-width: 768px) {
+    .first-notice-category {
+        bottom: 88.5%;
+        transform: scale(.5);
+        width: 100%;
+        /*padding-left: 5%;*/
+        left: -10%;
+    }
+}
+
+@media (min-width: 768px) {
 
 }
 
@@ -257,7 +313,7 @@ p{
 
 
 
-@media (max-width: 766px) {
+@media (max-width: 768px) {
     .red{
         display: none !important;
     }
@@ -273,6 +329,7 @@ p{
     h1{
         font-size: 1em !important;
     }
+
 }
 @media (min-width: 768px) {
 

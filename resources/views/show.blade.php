@@ -158,8 +158,11 @@
 
 {{-- NOTAS RELACIONADAS DEL LADO DERECHO --}}
         <div id="tops0" class=" col-sm-4">
-            {{--<p>Publicidad</p>--}}
-            {{--<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, aut deserunt doloremque et ex illum magni nam quia. Consequatur consequuntur esse incidunt iste libero molestiae nam nulla quis quos recusandae!</span><span>A accusamus, animi corporis dolorem earum error hic illum impedit modi nihil possimus quibusdam quis repudiandae sequi tenetur unde veritatis vero. Dicta doloribus ex explicabo labore magni quaerat soluta voluptatem?</span><span>Ad amet aut dicta dolores, doloribus eos exercitationem explicabo id minus nemo placeat quam quasi repellendus sint, suscipit tempora temporibus tenetur vero voluptate voluptatum. Cupiditate repellendus, voluptatem! Aperiam, magnam, quibusdam.</span><span>Deleniti ducimus eligendi enim est ex exercitationem facere incidunt magnam nesciunt perspiciatis quas quisquam, repellendus repudiandae, sequi similique suscipit velit. Esse exercitationem minus modi? Aliquid cumque ipsum optio quaerat quisquam?</span><span>Aliquam animi corporis dignissimos eaque, inventore ipsa ipsam magni mollitia necessitatibus nihil obcaecati omnis praesentium quaerat quas quasi quidem quisquam reiciendis repellendus sint tempore velit veritatis voluptas voluptatum? Maxime, officia.</span></p>--}}
+            <div class="row publicidad-medium">
+                <div class="col-sm-12">
+
+                </div>
+            </div>
             <div class="row">
                 <div class="col-sm-12">
                     @foreach($mediums as $medium)
@@ -212,9 +215,13 @@
 
 @section('content-bottoms')
 
+    <div class="row publicidad-bottom">
+
+    </div>
+
     <div class="row">
         <div class="col-sm-12 text-center">
-            <h3>Notas Relacionadas</h3>
+            <h3><b>Notas Relacionadas</b></h3>
             <hr>
         </div>
     </div>
