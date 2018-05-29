@@ -79,7 +79,8 @@
 <div class="form-group">
     {!! Form::label('important','Destacado o No Destacado ') !!}
     {!! Form::select('important',['No Destacado'=>'No Destacado',
-                                'Destacado'=>'Destacado']
+                                'Destacado'=>'Destacado',
+                                'Top Categoría'=>'Top Categoría']
                                 , null,['class'=>'form-control']
 ) !!}
 

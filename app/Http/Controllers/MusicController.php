@@ -42,14 +42,24 @@ class MusicController extends Controller
             ->limit(1)
             ->paginate(1);
 
+        $category_tops = Article::orderBy('id', 'DESC')
+            ->where('category', '=','Música')
+            ->where('important','Top Categoría')
+            ->where('approve','Aprobado')
+            ->limit(1)
+            ->paginate(1);
+
         $articles = DB::table('articles')
             ->orderBy('id','DESC')
             ->where('category', '=','Música')
+            ->where('important','No Destacado')
             ->where('approve','Aprobado')
-            ->skip(1)->take(100)
-            ->get();
+//            ->skip(1)->take(100)
+//            ->get();
+            ->paginate();
 
-        return view('music.index',compact('articles','tops', 'tops1','tops2','last_articles','videos'));
+
+        return view('music.index',compact('articles','tops', 'tops1','tops2','last_articles','videos','category_tops'));
     }
 
     public function show($id)

@@ -81,28 +81,98 @@
 {{-- Noticia 1--}}
 @section('content1')
 
-    @foreach($last_articles as $last_article)
+    {{--@foreach($last_articles as $last_article)--}}
 
-        <div class="row">
-            <div class="col-sm-12">
+        {{--<div class="row">--}}
+            {{--<div class="col-sm-12">--}}
+                {{--<div class="row">--}}
+                    {{--<a href="{{ route('move.show',$last_article->id.$last_article->head) }}" class="a-corregido2">--}}
+                        {{--<img class="card-img-top" src="images/{{$last_article->path}}" alt="">--}}
+
+                        {{--<div class="row first-notice vista-web">--}}
+                            {{--<div class="texto">--}}
+                                {{--<b>--}}
+                                    {{--<a href="{{ route('move.show',$last_article->id.$last_article->head) }}" class="a-corregido2">--}}
+                                        {{--<h1 class="text-tablet">--}}
+                                            {{--<b>{{$last_article->head}}</b>--}}
+                                        {{--</h1>--}}
+                                    {{--</a>--}}
+                                {{--</b>--}}
+                                {{--<p class="p-first-notice">{{$last_article->description}} </p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                        {{--<div class="row vista-móvil text-movil-center " >--}}
+                            {{--<div class="col-sm-12">--}}
+                                {{--<b>--}}
+                                    {{--<a href="{{ route('move.show',$last_article->id.$last_article->head) }}" class="a-corregido2">--}}
+                                        {{--<h3 class="">--}}
+                                            {{--<b>{{$last_article->head}}</b>--}}
+                                        {{--</h3>--}}
+                                    {{--</a>--}}
+                                {{--</b>--}}
+                                {{--<p class="p-first-notice">{{$last_article->description}} </p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+
+    {{--@endforeach--}}
+
+    {{--Espacio de separacion entre ultimo publicacion y las demas --}}
+    {{--<div class="container">--}}
+        {{--<div class="row">--}}
+            {{--<div class="col-12">--}}
+                {{--<br>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+
+    <div class="row">
+        @foreach($last_articles as $last_article)
+
+
+            <div class="col-sm-8">
+                <div class="row">
+                    <b>
+                        <a href="{{ route('move.show',$last_article->id.$last_article->head) }}" class="a-corregido2">
+                            <h3 class="">
+                                <b>{{$last_article->head}}</b>
+                            </h3>
+                        </a>
+                    </b>
+                </div>
+                <br>
+
+            </div>
+            <div class="col-sm-4">
+
+            </div>
+            <div class="col-sm-8">
+
                 <div class="row">
                     <a href="{{ route('move.show',$last_article->id.$last_article->head) }}" class="a-corregido2">
                         <img class="card-img-top" src="images/{{$last_article->path}}" alt="">
 
-                        <div class="row first-notice vista-web">
-                            <div class="texto">
+                        <div class="row first-notice-category vista-web">
+                            <div class="texto-category">
                                 <b>
-                                    <a href="{{ route('move.show',$last_article->id.$last_article->head) }}" class="a-corregido2">
-                                        <h1 class="text-tablet">
-                                            <b>{{$last_article->head}}</b>
-                                        </h1>
-                                    </a>
+                                    <i>
+                                        <span class="title-first-category">MOVIENDO EL INDIE</span>
+                                    </i>
                                 </b>
-                                <p class="p-first-notice">{{$last_article->description}} </p>
                             </div>
                         </div>
 
-                        <div class="row vista-móvil text-movil-center " >
+                        {{--<div class="row">--}}
+                        {{--<div class="col-12">--}}
+                        {{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolore natus voluptates. Aperiam, commodi dolorem dolorum excepturi illo impedit maxime molestiae neque nulla odio quae quasi repellendus soluta ullam voluptatibus.</p>--}}
+                        {{--</div>--}}
+                        {{--</div>--}}
+
+                        <div class="row vista-móvil col-12 text-movil-center " >
                             <div class="col-sm-12">
                                 <b>
                                     <a href="{{ route('move.show',$last_article->id.$last_article->head) }}" class="a-corregido2">
@@ -115,11 +185,31 @@
                             </div>
                         </div>
                     </a>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p class="descripcion">{{$last_article->description}}</p>
+                        </div>
+                        <div class="col-12">
+                            <p> <i>by</i> {{$last_article->autor}} </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
+            <div class="col-sm-4 vista-web">
+                {{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, culpa et exercitationem fugiat inventore laboriosam laborum, magnam magni nulla pariatur perferendis quisquam, similique tempora tenetur voluptatum. Dolorum natus omnis sapiente?</p>--}}
+            </div>
 
-    @endforeach
+            <div class="col-sm-8">
+
+            </div>
+            <div class="col-sm-4">
+
+            </div>
+
+        @endforeach
+    </div>
+
 
     {{--Espacio de separacion entre ultimo publicacion y las demas --}}
     <div class="container">
@@ -129,6 +219,7 @@
             </div>
         </div>
     </div>
+
     @foreach($articles as $article)
 
         <div class="row vista-web" style="margin-bottom: 10px ">

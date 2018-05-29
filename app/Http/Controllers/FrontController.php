@@ -41,13 +41,19 @@ class FrontController extends Controller
             ->limit(1)
             ->paginate(1);
 
+        $category_top = Article::orderBy('id', 'DESC')
+            ->where('important','IndieSonico')
+            ->where('approve','Aprobado')
+            ->limit(1)
+            ->paginate(1);
+
         $articles = DB::table('articles')
             ->orderBy('id','DESC')
             ->where('approve','Aprobado')
             ->skip(1)->take(100)
             ->get();
 
-        return view('index',compact('articles','tops','tops1','tops2', 'last_articles','videos'));
+        return view('index',compact('articles','tops','tops1','tops2', 'last_articles','videos','category_top'));
     }
 
     public function show($id)
