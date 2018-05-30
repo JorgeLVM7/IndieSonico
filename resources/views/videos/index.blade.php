@@ -17,6 +17,8 @@
                 <tr>
                     <th>Nombre</th>
                     <th>Video</th>
+                    <th>Catergoría</th>
+
                     <th colspan="3">Acciones</th>
                 </tr>
               </thead>
@@ -25,6 +27,7 @@
                   <tr>
                       <td>{{ $video ->name }}</td>
                       <td>{{ $video ->path }}</td>
+                      <td>{{ $video ->category }}</td>
                       <td>
                         <div class="btn-group btn-group-toggle" >
                           <a href="{{ route('videos.show', $video->id) }}" class="btn btn-outline-success" role="button" aria-pressed="true">Ver</a>

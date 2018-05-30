@@ -80,6 +80,7 @@
     {!! Form::label('important','Destacado o No Destacado ') !!}
     {!! Form::select('important',['No Destacado'=>'No Destacado',
                                 'Destacado'=>'Destacado',
+                                'IndieSonico'=>'IndieSonico',
                                 'Top Categoría'=>'Top Categoría']
                                 , null,['class'=>'form-control']
 ) !!}

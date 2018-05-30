@@ -8,7 +8,9 @@ class FrontController extends Controller
 {
     public  function  index()
     {
-        $videos = Video::orderBy('id','DESC')->paginate();
+        $videos = Video::orderBy('id','DESC')
+            ->where('category','=','Inicio')
+            ->paginate();
 
         // Inicializa @rownum
         DB::statement(DB::raw('SET @rownum = 0'));
@@ -17,7 +19,7 @@ class FrontController extends Controller
         $tops = DB::table('articles')
             ->select('id','head','path',DB::raw ('@rownum := @rownum + 1 as rownum'))
             ->where('approve', '=', 'Aprobado')
-            ->where('important','Destacado')
+            ->where('important','=','Destacado')
             ->orderBy('id', 'DESC')
             ->paginate(5);
 
@@ -26,34 +28,46 @@ class FrontController extends Controller
         $tops2 = DB::table('articles')
             ->select('id','head','path',DB::raw ('@rownum1 := @rownum1 + 1 as rownum1'))
             ->where('approve', '=', 'Aprobado')
-            ->where('important','Destacado')
+            ->where('important','=','Destacado')
             ->orderBy('id', 'DESC')
             ->paginate(3);
 
         $tops1 = Article::orderBy('id', 'DESC')
-            ->where('approve','Aprobado')
-            ->where('important','Destacado')
+            ->where('approve','=','Aprobado')
+            ->where('important','=','Destacado')
             ->limit(2)
             ->paginate(2);
 
         $last_articles = Article::orderBy('id', 'DESC')
-            ->where('approve','Aprobado')
+            ->where('approve','=','Aprobado')
+            ->where('important','=','No Destacado')
             ->limit(1)
             ->paginate(1);
 
-        $category_top = Article::orderBy('id', 'DESC')
-            ->where('important','IndieSonico')
-            ->where('approve','Aprobado')
+        $category_tops = Article::orderBy('id', 'DESC')
+            ->where('important','=','IndieSonico')
+            ->where('approve','=','Aprobado')
             ->limit(1)
             ->paginate(1);
+
+        $subarticles=DB::table('articles')
+            ->orderBy('id','DESC')
+            ->where('important','=','No Destacado')
+            ->where('approve','=','Aprobado')
+            ->skip(1)->take(3)
+            ->get();
+
+
 
         $articles = DB::table('articles')
             ->orderBy('id','DESC')
-            ->where('approve','Aprobado')
-            ->skip(1)->take(100)
+            ->where('important','=','No Destacado')
+            ->where('approve','=','Aprobado')
+            ->skip(4)->take(10000)
             ->get();
+//            ->paginate();
 
-        return view('index',compact('articles','tops','tops1','tops2', 'last_articles','videos','category_top'));
+        return view('index',compact('articles','tops','tops1','tops2', 'last_articles','videos','category_tops','subarticles'));
     }
 
     public function show($id)
@@ -102,7 +116,7 @@ class FrontController extends Controller
         $mediums = DB::table('articles')
             ->orderBy('id')
             ->where('important', '=','Destacado')
-            ->where('approve','Aprobado')
+            ->where('approve','=','Aprobado')
             ->paginate(3);
 
 

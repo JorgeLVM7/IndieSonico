@@ -7,6 +7,8 @@ use Mail;
 use Session;
 use Redirect;
 use IndieSonico\Article;
+use IndieSonico\Video;
+
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,6 +19,10 @@ class ContactController extends Controller
 
     public function index()
     {
+        $videos = Video::orderBy('id','DESC')
+            ->where('category','=','Inicio')
+            ->paginate();
+
         $tops = Article::orderBy('id', 'DESC')
             ->where('approve','Aprobado')
             ->limit(5)
@@ -27,7 +33,7 @@ class ContactController extends Controller
             ->limit(2)
             ->paginate(2);
 
-        return view('contact.index',compact('tops', 'tops1'));
+        return view('contact.index',compact('tops', 'tops1','videos'));
     }
     public function store(Request $request)
     {

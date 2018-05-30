@@ -50,7 +50,7 @@
                     </a>
                 </div>
             </div>
-            </a>
+
         </div>
 
     @endforeach
@@ -86,13 +86,13 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="row">
-                <a href="{{ route('show',$last_article->id.$last_article->head) }}" class="a-corregido2">
+                <a href="{{ route('show',$last_article->id.$last_article->head) }}" class="a-corregido2" style="margin: 0 auto">
                     <img class="card-img-top" src="images/{{$last_article->path}}" alt="">
 
                     <div class="row first-notice vista-web">
                         <div class="texto">
                             <b>
-                                <a href="{{ route('show',$last_article->id.$last_article->head) }}" class="a-corregido2 a-destacado">
+                                <a href="{{ route('show',$last_article->id.$last_article->head) }}" class="a-corregido2 a-destacado" >
                                     <h1 class="text-tablet">
                                         <b>{{$last_article->head}}</b>
                                     </h1>
@@ -125,26 +125,45 @@
         <div class="col-12">
             <br>
         </div>
-
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <br>
+        </div>
     </div>
 
     <div class="row">
-    @foreach($last_articles as $last_article)
+    @foreach($category_tops as $category_top)
+            <div class="col-sm-8">
+                <div class="row vista-web">
+                    <b>
+                        <a href="{{ route('show',$category_top->id.$category_top->head) }}" class="a-corregido2">
+                            <h3 class="">
+                                <b>{{$category_top->head}}</b>
+                            </h3>
+                        </a>
+                    </b>
+                </div>
+                <br>
 
+            </div>
+            <div class="col-sm-4">
+
+            </div>
             <div class="col-sm-8">
                 <div class="row">
-                    <a href="{{ route('show',$last_article->id.$last_article->head) }}" class="a-corregido2">
-                        <img class="card-img-top" src="images/{{$last_article->path}}" alt="">
+                    <a href="{{ route('show',$category_top->id.$category_top->head) }}" class="a-corregido2">
+                        <img class="card-img-top" src="images/{{$category_top->path}}" alt="">
 
-                        <div class="row first-notice-category vista-web">
-                            <div class="texto-category">
-                                <b>
-                                    <i>
-                                        <span class="title-first-category">INDIE SONICO</span>
-                                    </i>
-                                </b>
-                            </div>
-                        </div>
+                        {{--<div class="row first-notice-category vista-web">--}}
+                            {{--<div class="texto-category">--}}
+                                {{--<b>--}}
+                                    {{--<i>--}}
+                                        {{--<span class="title-first-category">INDIE SONICO</span>--}}
+                                    {{--</i>--}}
+                                {{--</b>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
                         {{--<div class="row">--}}
                             {{--<div class="col-12">--}}
@@ -153,32 +172,37 @@
                         {{--</div>--}}
 
                         <div class="row vista-móvil col-12 text-movil-center " >
-                            <div class="col-sm-12">
+                            <div class="col-sm-12 text-center">
                                 <b>
-                                    <a href="{{ route('show',$last_article->id.$last_article->head) }}" class="a-corregido2">
+                                    <a href="{{ route('show',$category_top->id.$category_top->head) }}" class="a-corregido2">
                                         <h3 class="">
-                                            <b>{{$last_article->head}}</b>
+                                            <b>{{$category_top->head}}</b>
                                         </h3>
                                     </a>
                                 </b>
-                                <p class="p-first-notice">{{$last_article->description}} </p>
+                                <p class="p-first-notice">{{$category_top->description}} </p>
                             </div>
                         </div>
                     </a>
-                    <div class="row">
+                    <div class="row vista-web">
                         <div class="col-sm-12">
-                            <p class="descripcion">{{$last_article->description}}</p>
+                            <p class="descripcion">{{$category_top->description}}</p>
                         </div>
                         <div class="col-12">
-                            <p> <i>by</i> {{$last_article->autor}} </p>
+                            <p> <i>by</i> {{$category_top->autor}} </p>
                         </div>
                     </div>
 
                 </div>
             </div>
             <div class="col-sm-4 vista-web">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, culpa et exercitationem fugiat inventore laboriosam laborum, magnam magni nulla pariatur perferendis quisquam, similique tempora tenetur voluptatum. Dolorum natus omnis sapiente?</p>
-            </div>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({
+                        google_ad_client: "ca-pub-7250274927102411",
+                        enable_page_level_ads: true
+                    });
+                </script>            </div>
 
             <div class="col-sm-8">
 
@@ -196,6 +220,83 @@
         <div class="row">
             <div class="col-12">
                 <br>
+            </div>
+        </div>
+    </div>
+
+    @foreach($subarticles as $subarticle)
+
+        <div class="row vista-web" style="margin-bottom: 10px ">
+            <div class="col-sm-6 ">
+                <p>{{$subarticle->category}}</p>
+                <a href="{{ route('show',$subarticle->id.$subarticle->head) }}" class="a-corregido2">
+                    <span class="title-articles"><b>{{ $subarticle ->head }}</b></span>
+                </a>
+                <p class="card-subtitle mb-2  descripcion">{{ $subarticle -> description }}</p>
+
+                <div class="row ">
+                    <div class="col-12">
+                        <p> <i>by</i> {{$subarticle->autor}} </p>
+                    </div>
+                    {{--<div class="col-6">--}}
+                    {{--<div id="" class="row">--}}
+                    {{--<a  class="twitter-share-button esp" data-size="large" href="https://twitter.com/home?status=http%3A//indiesonico.com/show/{{$article->id }}">Twittear</a>--}}
+                    {{--<div class="fb-share-button esp" data-href="http://indiesonico.com/show/{{ $article ->id }}" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Findiesonico.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>--}}
+                    {{--</div>--}}
+                    {{--</div>--}}
+                </div>
+                <br>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="row">
+                    <a href="{{ route('show',$subarticle->id.$subarticle->head) }}">
+                        <img class="card-img-top img-articles" src="images/{{$subarticle->path}}" alt="Card image cap" style="border-radius:0 !important;">
+                    </a>
+                </div>
+            </div>
+            <div class="col-12">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row vista-móvil" style="margin-bottom: 10px ">
+            <div class="col-sm-6 ">
+                <div class="row">
+                    <a href="{{ route('show',$subarticle->id.$subarticle->head) }}">
+                        <img class="card-img-top img-articles" src="images/{{$subarticle->path}}" alt="Card image cap">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 text-movil-center">
+                <a href="{{ route('show',$subarticle->id.$subarticle->head) }}" class="a-corregido2">
+                    <h2 class="card-title"><b>{{ $subarticle ->head }}</b></h2>
+                </a>
+                <p class="card-subtitle mb-2  descripcion">{{ $subarticle -> description }}</p>
+
+                <div class="row ">
+                    <div class="col-12">
+                        <p><i>by</i> {{$subarticle->autor}} </p>
+                    </div>
+                    {{--<div class="col-6">--}}
+                    {{--<div id="" class="row">--}}
+                    {{--<a  class="twitter-share-button esp" data-size="large" href="https://twitter.com/home?status=http%3A//indiesonico.com/show/{{$article->id }}">Twittear</a>--}}
+                    {{--<div class="fb-share-button esp" data-href="http://indiesonico.com/show/{{ $article ->id }}" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Findiesonico.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>--}}
+                    {{--</div>--}}
+                    {{--</div>--}}
+                </div>
+                <br>
+            </div>
+
+        </div>
+
+    @endforeach
+
+    {{--Espacio de separacion entre las 3 primeras publicaciones  --}}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <br>
+                <hr>
             </div>
         </div>
     </div>

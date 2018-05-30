@@ -214,7 +214,7 @@
 
     <div class="row">
         <div class="col-sm-12 text-center">
-            <h3>Notas Relacionadas</h3>
+            <span class="title-articles"><b>Notas Relacionadas</b></span>
             <hr>
         </div>
     </div>

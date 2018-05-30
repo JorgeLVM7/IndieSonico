@@ -4,8 +4,11 @@
     <div class="container-fluid">
         <div class="row">
             <video width="100%" height="100%" autoplay loop>
-                <source src="../logos/indie.mp4" type="video/mp4">
-                <source src="../logos/indie.ogg" type="video/ogg">
+
+                @foreach($videos as $video)
+                    <source src="../images/{{$video->path}}" type="video/mp4">
+                    {{--<source src="../logos/indie.ogg" type="video/ogg">--}}
+                @endforeach
             </video>
         </div>
     </div>

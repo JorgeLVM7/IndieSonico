@@ -258,6 +258,9 @@ p{
     display: none;
 }
 
+.text-movil-center{
+    margin: 0 auto !important;
+}
 
 @media (max-width: 1200px) {
     .first-notice-category {
@@ -347,6 +350,7 @@ p{
     }
     .text-movil-center{
         text-align: center !important;
+        margin: 0 auto;
     }
 }
 @media (min-width: 576px) {

@@ -10,6 +10,14 @@
     <script src="/js/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-7250274927102411",
+            enable_page_level_ads: true
+        });
+    </script>
+
     {{--<meta property="og:url"           content="l" />--}}
     {{--<meta name="og:type" property="og:type"          content="polo" />--}}
     {{--<meta name="og:title" property="og:title"        content="@yield('og-title')"/>--}}
@@ -48,22 +56,19 @@
                         <a class="nav-link a-corregido" href="{{route('entertainment.index')}}">Entretenimiento</a>
                     </li>
 
+
                 </ul>
-            </div>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-
-
                     <li class="nav-item">
                         <a class="nav-link a-corregido" href="{{route('contact.index')}}">Contacto</a>
                     </li>
-                    {{--<li class="nav-item">--}}
-                        {{--<a class="nav-link a-corregido" href="{{route('entertainment.index')}}">Entretenimiento</a>--}}
-                    {{--</li>--}}
-
                 </ul>
+
             </div>
-        </div>
+            {{--<div class="collapse navbar-collapse " id="navbarSupportedContent">--}}
+
+            </div>
+        {{--</div>--}}
     </nav>
 {{--<div class="container-fluid negro">--}}
     <div class="container blanco">

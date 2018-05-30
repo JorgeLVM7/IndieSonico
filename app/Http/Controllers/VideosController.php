@@ -29,6 +29,7 @@ class VideosController extends Controller
 
         $video ->name         = $request    ->name;
         $video ->path         = $request    ->path;
+        $video ->category     = $request    ->category;
         $video ->save();
 
         return redirect()-> route('videos.index')
@@ -49,6 +50,7 @@ class VideosController extends Controller
 
         $video ->name         = $request    ->name;
         $video ->path         = $request    ->path;
+        $video ->category     = $request    ->category;
         $video ->save();
 
         return redirect()-> route('videos.index')
