@@ -32,7 +32,7 @@ class ArticleController extends Controller
         $article ->path         = $request    ->path;
         $article ->description  = $request    ->description;
         $article ->body         = $request    ->body;
-        $article->video         =$request     ->video;
+        $article ->video         =$request     ->video;
 
         $article ->head_2       = $request    ->head_2;
         $article ->path_2       = $request    ->path_2;

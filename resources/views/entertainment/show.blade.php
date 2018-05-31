@@ -4,7 +4,7 @@
 
     @foreach($tops as $top)
         <div id="tops0" class="card" style="border:none !important; margin: 0;">
-            <a href="{{ route('show',$top->id.$top->head) }}">
+            <a href="{{ route('show',$top->id.'-'.str_slug($top->head)) }}">
                 <img  class="card-img-top" src="../images/{{$top->path}}" alt="Card image cap" style="height: 112px">
             </a>
 
@@ -13,7 +13,7 @@
                     <span id="number">{{$top->rownum}}</span>
                 </div>
                 <div class="col-10 title-tops">
-                    <a style="line-height: 1 !important;" href="{{ route('show',$top->id.$top->head) }}" class="a-corregido2 title-tops">
+                    <a style="line-height: 1 !important;" href="{{ route('show',$top->id.'-'.str_slug($top->head)) }}" class="a-corregido2 title-tops">
                         {{ $top->head }}
                     </a>
                 </div>
@@ -25,13 +25,13 @@
     @foreach($tops1 as $top1)
 
         <div id="tops1" class="col-6" style="border:none !important;  padding: 0;">
-            <a href="{{ route('show',$top1->id.$top1->head) }}">
+            <a href="{{ route('show',$top1->id.'-'.str_slug($top1->head)) }}">
                 <img  class="card-img-top" src="../images/{{$top1->path}}" alt="Card image cap" style="border-radius:0 !important;height: 112px">
             </a>
 
             <div class="row align-items-center">
                 <div class="col-12 title-tops">
-                    <a href="{{ route('show',$top1->id.$top1->head) }}" class="a-corregido2">
+                    <a href="{{ route('show',$top1->id.'-'.str_slug($top1->head)) }}" class="a-corregido2">
                         {{ $top1 ->head }}
                     </a>
                 </div>
@@ -43,7 +43,7 @@
     @foreach($tops2 as $top2)
 
         <div id="tops2" class="col-4" style="border:none !important;  padding: 0;">
-            <a href="{{ route('show',$top2->id.$top2->head) }}">
+            <a href="{{ route('show',$top2->id.'-'.str_slug($top2->head)) }}">
                 <img  class="card-img-top" src="../images/{{$top2->path}}" alt="Card image cap" style="border-radius:0 !important;height: 112px">
             </a>
 
@@ -52,7 +52,7 @@
                     <span id="number">{{$top2->rownum1}}</span>
                 </div>
                 <div class="col-10 title-tops">
-                    <a style="line-height: 1 !important;" href="{{ route('show',$top2->id.$top2->head) }}" class="a-corregido2 title-tops">
+                    <a style="line-height: 1 !important;" href="{{ route('show',$top2->id.'-'.str_slug($top2->head)) }}" class="a-corregido2 title-tops">
                         {{ $top2->head }}
                     </a>
                 </div>
@@ -166,13 +166,13 @@
 
                         <div id="" class="col-sm-12">
                             <div id="" class="card" style="border:none !important;">
-                                <a href="{{ route('entertainment.show',$medium->id.$medium->head) }}">
+                                <a href="{{ route('entertainment.show',$medium->id.'-'.str_slug($medium->head))}}">
                                     <img  class="card-img-top" src="../images/{{$medium->path}}" alt="Card image cap" style="height: 150px">
                                 </a>
 
                                 <div class="row align-items-center">
                                     <div class="col-12 title-tops">
-                                        <a href="{{ route('entertainment.show',$medium->id.$medium->head) }}" class="a-corregido2">
+                                        <a href="{{ route('entertainment.show',$medium->id.'-'.str_slug($medium->head)) }}" class="a-corregido2">
                                             <h5>{{ $medium ->head }}</h5>
                                         </a>
                                     </div>
@@ -223,12 +223,12 @@
 
             <div id="botoms0" class="col-sm-4">
                 <div id="" class="card" style="border:none !important;">
-                    <a href="{{ route('entertainment.show',$bottom->id.$bottom->head) }}">
+                    <a href="{{ route('entertainment.show',$bottom->id.'-'.str_slug($bottom->head)) }}">
                         <img  class="card-img-top" src="../images/{{$bottom->path}}" alt="Card image cap" style="height: 200px">
                     </a>
                     <div class="row align-items-center">
                         <div class="col-12 title-tops">
-                            <a href="{{ route('entertainment.show',$bottom->id.$bottom->head) }}" class="a-corregido2">
+                            <a href="{{ route('entertainment.show',$bottom->id.'-'.str_slug($bottom->head)) }}" class="a-corregido2">
                                 <h5>{{ $bottom ->head }}</h5>
                             </a>
                         </div>
@@ -244,12 +244,12 @@
             @foreach($bottoms as $bottom)
 
                 <div id="" class="col-6" style="border:none !important; padding: 0;">
-                    <a href="{{ route('entertainment.show',$bottom->id.$bottom->head) }}">
+                    <a href="{{ route('entertainment.show',$bottom->id.'-'.str_slug($bottom->head)) }}">
                         <img  class="card-img-top" src="../images/{{$bottom->path}}" alt="Card image cap" style="height: 120px">
                     </a>
                     <div class="row align-items-center">
                         <div class="col-12 title-tops">
-                            <a href="{{ route('entertainment.show',$bottom->id.$bottom->head) }}" class="a-corregido2">
+                            <a href="{{ route('entertainment.show',$bottom->id.'-'.str_slug($bottom->head)) }}" class="a-corregido2">
                                 <h5>{{ $bottom ->head }}</h5>
                             </a>
                         </div>

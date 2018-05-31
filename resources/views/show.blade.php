@@ -1,10 +1,16 @@
 @extends('layouts.indie3')
-{{-- NOTAS DESTACADAS EN ENCABEZADO --}}
+
+
+
+
+
+
+    {{-- NOTAS DESTACADAS EN ENCABEZADO --}}
 @section('content0')
 
     @foreach($tops as $top)
         <div id="tops0" class="card" style="border:none !important; margin: 0;">
-            <a href="{{ route('show',$top->id.$top->head) }}">
+            <a href="{{ route('show',$top->id.'-'.str_slug($top->head)) }}">
                 <img  class="card-img-top" src="../images/{{$top->path}}" alt="Card image cap" style="height: 112px">
             </a>
 
@@ -13,7 +19,7 @@
                     <span id="number">{{$top->rownum}}</span>
                 </div>
                 <div class="col-10 title-tops">
-                    <a style="line-height: 1 !important;" href="{{ route('show',$top->id.$top->head) }}" class="a-corregido2 title-tops">
+                    <a style="line-height: 1 !important;" href="{{ route('show',$top->id.'-'.str_slug($top->head)) }}" class="a-corregido2 title-tops">
                         {{ $top->head }}
                     </a>
                 </div>
@@ -25,17 +31,18 @@
     @foreach($tops1 as $top1)
 
         <div id="tops1" class="col-6" style="border:none !important;  padding: 0;">
-            <a href="{{ route('show',$top1->id.$top1->head) }}">
+            <a href="{{ route('show',$top1->id.'-'.str_slug($top1->head)) }}">
                 <img  class="card-img-top" src="../images/{{$top1->path}}" alt="Card image cap" style="border-radius:0 !important;height: 112px">
             </a>
 
-            <div class="row align-items-center">
+            <div class="row align-items-center col-12">
                 <div class="col-12 title-tops">
-                    <a href="{{ route('show',$top1->id.$top1->head) }}" class="a-corregido2">
+                    <a href="{{ route('show',$top1->id.'-'.str_slug($top1->head)) }}" class="a-corregido2">
                         {{ $top1 ->head }}
                     </a>
                 </div>
             </div>
+
         </div>
 
     @endforeach
@@ -43,16 +50,16 @@
     @foreach($tops2 as $top2)
 
         <div id="tops2" class="col-4" style="border:none !important;  padding: 0;">
-            <a href="{{ route('show',$top2->id.$top2->head) }}">
+            <a href="{{ route('show',$top2->id.'-'.str_slug($top2->head)) }}">
                 <img  class="card-img-top" src="../images/{{$top2->path}}" alt="Card image cap" style="border-radius:0 !important;height: 112px">
             </a>
 
-            <div class="row align-items-center">
+            <div class="row align-items-center col-12">
                 <div class="col-1">
                     <span id="number">{{$top2->rownum1}}</span>
                 </div>
                 <div class="col-10 title-tops">
-                    <a style="line-height: 1 !important;" href="{{ route('show',$top2->id.$top2->head) }}" class="a-corregido2 title-tops">
+                    <a style="line-height: 1 !important;" href="{{ route('show',$top2->id.'-'.str_slug($top2->head)) }}" class="a-corregido2 title-tops">
                         {{ $top2->head }}
                     </a>
                 </div>
@@ -169,13 +176,13 @@
 
                         <div id="" class="col-sm-12">
                             <div id="" class="card" style="border:none !important;">
-                                <a href="{{ route('show',$medium->id.$medium->head) }}">
+                                <a href="{{ route('show',$medium->id.'-'.str_slug($medium->head)) }}">
                                     <img  class="card-img-top" src="../images/{{$medium->path}}" alt="Card image cap" style="height: 150px">
                                 </a>
 
                                 <div class="row align-items-center">
                                     <div class="col-12 title-tops">
-                                        <a href="{{ route('show',$medium->id.$medium->head) }}" class="a-corregido2">
+                                        <a href="{{ route('show',$medium->id.'-'.str_slug($medium->head)) }}" class="a-corregido2">
                                             <h5>{{ $medium ->head }}</h5>
                                         </a>
                                     </div>
@@ -199,8 +206,8 @@
         <div class="col-sm-12">
             {{--Aqui va  un id="tops1"--}}
             <div id="" class="row">
-                <a  class="twitter-share-button esp" data-size="large" href="https://twitter.com/home?status=http%3A//indiesonico.com/{{$article->id }}">Twittear</a>
-                <div class="fb-share-button esp" data-href="http://indiesonico.com/{{ $article ->id }}" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Findiesonico.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+                <a  class="twitter-share-button esp" data-size="large" href="https://twitter.com/home?status=http%3A//indiesonico.com/show{{$article->id }}.'-'.{{str_slug($article->head)}}">Twittear</a>
+                <div class="fb-share-button" data-href="https://indiesonico.com/show/{{$article->id }}.'-'.{{str_slug($article->head)}}" data-layout="button_count"  data-title="{{$article->head}}"  datasrc="../images/{{$article->path}}" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Findiesonico.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
             </div>
         </div>
     </div>
@@ -210,6 +217,18 @@
     </div>
 
 @endsection
+
+{{--@section('head-facebook')--}}
+
+    {{--<meta property="og:url"           content="https://indiesonico.com" />--}}
+    {{--<meta property="og:type"          content="website" />--}}
+    {{--<meta property="og:title"         content="{{$article->head}}" />--}}
+    {{--<meta property="og:description"   content="{{$article->description}}" />--}}
+    {{--<meta property="og:image"         content="../images/{{$article->path}}" />--}}
+
+{{--@endsection--}}
+
+
 
 {{--NOTAS RELACIONADAS BOTTOM--}}
 
@@ -230,12 +249,12 @@
 
             <div id="botoms0" class="col-sm-4">
                 <div id="" class="card" style="border:none !important;">
-                    <a href="{{ route('show',$bottom->id.$bottom->head) }}">
+                    <a href="{{ route('show',$bottom->id.'-'.str_slug($bottom->head)) }}">
                         <img  class="card-img-top" src="../images/{{$bottom->path}}" alt="Card image cap" style="height: 200px">
                     </a>
                     <div class="row align-items-center">
                         <div class="col-12 title-tops">
-                            <a href="{{ route('show',$bottom->id.$bottom->head) }}" class="a-corregido2">
+                            <a href="{{ route('show',$bottom->id.'-'.str_slug($bottom->head)) }}" class="a-corregido2">
                                 <h5>{{ $bottom ->head }}</h5>
                             </a>
                         </div>
@@ -251,12 +270,12 @@
             @foreach($bottoms as $bottom)
 
                 <div id="" class="col-6" style="border:none !important; padding: 0;">
-                    <a href="{{ route('show',$bottom->id.$bottom->head) }}">
+                    <a href="{{ route('show',$bottom->id.'-'.str_slug($bottom->head)) }}">
                         <img  class="card-img-top" src="../images/{{$bottom->path}}" alt="Card image cap" style="height: 120px">
                     </a>
                     <div class="row align-items-center">
                         <div class="col-12 title-tops">
-                            <a href="{{ route('show',$bottom->id.$bottom->head) }}" class="a-corregido2">
+                            <a href="{{ route('show',$bottom->id.'-'.str_slug($bottom->head)) }}" class="a-corregido2">
                                 <h5>{{ $bottom ->head }}</h5>
                             </a>
                         </div>

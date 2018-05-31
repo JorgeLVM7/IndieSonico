@@ -18,7 +18,7 @@
 
     @foreach($tops as $top)
         <div id="tops0" class="card" style="border:none !important; margin: 0;">
-            <a href="{{ route('show',$top->id.$top->head) }}">
+            <a href="{{ route('show',$top->id.'-'.str_slug($top->head)) }}">
                 <img  class="card-img-top" src="../images/{{$top->path}}" alt="Card image cap" style="height: 112px">
             </a>
 
@@ -27,7 +27,7 @@
                     <span id="number">{{$top->rownum}}</span>
                 </div>
                 <div class="col-10 title-tops">
-                    <a style="line-height: 1 !important;" href="{{ route('show',$top->id.$top->head) }}" class="a-corregido2 title-tops">
+                    <a style="line-height: 1 !important;" href="{{ route('show',$top->id.'-'.str_slug($top->head)) }}" class="a-corregido2 title-tops">
                         {{ $top->head }}
                     </a>
                 </div>
@@ -39,18 +39,18 @@
     @foreach($tops1 as $top1)
 
         <div id="tops1" class="col-6" style="border:none !important;  padding: 0;">
-            <a href="{{ route('show',$top1->id.$top1->head) }}">
+            <a href="{{ route('show',$top1->id.'-'.str_slug($top1->head)) }}">
                 <img  class="card-img-top" src="../images/{{$top1->path}}" alt="Card image cap" style="border-radius:0 !important;height: 112px">
             </a>
 
-            <div class="row align-items-center">
+            <div class="row align-items-center col-12">
                 <div class="col-12 title-tops">
-                    <a href="{{ route('show',$top1->id.$top1->head) }}" class="a-corregido2">
+                    <a href="{{ route('show',$top1->id.'-'.str_slug($top1->head)) }}" class="a-corregido2">
                         {{ $top1 ->head }}
                     </a>
                 </div>
             </div>
-            </a>
+
         </div>
 
     @endforeach
@@ -58,16 +58,16 @@
     @foreach($tops2 as $top2)
 
         <div id="tops2" class="col-4" style="border:none !important;  padding: 0;">
-            <a href="{{ route('show',$top2->id.$top2->head) }}">
+            <a href="{{ route('show',$top2->id.'-'.str_slug($top2->head)) }}">
                 <img  class="card-img-top" src="../images/{{$top2->path}}" alt="Card image cap" style="border-radius:0 !important;height: 112px">
             </a>
 
-            <div class="row align-items-center">
+            <div class="row align-items-center col-12">
                 <div class="col-1">
                     <span id="number">{{$top2->rownum1}}</span>
                 </div>
                 <div class="col-10 title-tops">
-                    <a style="line-height: 1 !important;" href="{{ route('show',$top2->id.$top2->head) }}" class="a-corregido2 title-tops">
+                    <a style="line-height: 1 !important;" href="{{ route('show',$top2->id.'-'.str_slug($top2->head)) }}" class="a-corregido2 title-tops">
                         {{ $top2->head }}
                     </a>
                 </div>
@@ -81,60 +81,12 @@
 {{-- Noticia 1--}}
 @section('content1')
 
-    {{--@foreach($last_articles as $last_article)--}}
-
-        {{--<div class="row">--}}
-            {{--<div class="col-sm-12">--}}
-                {{--<div class="row">--}}
-                    {{--<a href="{{ route('music.show',$last_article->id.$last_article->head) }}" class="a-corregido2">--}}
-                        {{--<img class="card-img-top" src="images/{{$last_article->path}}" alt="">--}}
-
-                        {{--<div class="row first-notice vista-web">--}}
-                            {{--<div class="texto">--}}
-                                {{--<b>--}}
-                                    {{--<a href="{{ route('music.show',$last_article->id.$last_article->head) }}" class="a-corregido2">--}}
-                                        {{--<h1 class="text-tablet">--}}
-                                            {{--<b>{{$last_article->head}}</b>--}}
-                                        {{--</h1>--}}
-                                    {{--</a>--}}
-                                {{--</b>--}}
-                                {{--<p class="p-first-notice">{{$last_article->description}} </p>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-
-                        {{--<div class="row vista-móvil text-movil-center " >--}}
-                            {{--<div class="col-sm-12">--}}
-                                {{--<b>--}}
-                                    {{--<a href="{{ route('music.show',$last_article->id.$last_article->head) }}" class="a-corregido2">--}}
-                                        {{--<h3 class="">--}}
-                                            {{--<b>{{$last_article->head}}</b>--}}
-                                        {{--</h3>--}}
-                                    {{--</a>--}}
-                                {{--</b>--}}
-                                {{--<p class="p-first-notice">{{$last_article->description}} </p>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</a>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-
-    {{--@endforeach--}}
-    {{--<div class="row">--}}
-        {{--<div class="col-12">--}}
-            {{--<br>--}}
-        {{--</div>--}}
-
-    {{--</div>--}}
-
     <div class="row">
         @foreach($category_tops as $category_top)
-
-
             <div class="col-sm-8">
                 <div class="row vista-web">
                     <b>
-                        <a href="{{ route('music.show',$category_top->id.$category_top->head) }}" class="a-corregido2">
+                        <a href="{{ route('music.show',$category_top->id.'-'.str_slug($category_top->head)) }}" class="a-corregido2">
                             <h3 class="">
                                 <b>{{$category_top->head}}</b>
                             </h3>
@@ -148,30 +100,14 @@
 
             </div>
             <div class="col-sm-8">
+
                 <div class="row">
-                    <a href="{{ route('music.show',$category_top->id.$category_top->head) }}" class="a-corregido2">
+                    <a href="{{ route('music.show',$category_top->id.'-'.str_slug($category_top->head)) }}" class="a-corregido2">
                         <img class="card-img-top" src="images/{{$category_top->path}}" alt="">
-
-                        {{--<div class="row first-notice-category vista-web">--}}
-                            {{--<div class="texto-category">--}}
-                                {{--<b>--}}
-                                    {{--<i>--}}
-                                        {{--<span class="title-first-category">MÚSICA</span>--}}
-                                    {{--</i>--}}
-                                {{--</b>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-
-                        {{--<div class="row">--}}
-                        {{--<div class="col-12">--}}
-                        {{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolore natus voluptates. Aperiam, commodi dolorem dolorum excepturi illo impedit maxime molestiae neque nulla odio quae quasi repellendus soluta ullam voluptatibus.</p>--}}
-                        {{--</div>--}}
-                        {{--</div>--}}
-
                         <div class="row vista-móvil col-12 text-movil-center " >
                             <div class="col-sm-12">
                                 <b>
-                                    <a href="{{ route('music.show',$category_top->id.$category_top->head) }}" class="a-corregido2">
+                                    <a href="{{ route('music.show',$category_top->id.'-'.str_slug($category_top->head)) }}" class="a-corregido2">
                                         <h3 class="">
                                             <b>{{$category_top->head}}</b>
                                         </h3>
@@ -224,7 +160,7 @@
         <div class="row vista-web" style="margin-bottom: 10px ">
             <div class="col-sm-6 ">
                 <p>{{$subarticle->category}}</p>
-                <a href="{{ route('music.show',$subarticle->id.$subarticle->head) }}" class="a-corregido2">
+                <a href="{{ route('music.show',$subarticle->id.'-'.str_slug($subarticle->head)) }}" class="a-corregido2">
                     <span class="title-articles"><b>{{ $subarticle ->head }}</b></span>
                 </a>
                 <p class="card-subtitle mb-2  descripcion">{{ $subarticle -> description }}</p>
@@ -244,7 +180,7 @@
             </div>
             <div class="col-sm-6 ">
                 <div class="row">
-                    <a href="{{ route('music.show',$subarticle->id.$subarticle->head) }}">
+                    <a href="{{ route('music.show',$subarticle->id.'-'.str_slug($subarticle->head)) }}">
                         <img class="card-img-top img-articles" src="images/{{$subarticle->path}}" alt="Card image cap" style="border-radius:0 !important;">
                     </a>
                 </div>
@@ -257,13 +193,13 @@
         <div class="row vista-móvil" style="margin-bottom: 10px ">
             <div class="col-sm-6 ">
                 <div class="row">
-                    <a href="{{ route('music.show',$subarticle->id.$subarticle->head) }}">
+                    <a href="{{ route('music.show',$subarticle->id.'-'.str_slug($subarticle->head)) }}">
                         <img class="card-img-top img-articles" src="images/{{$subarticle->path}}" alt="Card image cap">
                     </a>
                 </div>
             </div>
             <div class="col-sm-6 text-movil-center">
-                <a href="{{ route('music.show',$subarticle->id.$subarticle->head) }}" class="a-corregido2">
+                <a href="{{ route('music.show',$subarticle->id.'-'.str_slug($subarticle->head)) }}" class="a-corregido2">
                     <h2 class="card-title"><b>{{ $subarticle ->head }}</b></h2>
                 </a>
                 <p class="card-subtitle mb-2  descripcion">{{ $subarticle -> description }}</p>
@@ -303,7 +239,7 @@
         <div class="row vista-web" style="margin-bottom: 10px ">
             <div class="col-sm-6 ">
                 <p>{{$article->category}}</p>
-                <a href="{{ route('music.show',$article->id.$article->head) }}" class="a-corregido2">
+                <a href="{{ route('music.show',$article->id.'-'.str_slug($article->head)) }}" class="a-corregido2">
                     <span class="title-articles"><b>{{ $article ->head }}</b></span>
                 </a>
                 <p class="card-subtitle mb-2  descripcion">{{ $article -> description }}</p>
@@ -323,7 +259,7 @@
             </div>
             <div class="col-sm-6 ">
                 <div class="row">
-                    <a href="{{ route('music.show',$article->id.$article->head) }}">
+                    <a href="{{ route('music.show',$article->id.'-'.str_slug($article->head)) }}">
                         <img class="card-img-top img-articles" src="images/{{$article->path}}" alt="Card image cap" style="border-radius:0 !important;">
                     </a>
                 </div>
@@ -336,13 +272,13 @@
         <div class="row vista-móvil" style="margin-bottom: 10px ">
             <div class="col-sm-6 ">
                 <div class="row">
-                    <a href="{{ route('music.show',$article->id.$article->head) }}">
+                    <a href="{{ route('music.show',$article->id.'-'.str_slug($article->head)) }}">
                         <img class="card-img-top img-articles" src="images/{{$article->path}}" alt="Card image cap">
                     </a>
                 </div>
             </div>
             <div class="col-sm-6 text-movil-center">
-                <a href="{{ route('music.show',$article->id.$article->head) }}" class="a-corregido2">
+                <a href="{{ route('music.show',$article->id.'-'.str_slug($article->head)) }}" class="a-corregido2">
                     <h2 class="card-title">{{ $article ->head }}</h2>
                 </a>
                 <p class="card-subtitle mb-2  descripcion">{{ $article -> description }}</p>
