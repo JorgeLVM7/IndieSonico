@@ -4,6 +4,10 @@ body{
     transition: all 3s !important;
     /*line-height: 1 !important;*/
 }
+@font-face {
+    font-family: "Big Noodle Titling";
+    src: url('../fonts/big_noodle_titling.ttf') format("truetype");
+}
 
 p{
     color: gray !important;
@@ -36,11 +40,12 @@ p{
 
 .footer{
     background-color: #444444;
-    color: #FEDC13;
+    color: #EFC205;
 }
 .title-articles{
-    font-size: 1.75rem;
+    font-size: 1.75rem !important;
     line-height: 1.2;
+    font-family: "Big Noodle Titling";
 
 }
 .title-tops{
@@ -92,7 +97,7 @@ p{
 }
 
 .texto {
-    background-color: #FEDC13;
+    background-color: #EFC205;
     padding: 15px;
     width: 100%;
     text-align: center;
@@ -100,7 +105,7 @@ p{
 }
 
 .texto-category {
-    background-color: #FEDC13;
+    background-color: #EFC205;
     padding: 3px;
     width: 100%;
     text-align: center;
@@ -124,7 +129,7 @@ p{
 .a-corregido{
     opacity: unset !important;
     text-decoration: none !important;
-    color: #FEDC13 !important;
+    color: #EFC205 !important;
 }
 .a-corregido2{
     opacity: unset !important;
@@ -133,17 +138,17 @@ p{
 }
 .a-corregido:hover, .a-corregido2:hover{
     text-decoration: none !important;
-    color: #FEDC13 !important;
+    color: #EFC205 !important;
     transition: 1s;
 }
 
 .a-logout{
     text-decoration: none !important;
-    color: #FEDC13 !important;
+    color: #EFC205 !important;
 }
 .a-logout:hover{
     text-decoration: none !important;
-    color: #FEDC13 !important;
+    color: #EFC205 !important;
     transition: 1s;
 
 }
@@ -200,7 +205,9 @@ p{
 /*Caja flotante de redes sociales */
 
 
-
+/*.follow{*/
+    /*display: none !important;*/
+/*}*/
 
 .red{
     position: fixed;
@@ -230,7 +237,7 @@ p{
     text-decoration: none;
     width: 55px;
     color: #FFFFFF;
-    background-color: #FEDC13;
+    background-color: #EFC205;
 }
 #twitter{
     padding: 10px 20px;
@@ -260,6 +267,23 @@ p{
 
 .text-movil-center{
     margin: 0 auto !important;
+}
+
+.icons-redes{
+    transform: scale(.75);
+}
+
+/* Estilo de Contacto */
+
+
+.bg-yellow{
+    background-color:#EFC205 ;
+}
+
+.bg-dark{
+    background-color: #444444 !important;
+    border-color: #444444 !important;
+    color: #EFC205 !important;
 }
 
 @media (max-width: 1200px) {
@@ -336,7 +360,7 @@ p{
 }
 @media (min-width: 768px) {
 
-    .red, .follow{
+    .red{
         display: none !important;
     }
 }
@@ -354,7 +378,7 @@ p{
     }
 }
 @media (min-width: 576px) {
-    .vista-móvil{
+    .vista-móvil,.follow{
         display: none !important;
     }
 

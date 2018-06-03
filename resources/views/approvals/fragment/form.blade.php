@@ -78,11 +78,13 @@
 
 <div class="form-group">
     {!! Form::label('important','Destacado o No Destacado ') !!}
-    {!! Form::select('important',['No Destacado'=>'No Destacado',
-                                'Destacado'=>'Destacado',
-                                'IndieSonico'=>'IndieSonico',
-                                'Top Categoría'=>'Top Categoría']
-                                , null,['class'=>'form-control']
+
+    {!! Form::select('important',[  'Publicación Común'     =>'Publicación Común',
+                                    'Top 5 '                =>'Top 5',
+                                    'Destacado Sesiones IS' =>'Destacado Sesiones IS',
+                                    'Destacado de Categoría'=>'Destacado de Categoría',
+                                    'Destacado Principal'   =>'Destacado Principal'],
+                                null,['class'=>'form-control']
 ) !!}
 
 </div>

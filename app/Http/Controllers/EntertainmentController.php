@@ -13,6 +13,7 @@ class EntertainmentController extends Controller
         $videos = Video::orderBy('id','DESC')
             ->where('category','=','Entretenimiento')
             ->paginate();
+
         // Inicializa @rownum
         DB::statement(DB::raw('SET @rownum = 0'));
 
@@ -20,7 +21,7 @@ class EntertainmentController extends Controller
         $tops = DB::table('articles')
             ->select('id','head','path',DB::raw ('@rownum := @rownum + 1 as rownum'))
             ->where('approve', '=', 'Aprobado')
-            ->where('important','=','Destacado')
+            ->where('important','=','Top 5')
             ->orderBy('id', 'DESC')
             ->paginate(5);
 
@@ -29,13 +30,13 @@ class EntertainmentController extends Controller
         $tops2 = DB::table('articles')
             ->select('id','head','path',DB::raw ('@rownum1 := @rownum1 + 1 as rownum1'))
             ->where('approve', '=', 'Aprobado')
-            ->where('important','=','Destacado')
+            ->where('important','=','Top 5')
             ->orderBy('id', 'DESC')
             ->paginate(3);
 
         $tops1 = Article::orderBy('id', 'DESC')
             ->where('approve','=','Aprobado')
-            ->where('important','=','Destacado')
+            ->where('important','=','Top 5')
             ->limit(2)
             ->paginate(2);
 
@@ -47,7 +48,7 @@ class EntertainmentController extends Controller
 
         $category_tops = Article::orderBy('id', 'DESC')
             ->where('category', '=','Entretenimiento')
-            ->where('important','=','Top Categoría')
+            ->where('important','=','Destacado de Categoría')
             ->where('approve','=','Aprobado')
             ->limit(1)
             ->paginate(1);
@@ -55,7 +56,7 @@ class EntertainmentController extends Controller
         $subarticles=DB::table('articles')
             ->orderBy('id','DESC')
             ->where('category', '=','Entretenimiento')
-            ->where('important','=','No Destacado')
+            ->where('important','=','Publicación Común')
             ->where('approve','=','Aprobado')
 //            ->skip(1)->take(3)
 //            ->get();
@@ -65,7 +66,7 @@ class EntertainmentController extends Controller
         $articles = DB::table('articles')
             ->orderBy('id','DESC')
             ->where('category', '=','Entretenimiento')
-            ->where('important','=','No Destacado')
+            ->where('important','=','Publicación Común')
             ->where('approve','=','Aprobado')
             ->skip(3)->take(100)
             ->get();
@@ -87,7 +88,7 @@ class EntertainmentController extends Controller
         $tops = DB::table('articles')
             ->select('id','head','path',DB::raw ('@rownum := @rownum + 1 as rownum'))
             ->where('approve', '=', 'Aprobado')
-            ->where('important','=','Destacado')
+            ->where('important','=','Top 5')
             ->orderBy('id', 'DESC')
             ->paginate(5);
 
@@ -96,13 +97,13 @@ class EntertainmentController extends Controller
         $tops2 = DB::table('articles')
             ->select('id','head','path',DB::raw ('@rownum1 := @rownum1 + 1 as rownum1'))
             ->where('approve', '=', 'Aprobado')
-            ->where('important','=','Destacado')
+            ->where('important','=','Top 5')
             ->orderBy('id', 'DESC')
             ->paginate(3);
 
         $tops1 = Article::orderBy('id', 'DESC')
             ->where('approve','=','Aprobado')
-            ->where('important','=','Destacado')
+            ->where('important','=','Top 5')
             ->limit(2)
             ->paginate(2);
 
@@ -111,14 +112,14 @@ class EntertainmentController extends Controller
         $bottoms = DB::table('articles')
             ->orderBy('id','DESC')
             ->where('category', '=','Entretenimiento')
-            ->where('important','=','Destacado')
+//            ->where('important','=','Destacado')
             ->where('approve','=','Aprobado')
             ->paginate(5);
 
         $mediums = DB::table('articles')
             ->orderBy('id')
             ->where('category', '=','Entretenimiento')
-            ->where('important', '=','Destacado')
+//            ->where('important', '=','Destacado')
             ->where('approve','=','Aprobado')
             ->paginate(3);
 

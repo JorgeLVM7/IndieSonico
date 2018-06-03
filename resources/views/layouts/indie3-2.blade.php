@@ -61,42 +61,37 @@
                 </ul>
 
             </div>
-            {{--<div class="collapse navbar-collapse " id="navbarSupportedContent">--}}
 
             </div>
-        {{--</div>--}}
     </nav>
-{{--<div class="container-fluid negro">--}}
-    <div class="container blanco">
-        <div class="row">
-            <br>
-        </div>
-        <div class="row">
 
-            <div id="caja-tops0" class="col-sm-12 card-group">
-                @yield('content0')
-            </div>
 
-            <div id="caja-tops1" class="row col-12 " style="margin: 0 auto; padding: 0;">
-                @yield('content0')
-            </div>
+    <div class="container-fluid bg-yellow follow">
 
-        </div>
-    </div>
-
-    <div class="container blanco">
-        <div class="row publicidad-top">
-            <div class="col-sm-12">
+        <div class="container">
+            <div class="row">
                 <br>
             </div>
         </div>
 
-        @yield('content1')
-
-        @yield('content-bottoms')
+            @yield('content1')
 
     </div>
-{{--</div>--}}
+    <div class="container-fluid bg-yellow vista-web">
+
+        <div class="container">
+            <div class="row">
+                <br>
+            </div>
+        </div>
+
+        <div class="container">
+            @yield('content1')
+
+        </div>
+
+
+    </div>
     <div class="container-fluid footer">
         <div class="container">
             <div class="row">
@@ -109,7 +104,7 @@
 
                 </div>
                 <div class="col-sm-4">
-                    <div class="row">
+                    <div class="row text-left">
                         <div class="col-12">
                             <h6 class="title-articles">ACERCA DE NOSOTROS</h6>
                             <p>Somos un medio digital especializado en Música y Entretenimiento.
@@ -175,6 +170,7 @@
                                     <a href="https://www.facebook.com/indiesonico/">
                                         <img class="icons-redes" src="/logos/facebook.png" alt="">
                                     </a>
+                                </div>
                                 </div>
 
                             </div>

@@ -1,4 +1,4 @@
-@extends('layouts.indie3')
+@extends('layouts.indie3-2')
 
 @section('content-video')
     <div class="container-fluid">
@@ -27,9 +27,10 @@
                     <div class="row follow">
                         <a class="a-redes" href="https://www.youtube.com/channel/UC6C4w1GO4iuIZxqjrmLf7YQ"><img class="redes" src="logos/youtube.jpg" alt=""></a>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col-12 text-center">
-                            <h1>Contáctanos</h1>
+                            <h1><span> <b>Contáctanos</b></span></h1>
                             {{--<hr>--}}
                         </div>
                     </div>
@@ -45,7 +46,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         {{--</div>--}}
 

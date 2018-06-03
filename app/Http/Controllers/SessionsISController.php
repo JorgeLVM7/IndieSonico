@@ -11,6 +11,7 @@ class SessionsISController extends Controller
         $videos = Video::orderBy('id','DESC')
             ->where('category','=','Sesiones IS')
             ->paginate();
+
         // Inicializa @rownum
         DB::statement(DB::raw('SET @rownum = 0'));
 
@@ -18,7 +19,7 @@ class SessionsISController extends Controller
         $tops = DB::table('articles')
             ->select('id','head','path',DB::raw ('@rownum := @rownum + 1 as rownum'))
             ->where('approve', '=', 'Aprobado')
-            ->where('important','=','Destacado')
+            ->where('important','=','Top 5')
             ->orderBy('id', 'DESC')
             ->paginate(5);
 
@@ -27,13 +28,13 @@ class SessionsISController extends Controller
         $tops2 = DB::table('articles')
             ->select('id','head','path',DB::raw ('@rownum1 := @rownum1 + 1 as rownum1'))
             ->where('approve', '=', 'Aprobado')
-            ->where('important','=','Destacado')
+            ->where('important','=','Top 5')
             ->orderBy('id', 'DESC')
             ->paginate(3);
 
         $tops1 = Article::orderBy('id', 'DESC')
             ->where('approve','=','Aprobado')
-            ->where('important','=','Destacado')
+            ->where('important','=','Top 5')
             ->limit(2)
             ->paginate(2);
 
@@ -45,15 +46,15 @@ class SessionsISController extends Controller
 
         $category_tops = Article::orderBy('id', 'DESC')
             ->where('category', '=','Sesiones IS')
-            ->where('important','Top Categoría')
-            ->where('approve','Aprobado')
+            ->where('important','=','Destacado de Categoría')
+            ->where('approve','=','Aprobado')
             ->limit(1)
             ->paginate(1);
 
         $subarticles=DB::table('articles')
             ->orderBy('id','DESC')
             ->where('category', '=','Sesiones IS')
-            ->where('important','=','No Destacado')
+            ->where('important','=','Publicación Común')
             ->where('approve','=','Aprobado')
 //            ->skip(1)->take(3)
 //            ->get();
@@ -63,11 +64,12 @@ class SessionsISController extends Controller
         $articles = DB::table('articles')
             ->orderBy('id','DESC')
             ->where('category', '=','Sesiones IS')
-            ->where('important','=','No Destacado')
+            ->where('important','=','Publicación Común')
             ->where('approve','=','Aprobado')
             ->skip(3)->take(100)
             ->get();
 //            ->paginate();
+
 
 
         return view('sessionsis.index',compact('articles','tops', 'tops1','tops2','last_articles','videos','category_tops','subarticles'));
@@ -84,7 +86,7 @@ class SessionsISController extends Controller
         $tops = DB::table('articles')
             ->select('id','head','path',DB::raw ('@rownum := @rownum + 1 as rownum'))
             ->where('approve', '=', 'Aprobado')
-            ->where('important','=','Destacado')
+            ->where('important','=','Top 5')
             ->orderBy('id', 'DESC')
             ->paginate(5);
 
@@ -93,13 +95,13 @@ class SessionsISController extends Controller
         $tops2 = DB::table('articles')
             ->select('id','head','path',DB::raw ('@rownum1 := @rownum1 + 1 as rownum1'))
             ->where('approve', '=', 'Aprobado')
-            ->where('important','=','Destacado')
+            ->where('important','=','Top 5')
             ->orderBy('id', 'DESC')
             ->paginate(3);
 
         $tops1 = Article::orderBy('id', 'DESC')
             ->where('approve','=','Aprobado')
-            ->where('important','=','Destacado')
+            ->where('important','=','Top 5')
             ->limit(2)
             ->paginate(2);
 
@@ -108,14 +110,14 @@ class SessionsISController extends Controller
         $bottoms = DB::table('articles')
             ->orderBy('id','DESC')
             ->where('category', '=','Sesiones IS')
-            ->where('important','=','Destacado')
+//            ->where('important','=','Destacado')
             ->where('approve','=','Aprobado')
             ->paginate(5);
 
         $mediums = DB::table('articles')
             ->orderBy('id')
             ->where('category', '=','Sesiones IS')
-            ->where('important', '=','Destacado')
+//            ->where('important', '=','Destacado')
             ->where('approve','=','Aprobado')
             ->paginate(3);
 
