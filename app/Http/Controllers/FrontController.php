@@ -3,11 +3,18 @@
 namespace IndieSonico\Http\Controllers;
 use IndieSonico\Article;
 use IndieSonico\Video;
+use IndieSonico\Popup;
+
 use Illuminate\Support\Facades\DB;
 class FrontController extends Controller
 {
     public  function  index()
     {
+        $popups = Popup::orderBy('id','DESC')
+            ->where('category','=','Home')
+            ->limit(1)
+            ->paginate(1);
+
         $videos = Video::orderBy('id','DESC')
             ->where('category','=','Inicio')
             ->paginate();
@@ -67,7 +74,7 @@ class FrontController extends Controller
             ->get();
 //            ->paginate();
 
-        return view('index',compact('articles','tops','tops1','tops2', 'last_articles','videos','category_tops','subarticles'));
+        return view('index',compact('articles','tops','tops1','tops2', 'last_articles','videos','category_tops','subarticles', 'popups'));
     }
 
     public function show($id)

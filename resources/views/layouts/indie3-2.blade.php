@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     @yield('head-facebook')
 
@@ -13,15 +11,15 @@
     <script src="/js/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-7250274927102411",
-            enable_page_level_ads: true
-        });
-    </script>
+    {{--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>--}}
+    {{--<script>--}}
+        {{--(adsbygoogle = window.adsbygoogle || []).push({--}}
+            {{--google_ad_client: "ca-pub-7250274927102411",--}}
+            {{--enable_page_level_ads: true--}}
+        {{--});--}}
+    {{--</script>--}}
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 
@@ -110,34 +108,7 @@
                             <p>Somos un medio digital especializado en Música y Entretenimiento.
                                 Estamos Moviendo el Indie !</p>
                         </div>
-                        {{--<div class="col-sm-6">--}}
-                            {{--<ul class="navbar-nav ml-auto">--}}
 
-                                {{--<li class="nav-item ">--}}
-                                    {{--<a class="nav-link a-corregido a-footer" href="{{route('music.index')}}">Música</a>--}}
-                                {{--</li>--}}
-                                {{--<li class="nav-item ">--}}
-                                    {{--<a class="nav-link a-corregido a-footer" href="{{route('move.index')}}">Moviendo el Indie</a>--}}
-                                {{--</li>--}}
-                            {{--</ul>--}}
-                        {{--</div>--}}
-                        {{--<div class="col-sm-6">--}}
-                            {{--<ul class="navbar-nav ml-auto">--}}
-                                {{--<li class="nav-item">--}}
-                                    {{--<a class="nav-link a-corregido a-footer" href="{{route('sessionsis.index')}}">Sesiones Indie Sonico</a>--}}
-                                {{--</li>--}}
-                                {{--<li class="nav-item">--}}
-                                    {{--<a class="nav-link a-corregido a-footer" href="{{route('entertainment.index')}}">Entretenimiento</a>--}}
-                                {{--</li>--}}
-                            {{--</ul>--}}
-                        {{--</div>--}}
-                        {{--<div class="col-12">--}}
-                            {{--<ul class="navbar-nav ml-auto">--}}
-                                {{--<li class="nav-item">--}}
-                                    {{--<a class="nav-link a-corregido a-footer" href="{{route('contact.index')}}">Contacto</a>--}}
-                                {{--</li>--}}
-                            {{--</ul>--}}
-                        {{--</div>--}}
                     </div>
                 </div>
                 <div class="col-sm-4">

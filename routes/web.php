@@ -58,6 +58,8 @@ Route::resource('log','LogController');
 
 Route::resource('cPanel','CpanelController');
 
+Route::resource('popups','PopupController');
+
 
 //Route::get('images/{filename}', function ($filename)
 //{

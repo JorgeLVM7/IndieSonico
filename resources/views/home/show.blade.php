@@ -63,6 +63,8 @@
     @endforeach
 
 @endsection
+
+
 {{--ARTTICULO COMPLETO--}}
 @section('content1')
 
@@ -196,13 +198,31 @@
         </div>
     </div>
 
-    <div class="row col-12">
+@section('head-facebook')
+
+    <meta property="og:url"           content="https://indiesonico.com/home/{{$article->id }}-{{str_slug($article->head)}}" />
+    <meta property="og:type"          content="article" />
+    <meta property="og:title"         content="{{$article->head}}" />
+    <meta property="og:description"   content="{{$article->description}}" />
+    {{--<meta property="og:image"         content="../images/{{$article->path}}" />--}}
+
+@endsection
+
+@section('head-twitter')
+    <meta name="twitter:image" content="https://indiesonico.com/images/{{$article->path}}" />
+    <meta name="twitter:site" content="@IndieSonico" />
+    <meta name="twitter:creator" content="@IndieSonico" />
+    <meta property="og:url" content="https://indiesonico.com/home/{{$article->id }}-{{str_slug($article->head)}}" />
+    {{--<meta property="og:title" content="{{$article->head}}" />--}}
+    {{--<meta property="og:description" content="{{$article->description}}" />--}}
+    <meta property="og:image"         content="https://indiesonico.com/images/{{$article->path}}" />
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b1b019d345ddfc6"></script>
+@endsection
+
+    <div class="row">
         <div class="col-sm-12">
-            {{--Aqui va  un id="tops1"--}}
-            <div id="" class="row">
-                <a  class="twitter-share-button esp" data-size="large" href="https://twitter.com/home?status=http%3A//indiesonico.com/home{{$article->id }}.'-'.{{str_slug($article->head)}}">Twittear</a>
-                <div class="fb-share-button" data-href="https://indiesonico.com/home/{{$article->id }}.'-'.{{str_slug($article->head)}}" data-layout="button_count"  data-title="{{$article->head}}"  datasrc="../images/{{$article->path}}" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Findiesonico.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
-            </div>
+            <div class="addthis_inline_share_toolbox"></div>
         </div>
     </div>
 
@@ -212,15 +232,7 @@
 
 @endsection
 
-@section('head-facebook')
 
-    <meta property="og:url"           content="https://indiesonico.com" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="{{$article->head}}" />
-    <meta property="og:description"   content="{{$article->description}}" />
-    <meta property="og:image"         content="../images/{{$article->path}}" />
-
-@endsection
 {{--NOTAS RELACIONADAS BOTTOM--}}
 
 @section('content-bottoms')

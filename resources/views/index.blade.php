@@ -1,5 +1,30 @@
 @extends('layouts.indie3')
 
+
+@section('popup')
+
+    @foreach($popups as $popup)
+
+        @if(! empty($popup->path))
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        <img  class="card-img-top" src="../images/{{$popup->path}}" alt="" style="width: 100%; height: 100%;">
+
+                    </div>
+                </div>
+            </div>
+        @else
+
+        @endif
+
+    @endforeach
+@endsection
+
 @section('content-video')
     <div class="container-fluid">
         <div class="row">
@@ -7,7 +32,6 @@
 
                 @foreach($videos as $video)
                 <source src="../images/{{$video->path}}" type="video/mp4">
-                {{--<source src="../logos/indie.ogg" type="video/ogg">--}}
                     @endforeach
             </video>
         </div>

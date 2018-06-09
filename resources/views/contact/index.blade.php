@@ -1,5 +1,6 @@
 @extends('layouts.indie3-2')
 
+
 @section('content-video')
     <div class="container-fluid">
         <div class="row">
