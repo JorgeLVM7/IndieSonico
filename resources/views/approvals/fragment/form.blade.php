@@ -47,10 +47,10 @@
 
 
 
-<div class="form-group">
-    <label for="">Autor</label>
-    <h5>{{ Auth::user()->name}} {{ Auth::user()->last_name}} </h5>
-</div>
+{{--<div class="form-group">--}}
+    {{--<label for="">Autor</label>--}}
+    {{--<h5>{{ Auth::user()->name}} {{ Auth::user()->last_name}} </h5>--}}
+{{--</div>--}}
 
 <div class="form-group">
     {!! Form::label('category','Categoría ') !!}

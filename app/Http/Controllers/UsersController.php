@@ -75,6 +75,6 @@ class UsersController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        return view('cpanel/users.edit', compact('user'));
+        return view('users.edit', compact('user'));
     }
 }
