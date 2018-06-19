@@ -210,9 +210,6 @@ p{
 /*Caja flotante de redes sociales */
 
 
-/*.follow{*/
-    /*display: none !important;*/
-/*}*/
 
 .red{
     position: fixed;
@@ -290,6 +287,13 @@ p{
     border-color: #444444 !important;
     color: #EFC205 !important;
 }
+
+
+/* snack bar */
+
+
+
+
 
 @media (max-width: 1200px) {
     .first-notice-category {

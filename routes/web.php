@@ -19,6 +19,8 @@ Route::get('/','FrontController@index')->name('index');
 //Route::get('show/{id}','FrontController@show')->name('show');
 
 
+Route::resource('subscribers', 'SubscribersController');
+
 Route::resource('approvals','ApprovalsController');
 
 Route::resource('carousel', 'CarouselController');
@@ -40,6 +42,7 @@ Route::resource('entertainment','EntertainmentController');
 Route::resource('contact','ContactController');
 
 Route::resource('home','FrontController');
+
 
 
 

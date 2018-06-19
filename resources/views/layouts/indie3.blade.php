@@ -12,16 +12,10 @@
     <script src="/js/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 
-    {{--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>--}}
-    {{--<script>--}}
-        {{--(adsbygoogle = window.adsbygoogle || []).push({--}}
-            {{--google_ad_client: "ca-pub-7250274927102411",--}}
-            {{--enable_page_level_ads: true--}}
-        {{--});--}}
-    {{--</script>--}}
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    {{-- Script del modal de la pagina principal --}}
     <script>
         $(document).ready(function()
         {
@@ -30,14 +24,33 @@
             setTimeout(function() {
                 $("#exampleModalCenter").modal("hide");
             },3000);
+
+
+
         });
+
+        $(document).ready(function() {
+            // show the alert
+        setTimeout(function() { $(".alert").alert('close'); }, 2000);
+
+        });
+
+
+
+
+
     </script>
+
 </head>
 <body>
-
+{{--Publiciddad --}}
 @yield('popup')
 
+
+{{-- Video de encabezado --}}
 @yield('content-video')
+
+{{--Menu Pincipal --}}
     <nav class="navbar navbar-expand-lg navbar-dark  h-insonico sticky-top">
         <div class="container">
             <a class="navbar-brand menu-top-iphone5 menu-top-iphone4" href="{{route('index')}}">
@@ -70,15 +83,50 @@
                     <li class="nav-item">
                         <a class="nav-link a-corregido" href="{{route('contact.index')}}">Contacto</a>
                     </li>
+                    <li class="nav-item">
+                        <a  class="nav-link a-corregido" data-toggle="modal" data-target="#exampleModal" data-whatever="">Suscriptores</a>
+                    </li>
                 </ul>
 
             </div>
-            {{--<div class="collapse navbar-collapse " id="navbarSupportedContent">--}}
 
             </div>
-        {{--</div>--}}
+
     </nav>
-{{--<div class="container-fluid negro">--}}
+
+
+{{-- Model de suscriptores --}}
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Novedades</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+
+                {!! Form::open(['route'=>'subscribers.store']) !!}
+
+                @include('subscribers.fragment.form')
+
+                {!! Form::close() !!}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        @include('subscribers.fragment.info')
+    </div>
+</div>
+
+{{--Contenido del sitio --}}
+
     <div class="container blanco">
         <div class="row">
             <br>
@@ -108,6 +156,8 @@
         @yield('content-bottoms')
 
     </div>
+
+
 {{--</div>--}}
     <div class="container-fluid footer">
         <div class="container">
@@ -180,11 +230,6 @@
     </div>
 
 @yield('content2')
-
-
-
-
-
 
 
 <script>window.twttr = (function(d, s, id) {

@@ -70,7 +70,7 @@ class FrontController extends Controller
             ->orderBy('id','DESC')
             ->where('important','=','Publicación Común')
             ->where('approve','=','Aprobado')
-            ->skip(4)->take(10000)
+            ->skip(3)->take(10000)
             ->get();
 //            ->paginate();
 
