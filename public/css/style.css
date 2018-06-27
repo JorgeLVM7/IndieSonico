@@ -53,10 +53,15 @@ p{
     font-family: "Big Noodle Titling";
 
 }
+
+.title-articles-bottoms{
+    font-size: 1.25rem !important;
+    line-height: 1.2;
+    font-family: "Big Noodle Titling";
+}
 .title-tops{
     font-size: .8rem !important;
     line-height: 1.2 !important;
-
     padding-top: 5px;
 }
 .caja-first-notice{
@@ -384,11 +389,16 @@ p{
     .text-movil-center{
         text-align: center !important;
         margin: 0 auto;
+
     }
+
+
 }
 @media (min-width: 576px) {
     .vista-móvil,.follow{
         display: none !important;
     }
 
+
 }
+

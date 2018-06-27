@@ -2,6 +2,7 @@
 
 namespace IndieSonico\Http\Controllers;
 
+use IndieSonico\Http\Requests\SubscriberRequest;
 use IndieSonico\Subscribers;
 use Illuminate\Http\Request;
 
@@ -33,16 +34,22 @@ class SubscribersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SubscriberRequest $request)
     {
         $subscriber = new Subscribers;
 
-        $this->validate($request,[
+//        $messages = [
+//
+//            'name_complete.required'=> 'Falta el campo de Nombre',
+//            'email.required'=> 'Falta el campo de Correo Electrónico',
+//        ];
 
-            'name_complete'=> 'required',
-            'email' => 'required',
-
-        ]);
+//        $this->validate($request, $messages,[
+//
+//            'name_complete'=> 'required',
+//            'email' => 'required',
+//
+//        ]);
 
         $subscriber -> name_complete = $request-> name_complete;
         $subscriber -> email = $request-> email;

@@ -179,7 +179,7 @@
                                 <div class="row align-items-center">
                                     <div class="col-12 title-tops">
                                         <a href="{{ route('home.show',$medium->id.'-'.str_slug($medium->head)) }}" class="a-corregido2">
-                                            <h5 class="title-articles">{{ $medium ->head }}</h5>
+                                            <h5 class="title-articles-bottoms">{{ $medium ->head }}</h5>
                                         </a>
                                     </div>
                                 </div>
@@ -204,7 +204,7 @@
     <meta property="og:type"          content="article" />
     <meta property="og:title"         content="{{$article->head}}" />
     <meta property="og:description"   content="{{$article->description}}" />
-    {{--<meta property="og:image"         content="../images/{{$article->path}}" />--}}
+    <meta property="og:image"         content="https://indiesonico.com/images/{{$article->path}}" />
 
 @endsection
 
@@ -217,7 +217,7 @@
     {{--<meta property="og:description" content="{{$article->description}}" />--}}
     <meta property="og:image"         content="https://indiesonico.com/images/{{$article->path}}" />
 
-    <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b1b019d345ddfc6"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b1b019d345ddfc6"></script>
 @endsection
 
     <div class="row">
@@ -258,7 +258,7 @@
                     <div class="row align-items-center">
                         <div class="col-12 title-tops">
                             <a href="{{ route('home.show',$bottom->id.'-'.str_slug($bottom->head)) }}" class="a-corregido2">
-                                <h6 class="title-articles">{{ $bottom ->head }}</h6>
+                                <h6 class="title-articles-bottoms">{{ $bottom ->head }}</h6>
                             </a>
                         </div>
                     </div>
@@ -279,7 +279,7 @@
                     <div class="row align-items-center">
                         <div class="col-12 title-tops">
                             <a href="{{ route('home.show',$bottom->id.'-'.str_slug($bottom->head)) }}" class="a-corregido2">
-                                <h6 class="title-articles">{{ $bottom ->head }}</h6>
+                                <h6 class="title-articles-bottoms">{{ $bottom ->head }}</h6>
                             </a>
                         </div>
                     </div>

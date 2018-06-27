@@ -16,8 +16,8 @@ class FrontController extends Controller
             ->paginate(1);
 
         $videos = Video::orderBy('id','DESC')
-            ->where('category','=','Inicio')
-            ->paginate();
+        ->where('category','=','Inicio')
+        ->paginate();
 
         // Inicializa @rownum
         DB::statement(DB::raw('SET @rownum = 0'));

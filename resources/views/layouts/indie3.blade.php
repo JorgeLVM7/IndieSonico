@@ -7,6 +7,29 @@
     @yield('head-facebook')
     @yield('head-twitter')
 
+    {{--Google Analyttics --}}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121457529-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121457529-1');
+    </script>
+    {{--Google AdSense --}}
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9317941718146890",
+            enable_page_level_ads: true
+        });
+    </script>
+
+
+
     <title>Indie Sonico</title>
     <link rel="icon" href="/css/favicon.ico">
     <script src="/js/jquery-3.3.1.js"></script>
@@ -25,8 +48,6 @@
                 $("#exampleModalCenter").modal("hide");
             },3000);
 
-
-
         });
 
         $(document).ready(function() {
@@ -34,10 +55,6 @@
         setTimeout(function() { $(".alert").alert('close'); }, 2000);
 
         });
-
-
-
-
 
     </script>
 
@@ -100,13 +117,13 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-dark">
                 <h5 class="modal-title" id="exampleModalLabel">Novedades</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body bg-dark">
 
 
                 {!! Form::open(['route'=>'subscribers.store']) !!}
@@ -122,6 +139,8 @@
 <div class="container">
     <div class="row">
         @include('subscribers.fragment.info')
+        @include('subscribers.fragment.error')
+
     </div>
 </div>
 

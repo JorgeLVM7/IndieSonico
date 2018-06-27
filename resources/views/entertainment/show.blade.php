@@ -177,7 +177,7 @@
                                 <div class="row align-items-center">
                                     <div class="col-12 title-tops">
                                         <a href="{{ route('entertainment.show',$medium->id.'-'.str_slug($medium->head)) }}" class="a-corregido2">
-                                            <h5 class="title-articles">{{ $medium ->head }}</h5>
+                                            <h5 class="title-articles-bottoms">{{ $medium ->head }}</h5>
                                         </a>
                                     </div>
                                 </div>
@@ -265,7 +265,7 @@
                     <div class="row align-items-center">
                         <div class="col-12 title-tops">
                             <a href="{{ route('entertainment.show',$bottom->id.'-'.str_slug($bottom->head)) }}" class="a-corregido2">
-                                <h6 class="title-articles">{{ $bottom ->head }}</h6>
+                                <h6 class="title-articles-bottoms">{{ $bottom ->head }}</h6>
                             </a>
                         </div>
                     </div>
@@ -286,7 +286,7 @@
                     <div class="row align-items-center">
                         <div class="col-12 title-tops">
                             <a href="{{ route('entertainment.show',$bottom->id.'-'.str_slug($bottom->head)) }}" class="a-corregido2">
-                                <h5 class="title-articles">{{ $bottom ->head }}</h5>
+                                <h5 class="title-articles-bottoms">{{ $bottom ->head }}</h5>
                             </a>
                         </div>
                     </div>
