@@ -63,6 +63,8 @@ Route::resource('cPanel','CpanelController');
 
 Route::resource('popups','PopupController');
 
+Route::get('subscribers/create', 'MessagesController@create')->name('subscribers.create');
+
 
 //Route::get('images/{filename}', function ($filename)
 //{
