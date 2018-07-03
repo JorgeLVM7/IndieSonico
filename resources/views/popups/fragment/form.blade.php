@@ -5,7 +5,7 @@
 
 
 <div class="form-group">
-    {!! Form::label('description','Descripción ') !!}
+    {!! Form::label('description','URL ') !!}
     {!! Form::text('description', null,['class'=>'form-control']) !!}
 </div>
 <div class="form-group">
@@ -25,11 +25,7 @@
 
 <div class="form-group">
     {!! Form::label('category','Categoría ') !!}
-    {!! Form::select('category',['Home'=>'Home',
-                                'Música'=>'Música',
-                                'Moviendo el Indie'=>'Moviendo el Indie',
-                                'Sesiones IS' => 'Sesiones IS',
-                                'Entretenimiento'=>'Entretenimiento']
+    {!! Form::select('category',['Home'=>'Home']
                                 , null,['class'=>'form-control']
 ) !!}
 

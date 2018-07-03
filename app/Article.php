@@ -8,8 +8,8 @@ use Carbon\Carbon;
 class Article extends Model
 {
     protected $fillable = [
-        'head', 'description', 'body','category','autor','approve', 'path','video',
-        'head_2','path_2','description_2', 'body_2','video_2','user_id', 'important'
+        'head', 'description', 'body','category','autor','approve', 'path','origin_img','video',
+        'head_2','path_2','origin_img2','description_2', 'body_2','video_2','user_id', 'important'
 
     ];
 

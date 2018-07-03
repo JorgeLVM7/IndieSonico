@@ -6,6 +6,10 @@
     {!! Form::label('image','Foto') !!}
     {!! Form::file('path') !!}
 </div>
+<div class="form-group">
+    {!! Form::label('origin_img','Origen de Imagen ') !!}
+    {!! Form::text('origin_img', null,['class'=>'form-control']) !!}
+</div>
 
 <div class="form-group">
     {!! Form::label('description','Descripción ') !!}
@@ -29,6 +33,10 @@
 <div class="form-group">
     {!! Form::label('image_2','Foto 2') !!}
     {!! Form::file('path_2') !!}
+</div>
+<div class="form-group">
+    {!! Form::label('origin_img2','Origen de Imagen 2 ') !!}
+    {!! Form::text('origin_img2', null,['class'=>'form-control']) !!}
 </div>
 
 <div class="form-group">

@@ -38,17 +38,24 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    {{-- Script del modal de la pagina principal --}}
     <script>
+
+        {{-- Popup --}}
         $(document).ready(function()
         {
+            setTimeout(function () {
             $("#exampleModalCenter").modal("show");
+
+        },10000);
 
             setTimeout(function() {
                 $("#exampleModalCenter").modal("hide");
-            },3000);
+            },40000);
 
         });
+
+
+        // Notificacion de suscriptores
 
         $(document).ready(function() {
             // show the alert
@@ -101,7 +108,7 @@
                         <a class="nav-link a-corregido" href="{{route('contact.index')}}">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a  class="nav-link a-corregido" data-toggle="modal" data-target="#exampleModal" data-whatever="">Suscriptores</a>
+                        <a  class="nav-link a-corregido" data-toggle="modal" data-target="#exampleModal" data-whatever="">Suscríbete</a>
                     </li>
                 </ul>
 

@@ -80,6 +80,8 @@
                 </div>
                 <div class="col-sm-12">
                     <img class="card-img-top" src="../images/{{$article->path}}" alt="">
+                    <p>{{$article->origin_img}}</p>
+
                     <br>
                 </div>
             </div>
@@ -117,6 +119,8 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <img class="card-img-top" src="../images/{{$article->path_2}}" alt="">
+                        <p>{{$article->origin_img2}}</p>
+
                         <br>
                     </div>
                 </div>
@@ -171,7 +175,7 @@
                         <div id="" class="col-sm-12">
                             <div id="" class="card" style="border:none !important;">
                                 <a href="{{ route('sessionsis.show',$medium->id.'-'.str_slug($medium->head))}}">
-                                    <img  class="card-img-top" src="../images/{{$medium->path}}" alt="" style="height: 150px">
+                                    <img  class="card-img-top" src="../images/{{$medium->path}}" alt="" style="height: 200px">
                                 </a>
 
                                 <div class="row align-items-center">

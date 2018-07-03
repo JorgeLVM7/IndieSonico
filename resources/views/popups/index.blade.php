@@ -16,7 +16,7 @@
               <thead>
                 <tr>
                     <th>Encabezado</th>
-                    <th>Descripción</th>
+                    <th>URL</th>
                     <th>Categoria</th>
                     <th colspan="3">Acciones</th>
                 </tr>

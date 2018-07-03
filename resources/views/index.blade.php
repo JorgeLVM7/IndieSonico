@@ -13,7 +13,9 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                        <img  class="card-img-top" src="../images/{{$popup->path}}" alt="" style="width: 100%; height: 100%;">
+                        <a href="{{$popup->description}}">
+                            <img  class="card-img-top" src="../images/{{$popup->path}}" alt="" style="width: 100%; height: 100%;">
+                        </a>
 
                     </div>
                 </div>

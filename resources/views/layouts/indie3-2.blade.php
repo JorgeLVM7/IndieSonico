@@ -56,6 +56,9 @@
                     <li class="nav-item">
                         <a class="nav-link a-corregido" href="{{route('contact.index')}}">Contacto</a>
                     </li>
+                    <li class="nav-item">
+                        <a  class="nav-link a-corregido" data-toggle="modal" data-target="#exampleModal" data-whatever="">Suscríbete</a>
+                    </li>
                 </ul>
 
             </div>
@@ -63,6 +66,39 @@
             </div>
     </nav>
 
+
+
+{{-- Model de suscriptores --}}
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark">
+                <h5 class="modal-title" id="exampleModalLabel">Novedades</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body bg-dark">
+
+
+                {!! Form::open(['route'=>'subscribers.store']) !!}
+
+                @include('subscribers.fragment.form')
+
+                {!! Form::close() !!}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{--<div class="container">--}}
+    {{--<div class="row">--}}
+        {{--@include('subscribers.fragment.info')--}}
+        {{--@include('subscribers.fragment.error')--}}
+
+    {{--</div>--}}
+{{--</div>--}}
 
     <div class="container-fluid bg-yellow follow">
 

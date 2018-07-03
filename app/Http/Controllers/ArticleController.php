@@ -30,12 +30,14 @@ class ArticleController extends Controller
 
         $article ->head         = $request    ->head;
         $article ->path         = $request    ->path;
+        $article ->origin_img  = $request    ->origin_img;
         $article ->description  = $request    ->description;
         $article ->body         = $request    ->body;
         $article ->video         =$request     ->video;
 
         $article ->head_2       = $request    ->head_2;
         $article ->path_2       = $request    ->path_2;
+        $article ->origin_img2  = $request    ->origin_img2;
         $article ->description_2 = $request   ->description_2;
         $article ->body_2       = $request    ->body_2;
         $article ->video_2      = $request    ->video_2;
@@ -68,12 +70,14 @@ class ArticleController extends Controller
 
         $article ->head         = $request    ->head;
         $article ->path         = $request    ->path;
+        $article ->origin_img  = $request    ->origin_img;
         $article ->description  = $request    ->description;
         $article ->body         = $request    ->body;
-        $article->video         =$request     ->video;
+        $article ->video         =$request     ->video;
 
         $article ->head_2       = $request    ->head_2;
         $article ->path_2       = $request    ->path_2;
+        $article ->origin_img2  = $request    ->origin_img2;
         $article ->description_2 = $request   ->description_2;
         $article ->body_2       = $request    ->body_2;
         $article ->video_2      = $request    ->video_2;
