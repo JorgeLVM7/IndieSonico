@@ -2,14 +2,20 @@
 
 namespace IndieSonico\Http\Controllers;
 use IndieSonico\Article;
+use IndieSonico\Description;
 use IndieSonico\Video;
 use IndieSonico\Popup;
+
 
 use Illuminate\Support\Facades\DB;
 class FrontController extends Controller
 {
     public  function  index()
     {
+        $description = Description::orderBy('id','DESC')
+            ->limit(1)
+            ->paginate(1);
+
         $popups = Popup::orderBy('id','DESC')
             ->where('category','=','Home')
             ->limit(1)
@@ -59,8 +65,10 @@ class FrontController extends Controller
 
         $subarticles=DB::table('articles')
             ->orderBy('id','DESC')
-            ->where('important','=','Publicación Común')
+//            ->where('important','=','Publicación Común')
             ->where('approve','=','Aprobado')
+            ->where('important','=','Top 5')
+
             ->skip(0)->take(3)
             ->get();
 
@@ -68,13 +76,15 @@ class FrontController extends Controller
 
         $articles = DB::table('articles')
             ->orderBy('id','DESC')
-            ->where('important','=','Publicación Común')
+//            ->where('important','=','Publicación Común')
             ->where('approve','=','Aprobado')
+            ->where('important','=','Top 5')
+
             ->skip(3)->take(10000)
             ->get();
 //            ->paginate();
 
-        return view('index',compact('articles','tops','tops1','tops2', 'last_articles','videos','category_tops','subarticles', 'popups'));
+        return view('index',compact('articles','tops','tops1','tops2', 'last_articles','videos','category_tops','subarticles', 'popups','description'));
     }
 
     public function show($id)
@@ -117,12 +127,17 @@ class FrontController extends Controller
         $bottoms = DB::table('articles')
             ->inRandomOrder()
 //            ->where('important', '=','Top 5')
+                ->where('id','!=',$id)
             ->where('approve','Aprobado')
             ->paginate(9);
+//            ->get();
+
+
 
         $mediums = DB::table('articles')
             ->inRandomOrder()
-//            ->where('important', '=','Top 5')
+            ->where('id','!=',$id)
+            //            ->where('important', '=','Top 5')
             ->where('approve','=','Aprobado')
             ->paginate(3);
 

@@ -1,5 +1,15 @@
 @extends('layouts.indie3')
 
+
+@section('description-site')
+    @foreach($description as $descriptio)
+
+        {{ $descriptio->description }}
+
+    @endforeach
+
+@endsection
+
 @section('content-video')
     <div class="container-fluid">
         <div class="row">

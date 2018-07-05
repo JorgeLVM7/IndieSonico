@@ -1,4 +1,11 @@
 @extends('layouts.indie3')
+
+@section('head-article')
+
+    {{$article->head}}
+
+@endsection
+
 {{-- NOTAS DESTACADAS EN ENCABEZADO --}}
 @section('content0')
 

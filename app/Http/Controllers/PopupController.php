@@ -36,7 +36,7 @@ class PopupController extends Controller
         $popup ->save();
 
         return redirect()-> route('popups.index')
-            ->with('info','El popup fue actualizado correctamente');
+            ->with('info','El popup fue creado correctamente');
 
     }
 

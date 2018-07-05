@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="@yield('description-site')">
 
     @yield('head-facebook')
     @yield('head-twitter')
@@ -30,7 +31,7 @@
 
 
 
-    <title>Indie Sonico</title>
+    <title>Indie Sonico - @yield('head-article')</title>
     <link rel="icon" href="/css/favicon.ico">
     <script src="/js/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="/css/style.css">

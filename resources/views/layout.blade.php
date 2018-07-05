@@ -46,6 +46,10 @@
                 <li class="nav-item">
                     <a class="nav-link a-corregido" href="{{route('subscribers.create')}}">Suscripciones</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link a-corregido" href="{{route('extras.index')}}">Extras</a>
+                </li>
+
             @else
 
 

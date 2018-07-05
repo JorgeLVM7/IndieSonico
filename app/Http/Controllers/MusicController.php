@@ -4,10 +4,16 @@ namespace IndieSonico\Http\Controllers;
 use IndieSonico\Article;
 use IndieSonico\Video;
 use Illuminate\Support\Facades\DB;
+use IndieSonico\Description;
+
 class MusicController extends Controller
 {
     public function index()
     {
+        $description = Description::orderBy('id','DESC')
+        ->limit(1)
+        ->paginate(1);
+
         $videos = Video::orderBy('id','DESC')
             ->where('category','=','Música')
             ->paginate();
@@ -55,6 +61,7 @@ class MusicController extends Controller
             ->orderBy('id','DESC')
             ->where('category', '=','Música')
             ->where('important','=','Publicación Común')
+//            ->where('important','=','Top 5')
             ->where('approve','=','Aprobado')
 //            ->skip(1)->take(3)
 //            ->get();
@@ -65,6 +72,8 @@ class MusicController extends Controller
             ->orderBy('id','DESC')
             ->where('category', '=','Música')
             ->where('important','=','Publicación Común')
+//            ->where('important','=','Top 5')
+
             ->where('approve','=','Aprobado')
             ->skip(3)->take(100)
             ->get();
@@ -72,7 +81,7 @@ class MusicController extends Controller
 
 
 
-        return view('music.index',compact('articles','tops', 'tops1','tops2','last_articles','videos','category_tops','subarticles'));
+        return view('music.index',compact('articles','tops', 'tops1','tops2','last_articles','videos','category_tops','subarticles','description'));
     }
 
     public function show($id)
@@ -109,6 +118,8 @@ class MusicController extends Controller
 
         $bottoms = DB::table('articles')
             ->orderBy('id','DESC')
+            ->where('id','!=',$id)
+
             ->where('category', '=','Música')
 //            ->where('important','=','Destacado')
             ->where('approve','=','Aprobado')
@@ -116,6 +127,8 @@ class MusicController extends Controller
 
         $mediums = DB::table('articles')
             ->orderBy('id')
+            ->where('id','!=',$id)
+
             ->where('category', '=','Música')
 //            ->where('important', '=','Destacado')
             ->where('approve','=','Aprobado')

@@ -65,6 +65,8 @@ Route::resource('popups','PopupController');
 
 Route::get('subscribers/create', 'MessagesController@create')->name('subscribers.create');
 
+Route::resource('extras','DescriptionController');
+
 
 //Route::get('images/{filename}', function ($filename)
 //{

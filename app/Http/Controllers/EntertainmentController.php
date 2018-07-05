@@ -4,12 +4,18 @@ namespace IndieSonico\Http\Controllers;
 use IndieSonico\Article;
 use Illuminate\Support\Facades\DB;
 use IndieSonico\Video;
+use IndieSonico\Description;
+
 
 
 class EntertainmentController extends Controller
 {
     public function index()
     {
+        $description = Description::orderBy('id','DESC')
+            ->limit(1)
+            ->paginate(1);
+
         $videos = Video::orderBy('id','DESC')
             ->where('category','=','Entretenimiento')
             ->paginate();
@@ -74,7 +80,7 @@ class EntertainmentController extends Controller
 
 
 
-        return view('entertainment.index',compact('articles','tops', 'tops1','tops2','last_articles','videos','category_tops','subarticles'));
+        return view('entertainment.index',compact('articles','tops', 'tops1','tops2','last_articles','videos','category_tops','subarticles','description'));
     }
 
     public function show($id)
@@ -111,6 +117,8 @@ class EntertainmentController extends Controller
 
         $bottoms = DB::table('articles')
             ->orderBy('id','DESC')
+            ->where('id','!=',$id)
+
             ->where('category', '=','Entretenimiento')
 //            ->where('important','=','Destacado')
             ->where('approve','=','Aprobado')
@@ -118,6 +126,8 @@ class EntertainmentController extends Controller
 
         $mediums = DB::table('articles')
             ->orderBy('id')
+            ->where('id','!=',$id)
+
             ->where('category', '=','Entretenimiento')
 //            ->where('important', '=','Destacado')
             ->where('approve','=','Aprobado')

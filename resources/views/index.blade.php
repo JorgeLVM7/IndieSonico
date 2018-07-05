@@ -1,5 +1,13 @@
 @extends('layouts.indie3')
 
+@section('description-site')
+    @foreach($description as $descriptio)
+
+        {{ $descriptio->description }}
+
+    @endforeach
+
+@endsection
 
 @section('popup')
 

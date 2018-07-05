@@ -4,10 +4,16 @@ namespace IndieSonico\Http\Controllers;
 use IndieSonico\Article;
 use IndieSonico\Video;
 use Illuminate\Support\Facades\DB;
+use IndieSonico\Description;
+
 class SessionsISController extends Controller
 {
     public function index()
     {
+        $description = Description::orderBy('id','DESC')
+            ->limit(1)
+            ->paginate(1);
+
         $videos = Video::orderBy('id','DESC')
             ->where('category','=','Sesiones IS')
             ->paginate();
@@ -72,7 +78,7 @@ class SessionsISController extends Controller
 
 
 
-        return view('sessionsis.index',compact('articles','tops', 'tops1','tops2','last_articles','videos','category_tops','subarticles'));
+        return view('sessionsis.index',compact('articles','tops', 'tops1','tops2','last_articles','videos','category_tops','subarticles','description'));
     }
 
     public function show($id)
@@ -109,6 +115,8 @@ class SessionsISController extends Controller
 
         $bottoms = DB::table('articles')
             ->orderBy('id','DESC')
+            ->where('id','!=',$id)
+
             ->where('category', '=','Sesiones IS')
 //            ->where('important','=','Destacado')
             ->where('approve','=','Aprobado')
@@ -116,6 +124,8 @@ class SessionsISController extends Controller
 
         $mediums = DB::table('articles')
             ->orderBy('id')
+            ->where('id','!=',$id)
+
             ->where('category', '=','Sesiones IS')
 //            ->where('important', '=','Destacado')
             ->where('approve','=','Aprobado')

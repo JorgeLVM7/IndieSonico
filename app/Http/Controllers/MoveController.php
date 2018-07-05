@@ -4,10 +4,16 @@ namespace IndieSonico\Http\Controllers;
 use IndieSonico\Article;
 use IndieSonico\Video;
 use Illuminate\Support\Facades\DB;
+use IndieSonico\Description;
+
 class MoveController extends Controller
 {
     public function index()
     {
+        $description = Description::orderBy('id','DESC')
+            ->limit(1)
+            ->paginate(1);
+
         $videos = Video::orderBy('id','DESC')
             ->where('category','=','Moviendo el Indie')
             ->paginate();
@@ -72,11 +78,13 @@ class MoveController extends Controller
 
 
 
-        return view('move.index',compact('articles','tops', 'tops1','tops2','last_articles','videos','category_tops','subarticles'));
+        return view('move.index',compact('articles','tops', 'tops1','tops2','last_articles','videos','category_tops','subarticles','description'));
     }
 
     public function show($id)
     {
+
+
         $videos = Video::orderBy('id','DESC')->paginate();
 
         // Inicializa @rownum
@@ -112,10 +120,14 @@ class MoveController extends Controller
             ->where('category', '=','Moviendo el Indie')
 //            ->where('important','=','Destacado')
             ->where('approve','=','Aprobado')
+            ->where('id','!=',$id)
+
             ->paginate(5);
 
         $mediums = DB::table('articles')
             ->orderBy('id')
+            ->where('id','!=',$id)
+
             ->where('category', '=','Moviendo el Indie')
 //            ->where('important', '=','Destacado')
             ->where('approve','=','Aprobado')
