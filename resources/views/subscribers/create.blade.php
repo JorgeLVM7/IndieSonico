@@ -7,12 +7,11 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Enviar mensaje</div>
-                <form method="POST" action="">
+                <form method="POST" action="{{ route('subscribers.store')}}">
                     {{ csrf_field() }}
                     <div class="panel-body">
                         <div class="form-group {{ $errors->has('recipient_id') ? 'has-error' : ''}}">
-                            <select name="recipient_id" class="form-control">
-                                <option value="">Selecciona al usuario</option>
+                            <select name="recipient_id" id="example-onSelectAll" multiple="multiple">
                                 @foreach ($subscribers as $subscriber)
                                     <option value="{{ $subscriber->id }}">{{ $subscriber->name_complete }}</option>
                                 @endforeach

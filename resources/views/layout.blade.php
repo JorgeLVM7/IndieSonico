@@ -9,6 +9,11 @@
 
     <link rel="stylesheet" href="/css/style.css">
 
+    <!-- Select del bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.js"></script>
+
     <link rel="stylesheet" href="/plugins/trumbowig/ui/trumbowyg.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -89,8 +94,12 @@
 
 
     </div>
-</nav>
-
+</nav> 
+@if (session()->has('flash'))
+    <div class="container">
+        <div class="alert alert-success">{{ session('flash') }}</div>
+    </div>
+@endif
 
 <div class="container bw">
     <br>
@@ -111,7 +120,17 @@
 <script src="/plugins/trumbowig/trumbowyg.min.js"></script>
 <script src="/js/util.js"></script>
 
+<!-- Js del select multiple -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.js"></script>
 
+<script type="text/javascript">
+    $('#example-onSelectAll').multiselect({
+        includeSelectAllOption: true,
+        onSelectAll: function() {
+            alert('onSelectAll triggered!');
+        }
+    });
+</script>
 
 
 </body>
