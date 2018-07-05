@@ -85,8 +85,12 @@
 
 
     </div>
-</nav>
-
+</nav> 
+@if (session()->has('flash'))
+    <div class="container">
+        <div class="alert alert-success">{{ session('flash') }}</div>
+    </div>
+@endif
 
 <div class="container bw">
     <br>

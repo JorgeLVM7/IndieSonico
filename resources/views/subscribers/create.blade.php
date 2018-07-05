@@ -7,7 +7,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Enviar mensaje</div>
-                <form method="POST" action="">
+                <form method="POST" action="{{ route('subscribers.store')}}">
                     {{ csrf_field() }}
                     <div class="panel-body">
                         <div class="form-group {{ $errors->has('recipient_id') ? 'has-error' : ''}}">
