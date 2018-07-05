@@ -48,7 +48,7 @@ class MessageSent extends Notification
                     ->error()
                     ->subject('Mensaje recibido desde tu sitio web')
                     ->line('Has recibido un mensaje')
-                    ->action('Click aquí para ver el mensaje', $this->message->body)
+                    ->action('Click aquí para ver el articulo', $this->message->body)
                     ->line('Gracias por utilizar nuestra apliacación');
     }
 
