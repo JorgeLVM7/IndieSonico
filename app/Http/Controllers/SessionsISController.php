@@ -60,7 +60,7 @@ class SessionsISController extends Controller
         $subarticles=DB::table('articles')
             ->orderBy('id','DESC')
             ->where('category', '=','Sesiones IS')
-            ->where('important','=','Publicación Común')
+//            ->where('important','=','Publicación Común')
             ->where('approve','=','Aprobado')
 //            ->skip(1)->take(3)
 //            ->get();
@@ -70,7 +70,7 @@ class SessionsISController extends Controller
         $articles = DB::table('articles')
             ->orderBy('id','DESC')
             ->where('category', '=','Sesiones IS')
-            ->where('important','=','Publicación Común')
+//            ->where('important','=','Publicación Común')
             ->where('approve','=','Aprobado')
             ->skip(3)->take(100)
             ->get();

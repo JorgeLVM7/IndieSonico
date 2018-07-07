@@ -60,7 +60,7 @@ class MusicController extends Controller
         $subarticles=DB::table('articles')
             ->orderBy('id','DESC')
             ->where('category', '=','Música')
-            ->where('important','=','Publicación Común')
+//            ->where('important','=','Publicación Común')
 //            ->where('important','=','Top 5')
             ->where('approve','=','Aprobado')
 //            ->skip(1)->take(3)
@@ -71,7 +71,7 @@ class MusicController extends Controller
         $articles = DB::table('articles')
             ->orderBy('id','DESC')
             ->where('category', '=','Música')
-            ->where('important','=','Publicación Común')
+//            ->where('important','=','Publicación Común')
 //            ->where('important','=','Top 5')
 
             ->where('approve','=','Aprobado')

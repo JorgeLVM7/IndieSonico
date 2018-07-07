@@ -60,7 +60,7 @@ class MoveController extends Controller
         $subarticles=DB::table('articles')
             ->orderBy('id','DESC')
             ->where('category', '=','Moviendo el Indie')
-            ->where('important','=','Publicación Común')
+//            ->where('important','=','Publicación Común')
             ->where('approve','=','Aprobado')
 //            ->skip(1)->take(3)
 //            ->get();
@@ -70,7 +70,7 @@ class MoveController extends Controller
         $articles = DB::table('articles')
             ->orderBy('id','DESC')
             ->where('category', '=','Moviendo el Indie')
-            ->where('important','=','Publicación Común')
+//            ->where('important','=','Publicación Común')
             ->where('approve','=','Aprobado')
             ->skip(3)->take(100)
             ->get();

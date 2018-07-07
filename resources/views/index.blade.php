@@ -231,12 +231,16 @@
             </div>
             <div class="col-sm-4 vista-web">
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- 1 -->
+                <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-9317941718146890"
+                data-ad-slot="4831809451"
+                data-ad-format="auto"></ins>
                 <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({
-                        google_ad_client: "ca-pub-7250274927102411",
-                        enable_page_level_ads: true
-                    });
-                </script>            </div>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
 
             <div class="col-sm-8">
 
@@ -329,7 +333,16 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <br>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- 1 -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-9317941718146890"
+                     data-ad-slot="4831809451"
+                     data-ad-format="auto"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
                 <hr>
             </div>
         </div>

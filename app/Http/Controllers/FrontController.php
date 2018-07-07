@@ -65,9 +65,9 @@ class FrontController extends Controller
 
         $subarticles=DB::table('articles')
             ->orderBy('id','DESC')
-//            ->where('important','=','Publicación Común')
+            ->where('important','=','Publicación Común')
             ->where('approve','=','Aprobado')
-            ->where('important','=','Top 5')
+//            ->where('important','=','Top 5')
 
             ->skip(0)->take(3)
             ->get();
@@ -76,9 +76,9 @@ class FrontController extends Controller
 
         $articles = DB::table('articles')
             ->orderBy('id','DESC')
-//            ->where('important','=','Publicación Común')
+            ->where('important','=','Publicación Común')
             ->where('approve','=','Aprobado')
-            ->where('important','=','Top 5')
+//            ->where('important','=','Top 5')
 
             ->skip(3)->take(10000)
             ->get();
