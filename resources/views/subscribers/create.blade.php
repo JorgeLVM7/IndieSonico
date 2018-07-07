@@ -6,7 +6,8 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Enviar mensaje</div>
+                <div class="panel-heading"><h1>Enviar mensaje</h1></div>
+                <br>
                 <form method="POST" action="{{ route('subscribers.store')}}">
                     {{ csrf_field() }}
                     <div class="panel-body">
@@ -19,7 +20,7 @@
                             {!! $errors->first('recipient_id', "<span class=help-block>:message</span>") !!}  
                         </div>
                         <div class="form-group {{ $errors->has('body') ? 'has-error' : ''}}">
-                            <textarea name="body" class="form-control" placeholder="escribe aqui tu mensaje" ></textarea>
+                            <textarea name="body" class="form-control" placeholder="Escriba aquí la url" ></textarea>
                             {!! $errors->first('body', "<span class=help-block>:message</span>") !!}  
                         </div>
                         <div class="form-group">

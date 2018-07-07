@@ -126,8 +126,8 @@
 <script type="text/javascript">
     $('#example-onSelectAll').multiselect({
         includeSelectAllOption: true,
-        onSelectAll: function() {
-            alert('onSelectAll triggered!');
+        onSelectAll: function(recipient_id) {
+            alert('');
         }
     });
 </script>
