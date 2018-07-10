@@ -2,7 +2,7 @@
 
 @section('head-article')
 
-    {{$article->head}}
+   - {{$article->head}}
 
 @endsection
 {{-- NOTAS DESTACADAS EN ENCABEZADO --}}
