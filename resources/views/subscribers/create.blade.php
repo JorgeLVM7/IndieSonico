@@ -12,7 +12,7 @@
                     {{ csrf_field() }}
                     <div class="panel-body">
                         <div class="form-group {{ $errors->has('recipient_id') ? 'has-error' : ''}}">
-                            <select name="recipient_id" id="example-onSelectAll" multiple="multiple">
+                            <select name="recipient_id[]" id="example-onSelectAll" multiple="multiple"  <select class="form-control select2" name="horario[]" id="horario" multiple="multiple" style="width: 100%>
                                 @foreach ($subscribers as $subscriber)
                                     <option value="{{ $subscriber->id }}">{{ $subscriber->name_complete }}</option>
                                 @endforeach
