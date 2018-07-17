@@ -29,11 +29,25 @@ class MessagesController extends Controller
 
         ]);
 
+
+
         $message = Message::create([
             'sender_id' => auth()->id(),
+
             'recipient_id' => $request->recipient_id,
             'body' => $request->body,
         ]);
+
+//        $correos = implode(';',$_POST['recipient_id']);
+//
+//        $body = $_POST['body'];
+//
+//        $message = Message::create([
+//        'sender_id' => auth()->id(),
+//
+//        'recipient_id' => $request = $correos,
+//        'body' => $request = $body,
+//    ]);
 
         $recipient = Subscribers::find($request->recipient_id);
 

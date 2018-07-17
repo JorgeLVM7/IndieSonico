@@ -21,6 +21,8 @@ Route::get('/','FrontController@index')->name('index');
 
 Route::resource('subscribers', 'SubscribersController');
 
+Route::resource('subscribers0', 'Subscribers2Controller');
+
 Route::resource('approvals','ApprovalsController');
 
 Route::resource('carousel', 'CarouselController');
